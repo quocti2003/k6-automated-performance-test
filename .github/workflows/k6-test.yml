@@ -80,29 +80,31 @@ jobs:
             -e RATE_LIMIT_AUTH_ENABLED=false \
             backend-service
 
-      # Buoc 5: Cho backend san sang (Liquibase can thoi gian tao schema)
-      - name: Wait for backend to be ready
+      # Buoc 5: Cho Spring Boot start xong moi tiep tuc
+      # until loop: lap vo han cho toi khi /actuator/health tra ve "UP"
+      # timeout-minutes: GitHub Actions tu kill neu qua 15 phut (phong truong hop crash)
+      - name: Wait for Spring Boot to be ready
+        timeout-minutes: 15
         run: |
-          echo "Waiting for backend (Liquibase migrations + Spring Boot startup)..."
-          echo "Checking if container is running..."
+          echo "Waiting for Spring Boot application to start..."
+          echo "Container status:"
           docker ps -a
-          for i in {1..60}; do
-            # Check if container is still running
+          echo ""
+          echo "Checking health endpoint every 5 seconds..."
+          until curl -s http://localhost:8082/actuator/health 2>/dev/null | grep -q '"status":"UP"'; do
+            # Neu container crash thi dung lai, in log ra de debug
             if ! docker ps --format '{{.Names}}' | grep -q backend; then
-              echo "Container crashed! Showing logs:"
+              echo "ERROR: Backend container crashed!"
+              echo "=== DOCKER LOGS ==="
               docker logs backend
               exit 1
             fi
-            if curl -s http://localhost:8082/actuator/health 2>/dev/null | grep -q '"status":"UP"'; then
-              echo "Backend is ready!"
-              exit 0
-            fi
-            echo "Attempt $i/60 - waiting 5s..."
+            echo "$(date +%H:%M:%S) - Spring Boot chua ready, cho 5s..."
             sleep 5
           done
-          echo "Backend failed to start after 5 minutes. Showing logs:"
-          docker logs backend
-          exit 1
+          echo ""
+          echo "Spring Boot is ready on localhost:8082!"
+          curl -s http://localhost:8082/actuator/health
 
       # Buoc 6: Cai dat k6
       - name: Install k6
