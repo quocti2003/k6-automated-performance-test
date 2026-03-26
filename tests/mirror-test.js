@@ -24,6 +24,8 @@ export function setup() {
     { headers: { 'Content-Type': 'application/json' } }
   );
 
+  console.log(`USERNAME: ${USERNAME}`);
+  console.log(`PASSWORD length: ${PASSWORD.length}`);
   console.log(`Login response status: ${loginRes.status}`);
   console.log(`Login response body: ${loginRes.body}`);
 
