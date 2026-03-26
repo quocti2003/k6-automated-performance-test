@@ -24,9 +24,16 @@ export function setup() {
     { headers: { 'Content-Type': 'application/json' } }
   );
 
+  console.log(`Login response status: ${loginRes.status}`);
+  console.log(`Login response body: ${loginRes.body}`);
+
   check(loginRes, {
     'login status 200': (r) => r.status === 200,
   });
+
+  if (loginRes.status !== 200) {
+    throw new Error(`Login failed: ${loginRes.body}`);
+  }
 
   const token = loginRes.json().accessToken;
   console.log(`Login OK, token: ${token.substring(0, 30)}...`);
