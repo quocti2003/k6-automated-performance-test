@@ -42,15 +42,21 @@ jobs:
           token: ${{ secrets.PAT_TOKEN }}
           path: backend
 
-      # Buoc 3: Build Docker image tu Dockerfile cua Repo A
+      # Buoc 3: Restore database schema + test user data
+      - name: Restore database
+        run: |
+          PGPASSWORD=mirror_password psql -h localhost -U mirror_user -d mirror_product -f db/schema_only.sql
+          PGPASSWORD=mirror_password psql -h localhost -U mirror_user -d mirror_product -f db/users_data.sql
+
+      # Buoc 4: Build Docker image tu Dockerfile cua Repo A
       - name: Build backend Docker image
         run: |
           cd backend/mirror-products-service
           docker build -t backend-service .
 
-      # Buoc 4: Start backend container
+      # Buoc 5: Start backend container
       # --network=host de backend truy cap duoc PostgreSQL tren localhost:5432
-      # Liquibase enabled = true de tu dong tao schema tu migrations
+      # Liquibase disabled vi schema da duoc restore tu dump
       - name: Start backend service
         run: |
           docker run -d --network=host --name backend \
@@ -58,7 +64,7 @@ jobs:
             -e SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/mirror_product \
             -e SPRING_DATASOURCE_USERNAME=mirror_user \
             -e SPRING_DATASOURCE_PASSWORD=mirror_password \
-            -e SPRING_LIQUIBASE_ENABLED=true \
+            -e SPRING_LIQUIBASE_ENABLED=false \
             -e JWT_USE_SECRETS_MANAGER=false \
             -e JWT_SECRET=local-dev-jwt-secret-key-mirror-diamond-2024-must-be-at-least-256-bits-long \
             -e JWT_EXPIRATION=3600 \
@@ -80,7 +86,7 @@ jobs:
             -e RATE_LIMIT_AUTH_ENABLED=false \
             backend-service
 
-      # Buoc 5: Cho Spring Boot start xong moi tiep tuc
+      # Buoc 6: Cho Spring Boot start xong moi tiep tuc
       # until loop: lap vo han cho toi khi /actuator/health tra ve "UP"
       # timeout-minutes: GitHub Actions tu kill neu qua 15 phut (phong truong hop crash)
       - name: Wait for Spring Boot to be ready
@@ -106,7 +112,7 @@ jobs:
           echo "Spring Boot is ready on localhost:8082!"
           curl -s http://localhost:8082/actuator/health
 
-      # Buoc 6: Cai dat k6
+      # Buoc 7: Cai dat k6
       - name: Install k6
         run: |
           sudo gpg -k
@@ -119,7 +125,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install k6
 
-      # Buoc 7: Chay k6 performance test + xuat HTML report
+      # Buoc 8: Chay k6 performance test + xuat HTML report
       - name: Run k6 performance test
         run: |
           K6_WEB_DASHBOARD=true \
@@ -129,7 +135,7 @@ jobs:
           K6_USERNAME: ${{ secrets.SERVICE_USERNAME }}
           K6_PASSWORD: ${{ secrets.SERVICE_PASSWORD }}
 
-      # Buoc 8: Deploy HTML report len GitHub Pages
+      # Buoc 9: Deploy HTML report len GitHub Pages
       - name: Deploy report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
