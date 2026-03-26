@@ -1,0 +1,83 @@
+name: K6 Automated Performance Test
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [run-k6-test]
+
+permissions:
+  contents: write
+
+jobs:
+  k6-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Buoc 1: Checkout Repo B (lay k6 scripts)
+      - name: Checkout k6 test repo
+        uses: actions/checkout@v4
+
+      # Buoc 2: Checkout Repo A (backend source + Dockerfile)
+      - name: Checkout backend repo
+        uses: actions/checkout@v4
+        with:
+          repository: quocti2003/MYRROR
+          ref: full-local
+          token: ${{ secrets.PAT_TOKEN }}
+          path: backend
+
+      # Buoc 3: Build Docker image tu Dockerfile cua Repo A
+      - name: Build backend Docker image
+        run: |
+          cd backend
+          docker build -t backend-service .
+
+      # Buoc 4: Start backend container
+      - name: Start backend service
+        run: |
+          docker run -d -p 8082:8082 --name backend backend-service
+
+      # Buoc 5: Cho backend san sang
+      - name: Wait for backend to be ready
+        run: |
+          echo "Waiting for backend..."
+          for i in {1..30}; do
+            if curl -s http://localhost:8082 > /dev/null 2>&1; then
+              echo "Backend is ready!"
+              break
+            fi
+            echo "Attempt $i/30 - waiting 2s..."
+            sleep 2
+          done
+
+      # Buoc 6: Cai dat k6
+      - name: Install k6
+        run: |
+          sudo gpg -k
+          sudo gpg --no-default-keyring \
+            --keyring /usr/share/keyrings/k6-archive-keyring.gpg \
+            --keyserver hkp://keyserver.ubuntu.com:80 \
+            --recv-keys C5AD17C747E3415A3642D57D77C6C491D6AC1D69
+          echo "deb [signed-by=/usr/share/keyrings/k6-archive-keyring.gpg] https://dl.k6.io/deb stable main" \
+            | sudo tee /etc/apt/sources.list.d/k6.list
+          sudo apt-get update
+          sudo apt-get install k6
+
+      # Buoc 7: Chay k6 performance test + xuat HTML report
+      - name: Run k6 performance test
+        run: |
+          K6_WEB_DASHBOARD=true \
+          K6_WEB_DASHBOARD_EXPORT=mirror-authentication-report.html \
+          k6 run tests/mirror-test.js
+        env:
+          K6_USERNAME: ${{ secrets.SERVICE_USERNAME }}
+          K6_PASSWORD: ${{ secrets.SERVICE_PASSWORD }}
+
+      # Buoc 8: Deploy HTML report len GitHub Pages
+      - name: Deploy report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          include_files: mirror-authentication-report.html
+          destination_dir: .
