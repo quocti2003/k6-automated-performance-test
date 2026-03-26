@@ -12,6 +12,22 @@ jobs:
   k6-test:
     runs-on: ubuntu-latest
 
+    # PostgreSQL chay song song voi job, backend se ket noi vao day
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: mirror_product
+          POSTGRES_USER: mirror_user
+          POSTGRES_PASSWORD: mirror_password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd="pg_isready -U mirror_user -d mirror_product"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
     steps:
       # Buoc 1: Checkout Repo B (lay k6 scripts)
       - name: Checkout k6 test repo
@@ -26,18 +42,6 @@ jobs:
           token: ${{ secrets.PAT_TOKEN }}
           path: backend
 
-      # Debug: kiem tra file structure
-      - name: Debug - check files
-        run: |
-          echo "=== backend/ ==="
-          ls -la backend/
-          echo "=== backend/mirror-products-service/ ==="
-          ls -la backend/mirror-products-service/
-          echo "=== Dockerfile content ==="
-          cat backend/mirror-products-service/Dockerfile
-          echo "=== Dockerfile size ==="
-          wc -c backend/mirror-products-service/Dockerfile
-
       # Buoc 3: Build Docker image tu Dockerfile cua Repo A
       - name: Build backend Docker image
         run: |
@@ -45,22 +49,52 @@ jobs:
           docker build -t backend-service .
 
       # Buoc 4: Start backend container
+      # --network=host de backend truy cap duoc PostgreSQL tren localhost:5432
+      # Liquibase enabled = true de tu dong tao schema tu migrations
       - name: Start backend service
         run: |
-          docker run -d -p 8082:8082 --name backend backend-service
+          docker run -d --network=host --name backend \
+            -e USE_SECRETS_MANAGER=false \
+            -e SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/mirror_product \
+            -e SPRING_DATASOURCE_USERNAME=mirror_user \
+            -e SPRING_DATASOURCE_PASSWORD=mirror_password \
+            -e SPRING_LIQUIBASE_ENABLED=true \
+            -e JWT_USE_SECRETS_MANAGER=false \
+            -e JWT_SECRET=local-dev-jwt-secret-key-mirror-diamond-2024-must-be-at-least-256-bits-long \
+            -e JWT_EXPIRATION=3600 \
+            -e JWT_REFRESH_EXPIRATION=86400 \
+            -e AWS_REGION=ap-southeast-1 \
+            -e AWS_ACCESS_KEY_ID=dummy \
+            -e AWS_SECRET_ACCESS_KEY=dummy \
+            -e CLOUDFLARE_R2_ENABLED=true \
+            -e CLOUDFLARE_R2_ACCOUNT_ID=dummy \
+            -e CLOUDFLARE_R2_ACCESS_KEY=dummy \
+            -e CLOUDFLARE_R2_SECRET_KEY=dummy \
+            -e CLOUDFLARE_R2_BUCKET_NAME=dummy \
+            -e CLOUDFLARE_R2_PUBLIC_URL_BASE=http://localhost \
+            -e NOTIFICATION_MODE=noop \
+            -e TURNSTILE_ENABLED=false \
+            -e MISA_SYNC_ENABLED=false \
+            -e PRECIOUS_METAL_USE_MOCK_DATA=true \
+            -e RATE_LIMIT_ENABLED=false \
+            -e RATE_LIMIT_AUTH_ENABLED=false \
+            backend-service
 
-      # Buoc 5: Cho backend san sang
+      # Buoc 5: Cho backend san sang (Liquibase can thoi gian tao schema)
       - name: Wait for backend to be ready
         run: |
-          echo "Waiting for backend..."
-          for i in {1..30}; do
-            if curl -s http://localhost:8082 > /dev/null 2>&1; then
+          echo "Waiting for backend (Liquibase migrations + Spring Boot startup)..."
+          for i in {1..60}; do
+            if curl -s http://localhost:8082/actuator/health 2>/dev/null | grep -q '"status":"UP"'; then
               echo "Backend is ready!"
-              break
+              exit 0
             fi
-            echo "Attempt $i/30 - waiting 2s..."
-            sleep 2
+            echo "Attempt $i/60 - waiting 5s..."
+            sleep 5
           done
+          echo "Backend failed to start. Showing logs:"
+          docker logs backend
+          exit 1
 
       # Buoc 6: Cai dat k6
       - name: Install k6
