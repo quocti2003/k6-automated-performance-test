@@ -53,7 +53,7 @@ COPY public.users (id, username, email, password, first_name, last_name, phone_n
 54	phygital.hanoi_partner	phygital.hanoi@mirror.vn	$2a$12$5M.F8WRnf/Yqsc2pzB60mOuKgV7dE/8G8w4aovbNpIFS3iqhYQDwq	Nguyen	Van A	0912345678	t	t	t	t	0	2026-01-27 03:59:29.380991	2026-01-27 03:58:55.86283	2026-01-27 03:58:55.862817	2026-01-27 03:59:29.448032	SYSTEM	SYSTEM	\N	\N	\N	f
 51	partner	partner@mirror.vn	$2b$12$jht6w7/Z0esejrZCwkwaNuGSc3Sv5EGeL8ZVOkzBKpJy7Wgl9BN.K	Test	Partner	\N	t	t	t	t	0	2026-01-28 02:38:47.2734	\N	2026-01-22 05:15:43.240968	2026-01-28 02:38:47.276596	SYSTEM	\N	\N	\N	\N	t
 4	minhtran	minh.tran@mirrorfuturediamond.com	$2a$12$KQ2VO.rmxIHsaRlkl7XCheCeB6e0tsJO5yGLIUCVDBMtkHByM3qCW	Minh	Tran	840901471135	t	t	t	t	0	2026-02-12 10:42:49.611743	2025-08-13 03:54:54.099803	2025-08-12 07:57:21.414483	2026-02-12 10:42:49.8474	SYSTEM	minhtran	Mr	\N	Vietnam	f
-1	tile	ti.le@mirrorfuturediamond.com	$2b$12$arJpOqf6KxTR5riywDJNT.y0yFefWILhg..PeDr/6Jqv9m2oODHOS	Ti	Le	0901471134	t	t	t	t	0	2026-03-26 09:27:35.525598	2025-09-03 03:07:02.62918	2025-08-01 11:34:46.678738	2026-03-26 09:27:35.540339	SYSTEM	tile	Mr	2003-08-30	Vietnam	f
+1	tile	ti.le@mirrorfuturediamond.com	$2b$12$r63.qslcePiKFnB5nn5.0eSpML3bjGvW8Kd87HC69uqM3p953WYXi	Ti	Le	0901471134	t	t	t	t	0	2026-03-26 09:27:35.525598	2025-09-03 03:07:02.62918	2025-08-01 11:34:46.678738	2026-03-26 09:27:35.540339	SYSTEM	tile	Mr	2003-08-30	Vietnam	f
 \.
 
 
