@@ -26,6 +26,18 @@ jobs:
           token: ${{ secrets.PAT_TOKEN }}
           path: backend
 
+      # Debug: kiem tra file structure
+      - name: Debug - check files
+        run: |
+          echo "=== backend/ ==="
+          ls -la backend/
+          echo "=== backend/mirror-products-service/ ==="
+          ls -la backend/mirror-products-service/
+          echo "=== Dockerfile content ==="
+          cat backend/mirror-products-service/Dockerfile
+          echo "=== Dockerfile size ==="
+          wc -c backend/mirror-products-service/Dockerfile
+
       # Buoc 3: Build Docker image tu Dockerfile cua Repo A
       - name: Build backend Docker image
         run: |
