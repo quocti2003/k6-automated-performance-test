@@ -31,7 +31,7 @@ CREATE TABLE public.age_group_preference_values (
 );
 
 
-ALTER TABLE public.age_group_preference_values OWNER TO postgres;
+ALTER TABLE public.age_group_preference_values OWNER TO mirror_user;
 
 --
 -- Name: age_group_preferences; Type: TABLE; Schema: public; Owner: postgres
@@ -45,7 +45,7 @@ CREATE TABLE public.age_group_preferences (
 );
 
 
-ALTER TABLE public.age_group_preferences OWNER TO postgres;
+ALTER TABLE public.age_group_preferences OWNER TO mirror_user;
 
 --
 -- Name: age_groups; Type: TABLE; Schema: public; Owner: postgres
@@ -59,7 +59,7 @@ CREATE TABLE public.age_groups (
 );
 
 
-ALTER TABLE public.age_groups OWNER TO postgres;
+ALTER TABLE public.age_groups OWNER TO mirror_user;
 
 --
 -- Name: appointments; Type: TABLE; Schema: public; Owner: postgres
@@ -88,7 +88,7 @@ CREATE TABLE public.appointments (
 );
 
 
-ALTER TABLE public.appointments OWNER TO postgres;
+ALTER TABLE public.appointments OWNER TO mirror_user;
 
 --
 -- Name: COLUMN appointments.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -235,7 +235,7 @@ CREATE SEQUENCE public.apt_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.apt_seq OWNER TO postgres;
+ALTER SEQUENCE public.apt_seq OWNER TO mirror_user;
 
 --
 -- Name: audit_logs; Type: TABLE; Schema: public; Owner: postgres
@@ -256,7 +256,7 @@ CREATE TABLE public.audit_logs (
 );
 
 
-ALTER TABLE public.audit_logs OWNER TO postgres;
+ALTER TABLE public.audit_logs OWNER TO mirror_user;
 
 --
 -- Name: audit_logs_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -290,7 +290,7 @@ CREATE TABLE public.band_style_options (
 );
 
 
-ALTER TABLE public.band_style_options OWNER TO postgres;
+ALTER TABLE public.band_style_options OWNER TO mirror_user;
 
 --
 -- Name: band_style_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -318,7 +318,7 @@ CREATE SEQUENCE public.blk_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.blk_seq OWNER TO postgres;
+ALTER SEQUENCE public.blk_seq OWNER TO mirror_user;
 
 --
 -- Name: blocked_slots; Type: TABLE; Schema: public; Owner: postgres
@@ -342,7 +342,7 @@ CREATE TABLE public.blocked_slots (
 );
 
 
-ALTER TABLE public.blocked_slots OWNER TO postgres;
+ALTER TABLE public.blocked_slots OWNER TO mirror_user;
 
 --
 -- Name: COLUMN blocked_slots.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -454,7 +454,7 @@ CREATE SEQUENCE public.cat_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.cat_seq OWNER TO postgres;
+ALTER SEQUENCE public.cat_seq OWNER TO mirror_user;
 
 --
 -- Name: category_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -468,7 +468,7 @@ CREATE SEQUENCE public.category_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.category_seq OWNER TO postgres;
+ALTER SEQUENCE public.category_seq OWNER TO mirror_user;
 
 --
 -- Name: cer_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -482,7 +482,7 @@ CREATE SEQUENCE public.cer_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.cer_seq OWNER TO postgres;
+ALTER SEQUENCE public.cer_seq OWNER TO mirror_user;
 
 --
 -- Name: certificate_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -496,7 +496,7 @@ CREATE SEQUENCE public.certificate_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.certificate_seq OWNER TO postgres;
+ALTER SEQUENCE public.certificate_seq OWNER TO mirror_user;
 
 --
 -- Name: certificates; Type: TABLE; Schema: public; Owner: postgres
@@ -514,7 +514,7 @@ CREATE TABLE public.certificates (
 );
 
 
-ALTER TABLE public.certificates OWNER TO postgres;
+ALTER TABLE public.certificates OWNER TO mirror_user;
 
 --
 -- Name: COLUMN certificates.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -588,7 +588,7 @@ CREATE TABLE public.clarity_grade_options (
 );
 
 
-ALTER TABLE public.clarity_grade_options OWNER TO postgres;
+ALTER TABLE public.clarity_grade_options OWNER TO mirror_user;
 
 --
 -- Name: clarity_grade_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -616,7 +616,7 @@ CREATE SEQUENCE public.col_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.col_seq OWNER TO postgres;
+ALTER SEQUENCE public.col_seq OWNER TO mirror_user;
 
 --
 -- Name: collection_age_group_allocations; Type: TABLE; Schema: public; Owner: postgres
@@ -631,7 +631,7 @@ CREATE TABLE public.collection_age_group_allocations (
 );
 
 
-ALTER TABLE public.collection_age_group_allocations OWNER TO postgres;
+ALTER TABLE public.collection_age_group_allocations OWNER TO mirror_user;
 
 --
 -- Name: collection_plan_items; Type: TABLE; Schema: public; Owner: postgres
@@ -649,7 +649,7 @@ CREATE TABLE public.collection_plan_items (
 );
 
 
-ALTER TABLE public.collection_plan_items OWNER TO postgres;
+ALTER TABLE public.collection_plan_items OWNER TO mirror_user;
 
 --
 -- Name: collection_plans; Type: TABLE; Schema: public; Owner: postgres
@@ -668,7 +668,7 @@ CREATE TABLE public.collection_plans (
 );
 
 
-ALTER TABLE public.collection_plans OWNER TO postgres;
+ALTER TABLE public.collection_plans OWNER TO mirror_user;
 
 --
 -- Name: collection_products; Type: TABLE; Schema: public; Owner: postgres
@@ -687,7 +687,7 @@ CREATE TABLE public.collection_products (
 );
 
 
-ALTER TABLE public.collection_products OWNER TO postgres;
+ALTER TABLE public.collection_products OWNER TO mirror_user;
 
 --
 -- Name: COLUMN collection_products.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -779,7 +779,7 @@ CREATE TABLE public.collections (
 );
 
 
-ALTER TABLE public.collections OWNER TO postgres;
+ALTER TABLE public.collections OWNER TO mirror_user;
 
 --
 -- Name: COLUMN collections.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -916,7 +916,7 @@ CREATE TABLE public.color_grade_options (
 );
 
 
-ALTER TABLE public.color_grade_options OWNER TO postgres;
+ALTER TABLE public.color_grade_options OWNER TO mirror_user;
 
 --
 -- Name: color_grade_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -944,7 +944,7 @@ CREATE SEQUENCE public.com_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.com_seq OWNER TO postgres;
+ALTER SEQUENCE public.com_seq OWNER TO mirror_user;
 
 --
 -- Name: component_optional_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -958,7 +958,7 @@ CREATE SEQUENCE public.component_optional_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.component_optional_seq OWNER TO postgres;
+ALTER SEQUENCE public.component_optional_seq OWNER TO mirror_user;
 
 --
 -- Name: component_optionals; Type: TABLE; Schema: public; Owner: postgres
@@ -976,7 +976,7 @@ CREATE TABLE public.component_optionals (
 );
 
 
-ALTER TABLE public.component_optionals OWNER TO postgres;
+ALTER TABLE public.component_optionals OWNER TO mirror_user;
 
 --
 -- Name: component_ownership_log_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -990,7 +990,7 @@ CREATE SEQUENCE public.component_ownership_log_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.component_ownership_log_seq OWNER TO postgres;
+ALTER SEQUENCE public.component_ownership_log_seq OWNER TO mirror_user;
 
 --
 -- Name: component_ownership_logs; Type: TABLE; Schema: public; Owner: postgres
@@ -1023,7 +1023,7 @@ CREATE TABLE public.component_ownership_logs (
 );
 
 
-ALTER TABLE public.component_ownership_logs OWNER TO postgres;
+ALTER TABLE public.component_ownership_logs OWNER TO mirror_user;
 
 --
 -- Name: component_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -1037,7 +1037,7 @@ CREATE SEQUENCE public.component_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.component_seq OWNER TO postgres;
+ALTER SEQUENCE public.component_seq OWNER TO mirror_user;
 
 --
 -- Name: components; Type: TABLE; Schema: public; Owner: postgres
@@ -1055,7 +1055,7 @@ CREATE TABLE public.components (
 );
 
 
-ALTER TABLE public.components OWNER TO postgres;
+ALTER TABLE public.components OWNER TO mirror_user;
 
 --
 -- Name: country_of_origin_options; Type: TABLE; Schema: public; Owner: postgres
@@ -1073,7 +1073,7 @@ CREATE TABLE public.country_of_origin_options (
 );
 
 
-ALTER TABLE public.country_of_origin_options OWNER TO postgres;
+ALTER TABLE public.country_of_origin_options OWNER TO mirror_user;
 
 --
 -- Name: country_of_origin_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -1101,7 +1101,7 @@ CREATE SEQUENCE public.cpr_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.cpr_seq OWNER TO postgres;
+ALTER SEQUENCE public.cpr_seq OWNER TO mirror_user;
 
 --
 -- Name: databasechangelog; Type: TABLE; Schema: public; Owner: postgres
@@ -1125,7 +1125,7 @@ CREATE TABLE public.databasechangelog (
 );
 
 
-ALTER TABLE public.databasechangelog OWNER TO postgres;
+ALTER TABLE public.databasechangelog OWNER TO mirror_user;
 
 --
 -- Name: databasechangeloglock; Type: TABLE; Schema: public; Owner: postgres
@@ -1139,7 +1139,7 @@ CREATE TABLE public.databasechangeloglock (
 );
 
 
-ALTER TABLE public.databasechangeloglock OWNER TO postgres;
+ALTER TABLE public.databasechangeloglock OWNER TO mirror_user;
 
 --
 -- Name: des_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -1153,7 +1153,7 @@ CREATE SEQUENCE public.des_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.des_seq OWNER TO postgres;
+ALTER SEQUENCE public.des_seq OWNER TO mirror_user;
 
 --
 -- Name: design_product_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -1167,7 +1167,7 @@ CREATE SEQUENCE public.design_product_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.design_product_seq OWNER TO postgres;
+ALTER SEQUENCE public.design_product_seq OWNER TO mirror_user;
 
 --
 -- Name: design_products; Type: TABLE; Schema: public; Owner: postgres
@@ -1200,7 +1200,7 @@ CREATE TABLE public.design_products (
 );
 
 
-ALTER TABLE public.design_products OWNER TO postgres;
+ALTER TABLE public.design_products OWNER TO mirror_user;
 
 --
 -- Name: design_sale_transaction_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -1214,7 +1214,7 @@ CREATE SEQUENCE public.design_sale_transaction_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.design_sale_transaction_seq OWNER TO postgres;
+ALTER SEQUENCE public.design_sale_transaction_seq OWNER TO mirror_user;
 
 --
 -- Name: design_sale_transactions; Type: TABLE; Schema: public; Owner: postgres
@@ -1242,7 +1242,7 @@ CREATE TABLE public.design_sale_transactions (
 );
 
 
-ALTER TABLE public.design_sale_transactions OWNER TO postgres;
+ALTER TABLE public.design_sale_transactions OWNER TO mirror_user;
 
 --
 -- Name: designer_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -1256,7 +1256,7 @@ CREATE SEQUENCE public.designer_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.designer_seq OWNER TO postgres;
+ALTER SEQUENCE public.designer_seq OWNER TO mirror_user;
 
 --
 -- Name: designers; Type: TABLE; Schema: public; Owner: postgres
@@ -1295,7 +1295,7 @@ CREATE TABLE public.designers (
 );
 
 
-ALTER TABLE public.designers OWNER TO postgres;
+ALTER TABLE public.designers OWNER TO mirror_user;
 
 --
 -- Name: dpr_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -1309,7 +1309,7 @@ CREATE SEQUENCE public.dpr_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.dpr_seq OWNER TO postgres;
+ALTER SEQUENCE public.dpr_seq OWNER TO mirror_user;
 
 --
 -- Name: dst_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -1323,7 +1323,7 @@ CREATE SEQUENCE public.dst_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.dst_seq OWNER TO postgres;
+ALTER SEQUENCE public.dst_seq OWNER TO mirror_user;
 
 --
 -- Name: email_verification_tokens; Type: TABLE; Schema: public; Owner: postgres
@@ -1339,7 +1339,7 @@ CREATE TABLE public.email_verification_tokens (
 );
 
 
-ALTER TABLE public.email_verification_tokens OWNER TO postgres;
+ALTER TABLE public.email_verification_tokens OWNER TO mirror_user;
 
 --
 -- Name: email_verification_tokens_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -1367,7 +1367,7 @@ CREATE SEQUENCE public.fil_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.fil_seq OWNER TO postgres;
+ALTER SEQUENCE public.fil_seq OWNER TO mirror_user;
 
 --
 -- Name: file_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -1381,7 +1381,7 @@ CREATE SEQUENCE public.file_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.file_seq OWNER TO postgres;
+ALTER SEQUENCE public.file_seq OWNER TO mirror_user;
 
 --
 -- Name: hol_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -1395,7 +1395,7 @@ CREATE SEQUENCE public.hol_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.hol_seq OWNER TO postgres;
+ALTER SEQUENCE public.hol_seq OWNER TO mirror_user;
 
 --
 -- Name: id_sequences; Type: TABLE; Schema: public; Owner: postgres
@@ -1409,7 +1409,7 @@ CREATE TABLE public.id_sequences (
 );
 
 
-ALTER TABLE public.id_sequences OWNER TO postgres;
+ALTER TABLE public.id_sequences OWNER TO mirror_user;
 
 --
 -- Name: inp_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -1423,7 +1423,7 @@ CREATE SEQUENCE public.inp_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.inp_seq OWNER TO postgres;
+ALTER SEQUENCE public.inp_seq OWNER TO mirror_user;
 
 --
 -- Name: inventory_movements; Type: TABLE; Schema: public; Owner: postgres
@@ -1449,7 +1449,7 @@ CREATE TABLE public.inventory_movements (
 );
 
 
-ALTER TABLE public.inventory_movements OWNER TO postgres;
+ALTER TABLE public.inventory_movements OWNER TO mirror_user;
 
 --
 -- Name: COLUMN inventory_movements.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -1599,7 +1599,7 @@ CREATE TABLE public.inventory_position_history (
 );
 
 
-ALTER TABLE public.inventory_position_history OWNER TO postgres;
+ALTER TABLE public.inventory_position_history OWNER TO mirror_user;
 
 --
 -- Name: COLUMN inventory_position_history.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -1823,7 +1823,7 @@ CREATE TABLE public.inventory_positions (
 );
 
 
-ALTER TABLE public.inventory_positions OWNER TO postgres;
+ALTER TABLE public.inventory_positions OWNER TO mirror_user;
 
 --
 -- Name: COLUMN inventory_positions.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -1963,7 +1963,7 @@ CREATE SEQUENCE public.iph_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.iph_seq OWNER TO postgres;
+ALTER SEQUENCE public.iph_seq OWNER TO mirror_user;
 
 --
 -- Name: itc_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -1977,7 +1977,7 @@ CREATE SEQUENCE public.itc_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.itc_seq OWNER TO postgres;
+ALTER SEQUENCE public.itc_seq OWNER TO mirror_user;
 
 --
 -- Name: item_variant_config_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -1991,7 +1991,7 @@ CREATE SEQUENCE public.item_variant_config_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.item_variant_config_seq OWNER TO postgres;
+ALTER SEQUENCE public.item_variant_config_seq OWNER TO mirror_user;
 
 --
 -- Name: item_variant_configs; Type: TABLE; Schema: public; Owner: postgres
@@ -2008,7 +2008,7 @@ CREATE TABLE public.item_variant_configs (
 );
 
 
-ALTER TABLE public.item_variant_configs OWNER TO postgres;
+ALTER TABLE public.item_variant_configs OWNER TO mirror_user;
 
 --
 -- Name: item_variant_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2022,7 +2022,7 @@ CREATE SEQUENCE public.item_variant_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.item_variant_seq OWNER TO postgres;
+ALTER SEQUENCE public.item_variant_seq OWNER TO mirror_user;
 
 --
 -- Name: item_variants; Type: TABLE; Schema: public; Owner: postgres
@@ -2039,7 +2039,7 @@ CREATE TABLE public.item_variants (
 );
 
 
-ALTER TABLE public.item_variants OWNER TO postgres;
+ALTER TABLE public.item_variants OWNER TO mirror_user;
 
 --
 -- Name: itv_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2053,7 +2053,7 @@ CREATE SEQUENCE public.itv_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.itv_seq OWNER TO postgres;
+ALTER SEQUENCE public.itv_seq OWNER TO mirror_user;
 
 --
 -- Name: ivm_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2067,7 +2067,7 @@ CREATE SEQUENCE public.ivm_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ivm_seq OWNER TO postgres;
+ALTER SEQUENCE public.ivm_seq OWNER TO mirror_user;
 
 --
 -- Name: jewelry_technical_reports; Type: TABLE; Schema: public; Owner: postgres
@@ -2114,7 +2114,7 @@ CREATE TABLE public.jewelry_technical_reports (
 );
 
 
-ALTER TABLE public.jewelry_technical_reports OWNER TO postgres;
+ALTER TABLE public.jewelry_technical_reports OWNER TO mirror_user;
 
 --
 -- Name: jlc_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2128,7 +2128,7 @@ CREATE SEQUENCE public.jlc_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jlc_seq OWNER TO postgres;
+ALTER SEQUENCE public.jlc_seq OWNER TO mirror_user;
 
 --
 -- Name: jmc_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2142,7 +2142,7 @@ CREATE SEQUENCE public.jmc_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jmc_seq OWNER TO postgres;
+ALTER SEQUENCE public.jmc_seq OWNER TO mirror_user;
 
 --
 -- Name: jsc_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2156,7 +2156,7 @@ CREATE SEQUENCE public.jsc_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jsc_seq OWNER TO postgres;
+ALTER SEQUENCE public.jsc_seq OWNER TO mirror_user;
 
 --
 -- Name: jtr_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2170,7 +2170,7 @@ CREATE SEQUENCE public.jtr_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jtr_seq OWNER TO postgres;
+ALTER SEQUENCE public.jtr_seq OWNER TO mirror_user;
 
 --
 -- Name: jtrc_labor_component_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2184,7 +2184,7 @@ CREATE SEQUENCE public.jtrc_labor_component_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jtrc_labor_component_seq OWNER TO postgres;
+ALTER SEQUENCE public.jtrc_labor_component_seq OWNER TO mirror_user;
 
 --
 -- Name: jtrc_labor_components; Type: TABLE; Schema: public; Owner: postgres
@@ -2204,7 +2204,7 @@ CREATE TABLE public.jtrc_labor_components (
 );
 
 
-ALTER TABLE public.jtrc_labor_components OWNER TO postgres;
+ALTER TABLE public.jtrc_labor_components OWNER TO mirror_user;
 
 --
 -- Name: jtrc_metal_component_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2218,7 +2218,7 @@ CREATE SEQUENCE public.jtrc_metal_component_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jtrc_metal_component_seq OWNER TO postgres;
+ALTER SEQUENCE public.jtrc_metal_component_seq OWNER TO mirror_user;
 
 --
 -- Name: jtrc_metal_components; Type: TABLE; Schema: public; Owner: postgres
@@ -2242,7 +2242,7 @@ CREATE TABLE public.jtrc_metal_components (
 );
 
 
-ALTER TABLE public.jtrc_metal_components OWNER TO postgres;
+ALTER TABLE public.jtrc_metal_components OWNER TO mirror_user;
 
 --
 -- Name: jtrc_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2256,7 +2256,7 @@ CREATE SEQUENCE public.jtrc_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jtrc_seq OWNER TO postgres;
+ALTER SEQUENCE public.jtrc_seq OWNER TO mirror_user;
 
 --
 -- Name: jtrc_stone_component_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2270,7 +2270,7 @@ CREATE SEQUENCE public.jtrc_stone_component_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jtrc_stone_component_seq OWNER TO postgres;
+ALTER SEQUENCE public.jtrc_stone_component_seq OWNER TO mirror_user;
 
 --
 -- Name: jtrc_stone_components; Type: TABLE; Schema: public; Owner: postgres
@@ -2301,7 +2301,7 @@ CREATE TABLE public.jtrc_stone_components (
 );
 
 
-ALTER TABLE public.jtrc_stone_components OWNER TO postgres;
+ALTER TABLE public.jtrc_stone_components OWNER TO mirror_user;
 
 --
 -- Name: label_template_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2315,7 +2315,7 @@ CREATE SEQUENCE public.label_template_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.label_template_seq OWNER TO postgres;
+ALTER SEQUENCE public.label_template_seq OWNER TO mirror_user;
 
 --
 -- Name: label_templates; Type: TABLE; Schema: public; Owner: postgres
@@ -2351,7 +2351,7 @@ CREATE TABLE public.label_templates (
 );
 
 
-ALTER TABLE public.label_templates OWNER TO postgres;
+ALTER TABLE public.label_templates OWNER TO mirror_user;
 
 --
 -- Name: labor_type_options; Type: TABLE; Schema: public; Owner: postgres
@@ -2369,7 +2369,7 @@ CREATE TABLE public.labor_type_options (
 );
 
 
-ALTER TABLE public.labor_type_options OWNER TO postgres;
+ALTER TABLE public.labor_type_options OWNER TO mirror_user;
 
 --
 -- Name: labor_type_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2397,7 +2397,7 @@ CREATE SEQUENCE public.lbt_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.lbt_seq OWNER TO postgres;
+ALTER SEQUENCE public.lbt_seq OWNER TO mirror_user;
 
 --
 -- Name: loc_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2411,7 +2411,7 @@ CREATE SEQUENCE public.loc_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.loc_seq OWNER TO postgres;
+ALTER SEQUENCE public.loc_seq OWNER TO mirror_user;
 
 --
 -- Name: locations; Type: TABLE; Schema: public; Owner: postgres
@@ -2442,7 +2442,7 @@ CREATE TABLE public.locations (
 );
 
 
-ALTER TABLE public.locations OWNER TO postgres;
+ALTER TABLE public.locations OWNER TO mirror_user;
 
 --
 -- Name: COLUMN locations.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -2612,7 +2612,7 @@ CREATE TABLE public.market_trends (
 );
 
 
-ALTER TABLE public.market_trends OWNER TO postgres;
+ALTER TABLE public.market_trends OWNER TO mirror_user;
 
 --
 -- Name: market_trends_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2644,7 +2644,7 @@ CREATE TABLE public.material_color_options (
 );
 
 
-ALTER TABLE public.material_color_options OWNER TO postgres;
+ALTER TABLE public.material_color_options OWNER TO mirror_user;
 
 --
 -- Name: material_color_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2681,7 +2681,7 @@ CREATE TABLE public.material_inventory (
 );
 
 
-ALTER TABLE public.material_inventory OWNER TO postgres;
+ALTER TABLE public.material_inventory OWNER TO mirror_user;
 
 --
 -- Name: material_options; Type: TABLE; Schema: public; Owner: postgres
@@ -2699,7 +2699,7 @@ CREATE TABLE public.material_options (
 );
 
 
-ALTER TABLE public.material_options OWNER TO postgres;
+ALTER TABLE public.material_options OWNER TO mirror_user;
 
 --
 -- Name: material_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2731,7 +2731,7 @@ CREATE TABLE public.metal_purity_options (
 );
 
 
-ALTER TABLE public.metal_purity_options OWNER TO postgres;
+ALTER TABLE public.metal_purity_options OWNER TO mirror_user;
 
 --
 -- Name: metal_purity_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2763,7 +2763,7 @@ CREATE TABLE public.metal_type_options (
 );
 
 
-ALTER TABLE public.metal_type_options OWNER TO postgres;
+ALTER TABLE public.metal_type_options OWNER TO mirror_user;
 
 --
 -- Name: metal_type_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2813,7 +2813,7 @@ CREATE TABLE public.mirror_diamonds (
 );
 
 
-ALTER TABLE public.mirror_diamonds OWNER TO postgres;
+ALTER TABLE public.mirror_diamonds OWNER TO mirror_user;
 
 --
 -- Name: mirror_products; Type: TABLE; Schema: public; Owner: postgres
@@ -2874,7 +2874,7 @@ CREATE TABLE public.mirror_products (
 );
 
 
-ALTER TABLE public.mirror_products OWNER TO postgres;
+ALTER TABLE public.mirror_products OWNER TO mirror_user;
 
 --
 -- Name: misa_balance_trackers; Type: TABLE; Schema: public; Owner: postgres
@@ -2904,7 +2904,7 @@ CREATE TABLE public.misa_balance_trackers (
 );
 
 
-ALTER TABLE public.misa_balance_trackers OWNER TO postgres;
+ALTER TABLE public.misa_balance_trackers OWNER TO mirror_user;
 
 --
 -- Name: misa_balance_trackers_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2949,7 +2949,7 @@ CREATE TABLE public.misa_callback_logs (
 );
 
 
-ALTER TABLE public.misa_callback_logs OWNER TO postgres;
+ALTER TABLE public.misa_callback_logs OWNER TO mirror_user;
 
 --
 -- Name: misa_callback_logs_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3000,7 +3000,7 @@ CREATE TABLE public.misa_customers (
 );
 
 
-ALTER TABLE public.misa_customers OWNER TO postgres;
+ALTER TABLE public.misa_customers OWNER TO mirror_user;
 
 --
 -- Name: misa_customers_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3063,7 +3063,7 @@ CREATE TABLE public.misa_inventory_items (
 );
 
 
-ALTER TABLE public.misa_inventory_items OWNER TO postgres;
+ALTER TABLE public.misa_inventory_items OWNER TO mirror_user;
 
 --
 -- Name: misa_inventory_items_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3122,7 +3122,7 @@ CREATE TABLE public.misa_invoices (
 );
 
 
-ALTER TABLE public.misa_invoices OWNER TO postgres;
+ALTER TABLE public.misa_invoices OWNER TO mirror_user;
 
 --
 -- Name: misa_invoices_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3165,7 +3165,7 @@ CREATE TABLE public.misa_product_categories (
 );
 
 
-ALTER TABLE public.misa_product_categories OWNER TO postgres;
+ALTER TABLE public.misa_product_categories OWNER TO mirror_user;
 
 --
 -- Name: misa_product_categories_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3203,7 +3203,7 @@ CREATE TABLE public.misa_sync_logs (
 );
 
 
-ALTER TABLE public.misa_sync_logs OWNER TO postgres;
+ALTER TABLE public.misa_sync_logs OWNER TO mirror_user;
 
 --
 -- Name: misa_sync_logs_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3243,7 +3243,7 @@ CREATE TABLE public.misa_warehouses (
 );
 
 
-ALTER TABLE public.misa_warehouses OWNER TO postgres;
+ALTER TABLE public.misa_warehouses OWNER TO mirror_user;
 
 --
 -- Name: misa_warehouses_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3271,7 +3271,7 @@ CREATE SEQUENCE public.ops_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ops_seq OWNER TO postgres;
+ALTER SEQUENCE public.ops_seq OWNER TO mirror_user;
 
 --
 -- Name: opt_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3285,7 +3285,7 @@ CREATE SEQUENCE public.opt_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.opt_seq OWNER TO postgres;
+ALTER SEQUENCE public.opt_seq OWNER TO mirror_user;
 
 --
 -- Name: ord_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3299,7 +3299,7 @@ CREATE SEQUENCE public.ord_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ord_seq OWNER TO postgres;
+ALTER SEQUENCE public.ord_seq OWNER TO mirror_user;
 
 --
 -- Name: order_item_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3313,7 +3313,7 @@ CREATE SEQUENCE public.order_item_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.order_item_seq OWNER TO postgres;
+ALTER SEQUENCE public.order_item_seq OWNER TO mirror_user;
 
 --
 -- Name: order_items; Type: TABLE; Schema: public; Owner: postgres
@@ -3336,7 +3336,7 @@ CREATE TABLE public.order_items (
 );
 
 
-ALTER TABLE public.order_items OWNER TO postgres;
+ALTER TABLE public.order_items OWNER TO mirror_user;
 
 --
 -- Name: order_payment_schedule; Type: TABLE; Schema: public; Owner: postgres
@@ -3359,7 +3359,7 @@ CREATE TABLE public.order_payment_schedule (
 );
 
 
-ALTER TABLE public.order_payment_schedule OWNER TO postgres;
+ALTER TABLE public.order_payment_schedule OWNER TO mirror_user;
 
 --
 -- Name: order_payment_schedule_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3373,7 +3373,7 @@ CREATE SEQUENCE public.order_payment_schedule_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.order_payment_schedule_seq OWNER TO postgres;
+ALTER SEQUENCE public.order_payment_schedule_seq OWNER TO mirror_user;
 
 --
 -- Name: order_payment_transactions; Type: TABLE; Schema: public; Owner: postgres
@@ -3395,7 +3395,7 @@ CREATE TABLE public.order_payment_transactions (
 );
 
 
-ALTER TABLE public.order_payment_transactions OWNER TO postgres;
+ALTER TABLE public.order_payment_transactions OWNER TO mirror_user;
 
 --
 -- Name: order_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3409,7 +3409,7 @@ CREATE SEQUENCE public.order_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.order_seq OWNER TO postgres;
+ALTER SEQUENCE public.order_seq OWNER TO mirror_user;
 
 --
 -- Name: order_status_history; Type: TABLE; Schema: public; Owner: postgres
@@ -3429,7 +3429,7 @@ CREATE TABLE public.order_status_history (
 );
 
 
-ALTER TABLE public.order_status_history OWNER TO postgres;
+ALTER TABLE public.order_status_history OWNER TO mirror_user;
 
 --
 -- Name: order_status_history_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3443,7 +3443,7 @@ CREATE SEQUENCE public.order_status_history_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.order_status_history_seq OWNER TO postgres;
+ALTER SEQUENCE public.order_status_history_seq OWNER TO mirror_user;
 
 --
 -- Name: orders; Type: TABLE; Schema: public; Owner: postgres
@@ -3495,7 +3495,7 @@ CREATE TABLE public.orders (
 );
 
 
-ALTER TABLE public.orders OWNER TO postgres;
+ALTER TABLE public.orders OWNER TO mirror_user;
 
 --
 -- Name: COLUMN orders.user_id; Type: COMMENT; Schema: public; Owner: postgres
@@ -3572,7 +3572,7 @@ CREATE SEQUENCE public.ori_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ori_seq OWNER TO postgres;
+ALTER SEQUENCE public.ori_seq OWNER TO mirror_user;
 
 --
 -- Name: osh_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3586,7 +3586,7 @@ CREATE SEQUENCE public.osh_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.osh_seq OWNER TO postgres;
+ALTER SEQUENCE public.osh_seq OWNER TO mirror_user;
 
 --
 -- Name: partner_capabilities; Type: TABLE; Schema: public; Owner: postgres
@@ -3609,7 +3609,7 @@ CREATE TABLE public.partner_capabilities (
 );
 
 
-ALTER TABLE public.partner_capabilities OWNER TO postgres;
+ALTER TABLE public.partner_capabilities OWNER TO mirror_user;
 
 --
 -- Name: partner_capability_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3623,7 +3623,7 @@ CREATE SEQUENCE public.partner_capability_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.partner_capability_seq OWNER TO postgres;
+ALTER SEQUENCE public.partner_capability_seq OWNER TO mirror_user;
 
 --
 -- Name: partner_inventory; Type: TABLE; Schema: public; Owner: postgres
@@ -3650,7 +3650,7 @@ CREATE TABLE public.partner_inventory (
 );
 
 
-ALTER TABLE public.partner_inventory OWNER TO postgres;
+ALTER TABLE public.partner_inventory OWNER TO mirror_user;
 
 --
 -- Name: COLUMN partner_inventory.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -3792,7 +3792,7 @@ CREATE TABLE public.partner_sale_items (
 );
 
 
-ALTER TABLE public.partner_sale_items OWNER TO postgres;
+ALTER TABLE public.partner_sale_items OWNER TO mirror_user;
 
 --
 -- Name: COLUMN partner_sale_items.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -3918,7 +3918,7 @@ CREATE TABLE public.partner_sales (
 );
 
 
-ALTER TABLE public.partner_sales OWNER TO postgres;
+ALTER TABLE public.partner_sales OWNER TO mirror_user;
 
 --
 -- Name: COLUMN partner_sales.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -4107,7 +4107,7 @@ CREATE SEQUENCE public.pat_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pat_seq OWNER TO postgres;
+ALTER SEQUENCE public.pat_seq OWNER TO mirror_user;
 
 --
 -- Name: pcm_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -4121,7 +4121,7 @@ CREATE SEQUENCE public.pcm_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pcm_seq OWNER TO postgres;
+ALTER SEQUENCE public.pcm_seq OWNER TO mirror_user;
 
 --
 -- Name: pcp_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -4135,7 +4135,7 @@ CREATE SEQUENCE public.pcp_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pcp_seq OWNER TO postgres;
+ALTER SEQUENCE public.pcp_seq OWNER TO mirror_user;
 
 --
 -- Name: permissions; Type: TABLE; Schema: public; Owner: postgres
@@ -4155,7 +4155,7 @@ CREATE TABLE public.permissions (
 );
 
 
-ALTER TABLE public.permissions OWNER TO postgres;
+ALTER TABLE public.permissions OWNER TO mirror_user;
 
 --
 -- Name: permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -4183,7 +4183,7 @@ CREATE SEQUENCE public.piv_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.piv_seq OWNER TO postgres;
+ALTER SEQUENCE public.piv_seq OWNER TO mirror_user;
 
 --
 -- Name: pjb_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -4197,7 +4197,7 @@ CREATE SEQUENCE public.pjb_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pjb_seq OWNER TO postgres;
+ALTER SEQUENCE public.pjb_seq OWNER TO mirror_user;
 
 --
 -- Name: pji_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -4211,7 +4211,7 @@ CREATE SEQUENCE public.pji_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pji_seq OWNER TO postgres;
+ALTER SEQUENCE public.pji_seq OWNER TO mirror_user;
 
 --
 -- Name: pod_attributions; Type: TABLE; Schema: public; Owner: postgres
@@ -4244,7 +4244,7 @@ CREATE TABLE public.pod_attributions (
 );
 
 
-ALTER TABLE public.pod_attributions OWNER TO postgres;
+ALTER TABLE public.pod_attributions OWNER TO mirror_user;
 
 --
 -- Name: COLUMN pod_attributions.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -4446,7 +4446,7 @@ CREATE TABLE public.pod_commissions (
 );
 
 
-ALTER TABLE public.pod_commissions OWNER TO postgres;
+ALTER TABLE public.pod_commissions OWNER TO mirror_user;
 
 --
 -- Name: COLUMN pod_commissions.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -4714,7 +4714,7 @@ CREATE TABLE public.pod_partners (
 );
 
 
-ALTER TABLE public.pod_partners OWNER TO postgres;
+ALTER TABLE public.pod_partners OWNER TO mirror_user;
 
 --
 -- Name: COLUMN pod_partners.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -4949,7 +4949,7 @@ CREATE TABLE public.pod_products (
 );
 
 
-ALTER TABLE public.pod_products OWNER TO postgres;
+ALTER TABLE public.pod_products OWNER TO mirror_user;
 
 --
 -- Name: COLUMN pod_products.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -5045,7 +5045,7 @@ CREATE TABLE public.pod_qr_codes (
 );
 
 
-ALTER TABLE public.pod_qr_codes OWNER TO postgres;
+ALTER TABLE public.pod_qr_codes OWNER TO mirror_user;
 
 --
 -- Name: COLUMN pod_qr_codes.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -5174,7 +5174,7 @@ CREATE TABLE public.pod_qr_scans (
 );
 
 
-ALTER TABLE public.pod_qr_scans OWNER TO postgres;
+ALTER TABLE public.pod_qr_scans OWNER TO mirror_user;
 
 --
 -- Name: COLUMN pod_qr_scans.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -5335,7 +5335,7 @@ CREATE SEQUENCE public.pod_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pod_seq OWNER TO postgres;
+ALTER SEQUENCE public.pod_seq OWNER TO mirror_user;
 
 --
 -- Name: pod_user_attributions; Type: TABLE; Schema: public; Owner: postgres
@@ -5358,7 +5358,7 @@ CREATE TABLE public.pod_user_attributions (
 );
 
 
-ALTER TABLE public.pod_user_attributions OWNER TO postgres;
+ALTER TABLE public.pod_user_attributions OWNER TO mirror_user;
 
 --
 -- Name: COLUMN pod_user_attributions.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -5490,7 +5490,7 @@ CREATE TABLE public.pods (
 );
 
 
-ALTER TABLE public.pods OWNER TO postgres;
+ALTER TABLE public.pods OWNER TO mirror_user;
 
 --
 -- Name: COLUMN pods.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -5707,7 +5707,7 @@ CREATE SEQUENCE public.por_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.por_seq OWNER TO postgres;
+ALTER SEQUENCE public.por_seq OWNER TO mirror_user;
 
 --
 -- Name: pos_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -5721,7 +5721,7 @@ CREATE SEQUENCE public.pos_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pos_seq OWNER TO postgres;
+ALTER SEQUENCE public.pos_seq OWNER TO mirror_user;
 
 --
 -- Name: ppl_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -5735,7 +5735,7 @@ CREATE SEQUENCE public.ppl_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ppl_seq OWNER TO postgres;
+ALTER SEQUENCE public.ppl_seq OWNER TO mirror_user;
 
 --
 -- Name: pqr_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -5749,7 +5749,7 @@ CREATE SEQUENCE public.pqr_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pqr_seq OWNER TO postgres;
+ALTER SEQUENCE public.pqr_seq OWNER TO mirror_user;
 
 --
 -- Name: pqs_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -5763,7 +5763,7 @@ CREATE SEQUENCE public.pqs_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pqs_seq OWNER TO postgres;
+ALTER SEQUENCE public.pqs_seq OWNER TO mirror_user;
 
 --
 -- Name: prd_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -5777,7 +5777,7 @@ CREATE SEQUENCE public.prd_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.prd_seq OWNER TO postgres;
+ALTER SEQUENCE public.prd_seq OWNER TO mirror_user;
 
 --
 -- Name: print_job_items; Type: TABLE; Schema: public; Owner: postgres
@@ -5799,7 +5799,7 @@ CREATE TABLE public.print_job_items (
 );
 
 
-ALTER TABLE public.print_job_items OWNER TO postgres;
+ALTER TABLE public.print_job_items OWNER TO mirror_user;
 
 --
 -- Name: print_jobs; Type: TABLE; Schema: public; Owner: postgres
@@ -5827,7 +5827,7 @@ CREATE TABLE public.print_jobs (
 );
 
 
-ALTER TABLE public.print_jobs OWNER TO postgres;
+ALTER TABLE public.print_jobs OWNER TO mirror_user;
 
 --
 -- Name: product_certificates; Type: TABLE; Schema: public; Owner: postgres
@@ -5841,7 +5841,7 @@ CREATE TABLE public.product_certificates (
 );
 
 
-ALTER TABLE public.product_certificates OWNER TO postgres;
+ALTER TABLE public.product_certificates OWNER TO mirror_user;
 
 --
 -- Name: COLUMN product_certificates.product_id; Type: COMMENT; Schema: public; Owner: postgres
@@ -5888,7 +5888,7 @@ CREATE TABLE public.product_finder_combinations (
 );
 
 
-ALTER TABLE public.product_finder_combinations OWNER TO postgres;
+ALTER TABLE public.product_finder_combinations OWNER TO mirror_user;
 
 --
 -- Name: product_finder_combinations_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -5927,7 +5927,7 @@ CREATE TABLE public.product_finder_selections (
 );
 
 
-ALTER TABLE public.product_finder_selections OWNER TO postgres;
+ALTER TABLE public.product_finder_selections OWNER TO mirror_user;
 
 --
 -- Name: product_finder_selections_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -5961,7 +5961,7 @@ CREATE TABLE public.product_finder_side_stone_options (
 );
 
 
-ALTER TABLE public.product_finder_side_stone_options OWNER TO postgres;
+ALTER TABLE public.product_finder_side_stone_options OWNER TO mirror_user;
 
 --
 -- Name: product_finder_side_stone_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -5989,7 +5989,7 @@ CREATE SEQUENCE public.production_order_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.production_order_seq OWNER TO postgres;
+ALTER SEQUENCE public.production_order_seq OWNER TO mirror_user;
 
 --
 -- Name: production_order_stage_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6003,7 +6003,7 @@ CREATE SEQUENCE public.production_order_stage_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.production_order_stage_seq OWNER TO postgres;
+ALTER SEQUENCE public.production_order_stage_seq OWNER TO mirror_user;
 
 --
 -- Name: production_order_stages; Type: TABLE; Schema: public; Owner: postgres
@@ -6040,7 +6040,7 @@ CREATE TABLE public.production_order_stages (
 );
 
 
-ALTER TABLE public.production_order_stages OWNER TO postgres;
+ALTER TABLE public.production_order_stages OWNER TO mirror_user;
 
 --
 -- Name: production_orders; Type: TABLE; Schema: public; Owner: postgres
@@ -6071,7 +6071,7 @@ CREATE TABLE public.production_orders (
 );
 
 
-ALTER TABLE public.production_orders OWNER TO postgres;
+ALTER TABLE public.production_orders OWNER TO mirror_user;
 
 --
 -- Name: production_plan_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6085,7 +6085,7 @@ CREATE SEQUENCE public.production_plan_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.production_plan_seq OWNER TO postgres;
+ALTER SEQUENCE public.production_plan_seq OWNER TO mirror_user;
 
 --
 -- Name: production_plans; Type: TABLE; Schema: public; Owner: postgres
@@ -6114,7 +6114,7 @@ CREATE TABLE public.production_plans (
 );
 
 
-ALTER TABLE public.production_plans OWNER TO postgres;
+ALTER TABLE public.production_plans OWNER TO mirror_user;
 
 --
 -- Name: psi_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6128,7 +6128,7 @@ CREATE SEQUENCE public.psi_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.psi_seq OWNER TO postgres;
+ALTER SEQUENCE public.psi_seq OWNER TO mirror_user;
 
 --
 -- Name: psl_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6142,7 +6142,7 @@ CREATE SEQUENCE public.psl_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.psl_seq OWNER TO postgres;
+ALTER SEQUENCE public.psl_seq OWNER TO mirror_user;
 
 --
 -- Name: ptn_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6156,7 +6156,7 @@ CREATE SEQUENCE public.ptn_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ptn_seq OWNER TO postgres;
+ALTER SEQUENCE public.ptn_seq OWNER TO mirror_user;
 
 --
 -- Name: ptr_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6170,7 +6170,7 @@ CREATE SEQUENCE public.ptr_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ptr_seq OWNER TO postgres;
+ALTER SEQUENCE public.ptr_seq OWNER TO mirror_user;
 
 --
 -- Name: ptx_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6184,7 +6184,7 @@ CREATE SEQUENCE public.ptx_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ptx_seq OWNER TO postgres;
+ALTER SEQUENCE public.ptx_seq OWNER TO mirror_user;
 
 --
 -- Name: pua_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6198,7 +6198,7 @@ CREATE SEQUENCE public.pua_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pua_seq OWNER TO postgres;
+ALTER SEQUENCE public.pua_seq OWNER TO mirror_user;
 
 --
 -- Name: purchase_order_age_group_allocations; Type: TABLE; Schema: public; Owner: postgres
@@ -6213,7 +6213,7 @@ CREATE TABLE public.purchase_order_age_group_allocations (
 );
 
 
-ALTER TABLE public.purchase_order_age_group_allocations OWNER TO postgres;
+ALTER TABLE public.purchase_order_age_group_allocations OWNER TO mirror_user;
 
 --
 -- Name: purchase_order_item_variants; Type: TABLE; Schema: public; Owner: postgres
@@ -6229,7 +6229,7 @@ CREATE TABLE public.purchase_order_item_variants (
 );
 
 
-ALTER TABLE public.purchase_order_item_variants OWNER TO postgres;
+ALTER TABLE public.purchase_order_item_variants OWNER TO mirror_user;
 
 --
 -- Name: purchase_order_items; Type: TABLE; Schema: public; Owner: postgres
@@ -6245,7 +6245,7 @@ CREATE TABLE public.purchase_order_items (
 );
 
 
-ALTER TABLE public.purchase_order_items OWNER TO postgres;
+ALTER TABLE public.purchase_order_items OWNER TO mirror_user;
 
 --
 -- Name: purchase_orders; Type: TABLE; Schema: public; Owner: postgres
@@ -6261,7 +6261,7 @@ CREATE TABLE public.purchase_orders (
 );
 
 
-ALTER TABLE public.purchase_orders OWNER TO postgres;
+ALTER TABLE public.purchase_orders OWNER TO mirror_user;
 
 --
 -- Name: qr_codes; Type: TABLE; Schema: public; Owner: postgres
@@ -6285,7 +6285,7 @@ CREATE TABLE public.qr_codes (
 );
 
 
-ALTER TABLE public.qr_codes OWNER TO postgres;
+ALTER TABLE public.qr_codes OWNER TO mirror_user;
 
 --
 -- Name: COLUMN qr_codes.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -6405,7 +6405,7 @@ CREATE TABLE public.qr_scans (
 );
 
 
-ALTER TABLE public.qr_scans OWNER TO postgres;
+ALTER TABLE public.qr_scans OWNER TO mirror_user;
 
 --
 -- Name: COLUMN qr_scans.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -6503,7 +6503,7 @@ CREATE SEQUENCE public.qrc_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.qrc_seq OWNER TO postgres;
+ALTER SEQUENCE public.qrc_seq OWNER TO mirror_user;
 
 --
 -- Name: rak_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6517,7 +6517,7 @@ CREATE SEQUENCE public.rak_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.rak_seq OWNER TO postgres;
+ALTER SEQUENCE public.rak_seq OWNER TO mirror_user;
 
 --
 -- Name: rec_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6531,7 +6531,7 @@ CREATE SEQUENCE public.rec_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.rec_seq OWNER TO postgres;
+ALTER SEQUENCE public.rec_seq OWNER TO mirror_user;
 
 --
 -- Name: rfid_scan_logs; Type: TABLE; Schema: public; Owner: postgres
@@ -6562,7 +6562,7 @@ CREATE TABLE public.rfid_scan_logs (
 );
 
 
-ALTER TABLE public.rfid_scan_logs OWNER TO postgres;
+ALTER TABLE public.rfid_scan_logs OWNER TO mirror_user;
 
 --
 -- Name: rfid_tags; Type: TABLE; Schema: public; Owner: postgres
@@ -6591,7 +6591,7 @@ CREATE TABLE public.rfid_tags (
 );
 
 
-ALTER TABLE public.rfid_tags OWNER TO postgres;
+ALTER TABLE public.rfid_tags OWNER TO mirror_user;
 
 --
 -- Name: rft_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6605,7 +6605,7 @@ CREATE SEQUENCE public.rft_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.rft_seq OWNER TO postgres;
+ALTER SEQUENCE public.rft_seq OWNER TO mirror_user;
 
 --
 -- Name: role_matrix; Type: TABLE; Schema: public; Owner: postgres
@@ -6621,7 +6621,7 @@ CREATE TABLE public.role_matrix (
 );
 
 
-ALTER TABLE public.role_matrix OWNER TO postgres;
+ALTER TABLE public.role_matrix OWNER TO mirror_user;
 
 --
 -- Name: role_matrix_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6647,7 +6647,7 @@ CREATE TABLE public.role_permissions (
 );
 
 
-ALTER TABLE public.role_permissions OWNER TO postgres;
+ALTER TABLE public.role_permissions OWNER TO mirror_user;
 
 --
 -- Name: roles; Type: TABLE; Schema: public; Owner: postgres
@@ -6665,7 +6665,7 @@ CREATE TABLE public.roles (
 );
 
 
-ALTER TABLE public.roles OWNER TO postgres;
+ALTER TABLE public.roles OWNER TO mirror_user;
 
 --
 -- Name: roles_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6693,7 +6693,7 @@ CREATE SEQUENCE public.rsl_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.rsl_seq OWNER TO postgres;
+ALTER SEQUENCE public.rsl_seq OWNER TO mirror_user;
 
 --
 -- Name: s3_files; Type: TABLE; Schema: public; Owner: postgres
@@ -6718,7 +6718,7 @@ CREATE TABLE public.s3_files (
 );
 
 
-ALTER TABLE public.s3_files OWNER TO postgres;
+ALTER TABLE public.s3_files OWNER TO mirror_user;
 
 --
 -- Name: scn_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6732,7 +6732,7 @@ CREATE SEQUENCE public.scn_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.scn_seq OWNER TO postgres;
+ALTER SEQUENCE public.scn_seq OWNER TO mirror_user;
 
 --
 -- Name: side_stones_options; Type: TABLE; Schema: public; Owner: postgres
@@ -6750,7 +6750,7 @@ CREATE TABLE public.side_stones_options (
 );
 
 
-ALTER TABLE public.side_stones_options OWNER TO postgres;
+ALTER TABLE public.side_stones_options OWNER TO mirror_user;
 
 --
 -- Name: side_stones_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6782,7 +6782,7 @@ CREATE TABLE public.sku_prefix_options (
 );
 
 
-ALTER TABLE public.sku_prefix_options OWNER TO postgres;
+ALTER TABLE public.sku_prefix_options OWNER TO mirror_user;
 
 --
 -- Name: sku_prefix_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6810,7 +6810,7 @@ CREATE SEQUENCE public.sku_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.sku_seq OWNER TO postgres;
+ALTER SEQUENCE public.sku_seq OWNER TO mirror_user;
 
 --
 -- Name: slt_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -6824,7 +6824,7 @@ CREATE SEQUENCE public.slt_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.slt_seq OWNER TO postgres;
+ALTER SEQUENCE public.slt_seq OWNER TO mirror_user;
 
 --
 -- Name: stock_reconciliation_records; Type: TABLE; Schema: public; Owner: postgres
@@ -6856,7 +6856,7 @@ CREATE TABLE public.stock_reconciliation_records (
 );
 
 
-ALTER TABLE public.stock_reconciliation_records OWNER TO postgres;
+ALTER TABLE public.stock_reconciliation_records OWNER TO mirror_user;
 
 --
 -- Name: COLUMN stock_reconciliation_records.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -7028,7 +7028,7 @@ CREATE TABLE public.stone_origin_options (
 );
 
 
-ALTER TABLE public.stone_origin_options OWNER TO postgres;
+ALTER TABLE public.stone_origin_options OWNER TO mirror_user;
 
 --
 -- Name: stone_origin_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -7060,7 +7060,7 @@ CREATE TABLE public.stone_role_options (
 );
 
 
-ALTER TABLE public.stone_role_options OWNER TO postgres;
+ALTER TABLE public.stone_role_options OWNER TO mirror_user;
 
 --
 -- Name: stone_role_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -7096,7 +7096,7 @@ CREATE TABLE public.stone_shape_options (
 );
 
 
-ALTER TABLE public.stone_shape_options OWNER TO postgres;
+ALTER TABLE public.stone_shape_options OWNER TO mirror_user;
 
 --
 -- Name: stone_shape_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -7128,7 +7128,7 @@ CREATE TABLE public.stone_type_options (
 );
 
 
-ALTER TABLE public.stone_type_options OWNER TO postgres;
+ALTER TABLE public.stone_type_options OWNER TO mirror_user;
 
 --
 -- Name: stone_type_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -7160,7 +7160,7 @@ CREATE TABLE public.stone_weight_options (
 );
 
 
-ALTER TABLE public.stone_weight_options OWNER TO postgres;
+ALTER TABLE public.stone_weight_options OWNER TO mirror_user;
 
 --
 -- Name: stone_weight_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -7193,7 +7193,7 @@ CREATE TABLE public.user_otps (
 );
 
 
-ALTER TABLE public.user_otps OWNER TO postgres;
+ALTER TABLE public.user_otps OWNER TO mirror_user;
 
 --
 -- Name: user_otps_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -7219,7 +7219,7 @@ CREATE TABLE public.user_roles (
 );
 
 
-ALTER TABLE public.user_roles OWNER TO postgres;
+ALTER TABLE public.user_roles OWNER TO mirror_user;
 
 --
 -- Name: users; Type: TABLE; Schema: public; Owner: postgres
@@ -7251,7 +7251,7 @@ CREATE TABLE public.users (
 );
 
 
-ALTER TABLE public.users OWNER TO postgres;
+ALTER TABLE public.users OWNER TO mirror_user;
 
 --
 -- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -7279,7 +7279,7 @@ CREATE SEQUENCE public.ven_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ven_seq OWNER TO postgres;
+ALTER SEQUENCE public.ven_seq OWNER TO mirror_user;
 
 --
 -- Name: vendor_products; Type: TABLE; Schema: public; Owner: postgres
@@ -7297,7 +7297,7 @@ CREATE TABLE public.vendor_products (
 );
 
 
-ALTER TABLE public.vendor_products OWNER TO postgres;
+ALTER TABLE public.vendor_products OWNER TO mirror_user;
 
 --
 -- Name: vendors; Type: TABLE; Schema: public; Owner: postgres
@@ -7333,7 +7333,7 @@ CREATE TABLE public.vendors (
 );
 
 
-ALTER TABLE public.vendors OWNER TO postgres;
+ALTER TABLE public.vendors OWNER TO mirror_user;
 
 --
 -- Name: vpr_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -7347,7 +7347,7 @@ CREATE SEQUENCE public.vpr_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.vpr_seq OWNER TO postgres;
+ALTER SEQUENCE public.vpr_seq OWNER TO mirror_user;
 
 --
 -- Name: warehouse_racks; Type: TABLE; Schema: public; Owner: postgres
@@ -7372,7 +7372,7 @@ CREATE TABLE public.warehouse_racks (
 );
 
 
-ALTER TABLE public.warehouse_racks OWNER TO postgres;
+ALTER TABLE public.warehouse_racks OWNER TO mirror_user;
 
 --
 -- Name: COLUMN warehouse_racks.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -7504,7 +7504,7 @@ CREATE TABLE public.warehouse_slots (
 );
 
 
-ALTER TABLE public.warehouse_slots OWNER TO postgres;
+ALTER TABLE public.warehouse_slots OWNER TO mirror_user;
 
 --
 -- Name: COLUMN warehouse_slots.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -7637,7 +7637,7 @@ CREATE SEQUENCE public.wfs_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.wfs_seq OWNER TO postgres;
+ALTER SEQUENCE public.wfs_seq OWNER TO mirror_user;
 
 --
 -- Name: wft_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -7651,7 +7651,7 @@ CREATE SEQUENCE public.wft_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.wft_seq OWNER TO postgres;
+ALTER SEQUENCE public.wft_seq OWNER TO mirror_user;
 
 --
 -- Name: who_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -7665,7 +7665,7 @@ CREATE SEQUENCE public.who_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.who_seq OWNER TO postgres;
+ALTER SEQUENCE public.who_seq OWNER TO mirror_user;
 
 --
 -- Name: wholesale_order_items; Type: TABLE; Schema: public; Owner: postgres
@@ -7688,7 +7688,7 @@ CREATE TABLE public.wholesale_order_items (
 );
 
 
-ALTER TABLE public.wholesale_order_items OWNER TO postgres;
+ALTER TABLE public.wholesale_order_items OWNER TO mirror_user;
 
 --
 -- Name: COLUMN wholesale_order_items.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -7819,7 +7819,7 @@ CREATE TABLE public.wholesale_orders (
 );
 
 
-ALTER TABLE public.wholesale_orders OWNER TO postgres;
+ALTER TABLE public.wholesale_orders OWNER TO mirror_user;
 
 --
 -- Name: COLUMN wholesale_orders.id; Type: COMMENT; Schema: public; Owner: postgres
@@ -8043,7 +8043,7 @@ CREATE SEQUENCE public.woi_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.woi_seq OWNER TO postgres;
+ALTER SEQUENCE public.woi_seq OWNER TO mirror_user;
 
 --
 -- Name: workflow_stage_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -8057,7 +8057,7 @@ CREATE SEQUENCE public.workflow_stage_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.workflow_stage_seq OWNER TO postgres;
+ALTER SEQUENCE public.workflow_stage_seq OWNER TO mirror_user;
 
 --
 -- Name: workflow_stages; Type: TABLE; Schema: public; Owner: postgres
@@ -8082,7 +8082,7 @@ CREATE TABLE public.workflow_stages (
 );
 
 
-ALTER TABLE public.workflow_stages OWNER TO postgres;
+ALTER TABLE public.workflow_stages OWNER TO mirror_user;
 
 --
 -- Name: workflow_template_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -8096,7 +8096,7 @@ CREATE SEQUENCE public.workflow_template_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.workflow_template_seq OWNER TO postgres;
+ALTER SEQUENCE public.workflow_template_seq OWNER TO mirror_user;
 
 --
 -- Name: workflow_templates; Type: TABLE; Schema: public; Owner: postgres
@@ -8119,7 +8119,7 @@ CREATE TABLE public.workflow_templates (
 );
 
 
-ALTER TABLE public.workflow_templates OWNER TO postgres;
+ALTER TABLE public.workflow_templates OWNER TO mirror_user;
 
 --
 -- Name: age_group_preferences age_group_preferences_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
