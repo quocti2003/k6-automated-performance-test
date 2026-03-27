@@ -34,11 +34,11 @@ jobs:
     steps:
       # Buoc 1: Checkout Repo B (lay k6 scripts)
       - name: Checkout k6 test repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Buoc 2: Checkout Repo A (backend source + Dockerfile)
       - name: Checkout backend repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: quocti2003/MYRROR
           ref: full-local
