@@ -5,6 +5,9 @@ on:
   repository_dispatch:
     types: [run-k6-test]
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: write
 
@@ -90,8 +93,6 @@ jobs:
             backend-service
 
       # Buoc 6: Cho Spring Boot start xong moi tiep tuc
-      # until loop: lap vo han cho toi khi /actuator/health tra ve "UP"
-      # timeout-minutes: GitHub Actions tu kill neu qua 15 phut (phong truong hop crash)
       - name: Wait for Spring Boot to be ready
         timeout-minutes: 15
         run: |
@@ -101,7 +102,6 @@ jobs:
           echo ""
           echo "Checking health endpoint every 5 seconds..."
           until curl -s http://localhost:8082/actuator/health 2>/dev/null | grep -q '"status":"UP"'; do
-            # Neu container crash thi dung lai, in log ra de debug
             if ! docker ps --format '{{.Names}}' | grep -q backend; then
               echo "ERROR: Backend container crashed!"
               echo "=== DOCKER LOGS ==="
@@ -144,9 +144,18 @@ jobs:
           mkdir -p report
           cp mirror-authentication-report.html report/index.html
 
-      # Buoc 10: Deploy HTML report len GitHub Pages
-      - name: Deploy report to GitHub Pages
+      # Buoc 10: Deploy HTML report len GitHub Pages (Repo B)
+      - name: Deploy report to GitHub Pages (Repo B)
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./report
+
+      # Buoc 11: Deploy HTML report len GitHub Pages (Repo A)
+      - name: Deploy report to GitHub Pages (Repo A)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.PAT_TOKEN }}
+          external_repository: quocti2003/MYRROR
+          publish_dir: ./report
+          publish_branch: gh-pages
