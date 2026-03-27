@@ -4,8 +4,8 @@ import { check, sleep } from 'k6';
 // __ENV la object chua tat ca environment variables
 // Neu khong co env thi dung gia tri mac dinh (de chay local duoc)
 const BASE_URL = __ENV.K6_BASE_URL || 'http://localhost:8082';
-const USERNAME = __ENV.K6_USERNAME || 'tile';
-const PASSWORD = __ENV.K6_PASSWORD || 'TiMirror$123';
+const USERNAME = __ENV.K6_USERNAME || 'standard.user';
+const PASSWORD = __ENV.K6_PASSWORD || 'MimiMirror@123';
 
 export let options = {
   vus: 5,
