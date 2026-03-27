@@ -138,11 +138,15 @@ jobs:
           K6_USERNAME: ${{ secrets.SERVICE_USERNAME }}
           K6_PASSWORD: ${{ secrets.SERVICE_PASSWORD }}
 
-      # Buoc 9: Deploy HTML report len GitHub Pages
+      # Buoc 9: Copy report vao folder rieng de deploy
+      - name: Prepare report for deploy
+        run: |
+          mkdir -p report
+          cp mirror-authentication-report.html report/index.html
+
+      # Buoc 10: Deploy HTML report len GitHub Pages
       - name: Deploy report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-          include_files: mirror-authentication-report.html
-          destination_dir: .
+          publish_dir: ./report
