@@ -45,8 +45,10 @@ jobs:
       # Buoc 3: Restore database schema + test user data
       - name: Restore database
         run: |
-          PGPASSWORD=mirror_password psql -h localhost -U mirror_user -d mirror_product -f db/schema_only.sql
+          PGPASSWORD=mirror_password psql -h localhost -U mirror_user -d mirror_product -f db/schema_only.sql 2>&1 | grep -v "role .* does not exist" || true
           PGPASSWORD=mirror_password psql -h localhost -U mirror_user -d mirror_product -f db/users_data.sql
+          echo "=== Verify users table ==="
+          PGPASSWORD=mirror_password psql -h localhost -U mirror_user -d mirror_product -c "SELECT username, email FROM users LIMIT 5;"
 
       # Buoc 4: Build Docker image tu Dockerfile cua Repo A
       - name: Build backend Docker image
