@@ -22,7 +22,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: age_group_preference_values; Type: TABLE; Schema: public; Owner: postgres
+-- Name: age_group_preference_values; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.age_group_preference_values (
@@ -31,10 +31,8 @@ CREATE TABLE public.age_group_preference_values (
 );
 
 
-ALTER TABLE public.age_group_preference_values OWNER TO mirror_user;
-
 --
--- Name: age_group_preferences; Type: TABLE; Schema: public; Owner: postgres
+-- Name: age_group_preferences; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.age_group_preferences (
@@ -45,10 +43,8 @@ CREATE TABLE public.age_group_preferences (
 );
 
 
-ALTER TABLE public.age_group_preferences OWNER TO mirror_user;
-
 --
--- Name: age_groups; Type: TABLE; Schema: public; Owner: postgres
+-- Name: age_groups; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.age_groups (
@@ -59,10 +55,8 @@ CREATE TABLE public.age_groups (
 );
 
 
-ALTER TABLE public.age_groups OWNER TO mirror_user;
-
 --
--- Name: appointments; Type: TABLE; Schema: public; Owner: postgres
+-- Name: appointments; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.appointments (
@@ -88,143 +82,141 @@ CREATE TABLE public.appointments (
 );
 
 
-ALTER TABLE public.appointments OWNER TO mirror_user;
-
 --
--- Name: COLUMN appointments.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.id IS 'Primary key (APT prefix)';
 
 
 --
--- Name: COLUMN appointments.customer_title; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.customer_title; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.customer_title IS 'Customer title (Mr, Mrs, Ms)';
 
 
 --
--- Name: COLUMN appointments.customer_first_name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.customer_first_name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.customer_first_name IS 'Customer first name';
 
 
 --
--- Name: COLUMN appointments.customer_last_name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.customer_last_name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.customer_last_name IS 'Customer last name';
 
 
 --
--- Name: COLUMN appointments.customer_email; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.customer_email; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.customer_email IS 'Customer email address';
 
 
 --
--- Name: COLUMN appointments.customer_phone; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.customer_phone; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.customer_phone IS 'Customer phone number';
 
 
 --
--- Name: COLUMN appointments.venue_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.venue_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.venue_id IS 'Reference to locations table';
 
 
 --
--- Name: COLUMN appointments.service; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.service; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.service IS 'Type of service requested';
 
 
 --
--- Name: COLUMN appointments.appointment_date; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.appointment_date; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.appointment_date IS 'Date of appointment';
 
 
 --
--- Name: COLUMN appointments.appointment_time; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.appointment_time; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.appointment_time IS 'Time of appointment';
 
 
 --
--- Name: COLUMN appointments.language; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.language; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.language IS 'Preferred language';
 
 
 --
--- Name: COLUMN appointments.preferences; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.preferences; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.preferences IS 'Customer preferences and special requests';
 
 
 --
--- Name: COLUMN appointments.status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.status IS 'Appointment status (PENDING, CONFIRMED, COMPLETED, CANCELLED, NO_SHOW)';
 
 
 --
--- Name: COLUMN appointments.cancellation_reason; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.cancellation_reason; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.cancellation_reason IS 'Reason for cancellation if cancelled';
 
 
 --
--- Name: COLUMN appointments.staff_notes; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.staff_notes; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.staff_notes IS 'Internal staff notes';
 
 
 --
--- Name: COLUMN appointments.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN appointments.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN appointments.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN appointments.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN appointments.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.appointments.is_active IS 'Active status flag';
 
 
 --
--- Name: apt_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: apt_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.apt_seq
@@ -235,10 +227,8 @@ CREATE SEQUENCE public.apt_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.apt_seq OWNER TO mirror_user;
-
 --
--- Name: audit_logs; Type: TABLE; Schema: public; Owner: postgres
+-- Name: audit_logs; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.audit_logs (
@@ -256,10 +246,8 @@ CREATE TABLE public.audit_logs (
 );
 
 
-ALTER TABLE public.audit_logs OWNER TO mirror_user;
-
 --
--- Name: audit_logs_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: audit_logs_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.audit_logs ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -273,7 +261,7 @@ ALTER TABLE public.audit_logs ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTI
 
 
 --
--- Name: band_style_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: band_style_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.band_style_options (
@@ -290,10 +278,8 @@ CREATE TABLE public.band_style_options (
 );
 
 
-ALTER TABLE public.band_style_options OWNER TO mirror_user;
-
 --
--- Name: band_style_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: band_style_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.band_style_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -307,7 +293,7 @@ ALTER TABLE public.band_style_options ALTER COLUMN id ADD GENERATED BY DEFAULT A
 
 
 --
--- Name: blk_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: blk_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.blk_seq
@@ -318,10 +304,8 @@ CREATE SEQUENCE public.blk_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.blk_seq OWNER TO mirror_user;
-
 --
--- Name: blocked_slots; Type: TABLE; Schema: public; Owner: postgres
+-- Name: blocked_slots; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.blocked_slots (
@@ -342,108 +326,106 @@ CREATE TABLE public.blocked_slots (
 );
 
 
-ALTER TABLE public.blocked_slots OWNER TO mirror_user;
-
 --
--- Name: COLUMN blocked_slots.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN blocked_slots.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.blocked_slots.id IS 'Primary key (BLK prefix)';
 
 
 --
--- Name: COLUMN blocked_slots.venue_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN blocked_slots.venue_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.blocked_slots.venue_id IS 'Reference to locations table (null = all venues)';
 
 
 --
--- Name: COLUMN blocked_slots.block_date; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN blocked_slots.block_date; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.blocked_slots.block_date IS 'Date of the blocked slot';
 
 
 --
--- Name: COLUMN blocked_slots.start_time; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN blocked_slots.start_time; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.blocked_slots.start_time IS 'Start time of blocked period';
 
 
 --
--- Name: COLUMN blocked_slots.end_time; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN blocked_slots.end_time; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.blocked_slots.end_time IS 'End time of blocked period (null = single slot)';
 
 
 --
--- Name: COLUMN blocked_slots.is_full_day; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN blocked_slots.is_full_day; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.blocked_slots.is_full_day IS 'Whether the entire day is blocked';
 
 
 --
--- Name: COLUMN blocked_slots.reason; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN blocked_slots.reason; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.blocked_slots.reason IS 'Reason for blocking (e.g., Lunch break, Meeting, Holiday)';
 
 
 --
--- Name: COLUMN blocked_slots.block_type; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN blocked_slots.block_type; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.blocked_slots.block_type IS 'Type of block (SINGLE, RECURRING_DAILY, RECURRING_WEEKLY)';
 
 
 --
--- Name: COLUMN blocked_slots.recurring_end_date; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN blocked_slots.recurring_end_date; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.blocked_slots.recurring_end_date IS 'End date for recurring blocks';
 
 
 --
--- Name: COLUMN blocked_slots.created_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN blocked_slots.created_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.blocked_slots.created_by IS 'Admin user who created the block';
 
 
 --
--- Name: COLUMN blocked_slots.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN blocked_slots.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.blocked_slots.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN blocked_slots.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN blocked_slots.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.blocked_slots.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN blocked_slots.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN blocked_slots.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.blocked_slots.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN blocked_slots.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN blocked_slots.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.blocked_slots.is_active IS 'Active status flag';
 
 
 --
--- Name: cat_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: cat_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.cat_seq
@@ -454,10 +436,8 @@ CREATE SEQUENCE public.cat_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.cat_seq OWNER TO mirror_user;
-
 --
--- Name: category_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: category_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.category_seq
@@ -468,10 +448,8 @@ CREATE SEQUENCE public.category_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.category_seq OWNER TO mirror_user;
-
 --
--- Name: cer_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: cer_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.cer_seq
@@ -482,10 +460,8 @@ CREATE SEQUENCE public.cer_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.cer_seq OWNER TO mirror_user;
-
 --
--- Name: certificate_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: certificate_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.certificate_seq
@@ -496,10 +472,8 @@ CREATE SEQUENCE public.certificate_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.certificate_seq OWNER TO mirror_user;
-
 --
--- Name: certificates; Type: TABLE; Schema: public; Owner: postgres
+-- Name: certificates; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.certificates (
@@ -514,66 +488,64 @@ CREATE TABLE public.certificates (
 );
 
 
-ALTER TABLE public.certificates OWNER TO mirror_user;
-
 --
--- Name: COLUMN certificates.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN certificates.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.certificates.id IS 'Primary key (CER prefix)';
 
 
 --
--- Name: COLUMN certificates.certificate_code; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN certificates.certificate_code; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.certificates.certificate_code IS 'Certificate identification code';
 
 
 --
--- Name: COLUMN certificates.certificate_type; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN certificates.certificate_type; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.certificates.certificate_type IS 'Type of certificate (IGI, etc.)';
 
 
 --
--- Name: COLUMN certificates.certificate_url; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN certificates.certificate_url; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.certificates.certificate_url IS 'URL to certificate document';
 
 
 --
--- Name: COLUMN certificates.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN certificates.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.certificates.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN certificates.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN certificates.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.certificates.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN certificates.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN certificates.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.certificates.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN certificates.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN certificates.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.certificates.is_active IS 'Active status flag';
 
 
 --
--- Name: clarity_grade_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: clarity_grade_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.clarity_grade_options (
@@ -588,10 +560,8 @@ CREATE TABLE public.clarity_grade_options (
 );
 
 
-ALTER TABLE public.clarity_grade_options OWNER TO mirror_user;
-
 --
--- Name: clarity_grade_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: clarity_grade_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.clarity_grade_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -605,7 +575,7 @@ ALTER TABLE public.clarity_grade_options ALTER COLUMN id ADD GENERATED BY DEFAUL
 
 
 --
--- Name: col_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: col_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.col_seq
@@ -616,10 +586,8 @@ CREATE SEQUENCE public.col_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.col_seq OWNER TO mirror_user;
-
 --
--- Name: collection_age_group_allocations; Type: TABLE; Schema: public; Owner: postgres
+-- Name: collection_age_group_allocations; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.collection_age_group_allocations (
@@ -631,10 +599,8 @@ CREATE TABLE public.collection_age_group_allocations (
 );
 
 
-ALTER TABLE public.collection_age_group_allocations OWNER TO mirror_user;
-
 --
--- Name: collection_plan_items; Type: TABLE; Schema: public; Owner: postgres
+-- Name: collection_plan_items; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.collection_plan_items (
@@ -649,10 +615,8 @@ CREATE TABLE public.collection_plan_items (
 );
 
 
-ALTER TABLE public.collection_plan_items OWNER TO mirror_user;
-
 --
--- Name: collection_plans; Type: TABLE; Schema: public; Owner: postgres
+-- Name: collection_plans; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.collection_plans (
@@ -668,10 +632,8 @@ CREATE TABLE public.collection_plans (
 );
 
 
-ALTER TABLE public.collection_plans OWNER TO mirror_user;
-
 --
--- Name: collection_products; Type: TABLE; Schema: public; Owner: postgres
+-- Name: collection_products; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.collection_products (
@@ -687,73 +649,71 @@ CREATE TABLE public.collection_products (
 );
 
 
-ALTER TABLE public.collection_products OWNER TO mirror_user;
-
 --
--- Name: COLUMN collection_products.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collection_products.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collection_products.id IS 'Primary key';
 
 
 --
--- Name: COLUMN collection_products.collection_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collection_products.collection_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collection_products.collection_id IS 'Foreign key to collections';
 
 
 --
--- Name: COLUMN collection_products.product_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collection_products.product_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collection_products.product_id IS 'Foreign key to products';
 
 
 --
--- Name: COLUMN collection_products.sort_order; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collection_products.sort_order; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collection_products.sort_order IS 'Product order in collection';
 
 
 --
--- Name: COLUMN collection_products.is_hero_product; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collection_products.is_hero_product; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collection_products.is_hero_product IS 'Is this the hero product';
 
 
 --
--- Name: COLUMN collection_products.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collection_products.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collection_products.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN collection_products.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collection_products.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collection_products.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN collection_products.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collection_products.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collection_products.is_active IS 'Is active flag';
 
 
 --
--- Name: COLUMN collection_products.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collection_products.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collection_products.is_deleted IS 'Is deleted flag';
 
 
 --
--- Name: collections; Type: TABLE; Schema: public; Owner: postgres
+-- Name: collections; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.collections (
@@ -779,129 +739,127 @@ CREATE TABLE public.collections (
 );
 
 
-ALTER TABLE public.collections OWNER TO mirror_user;
-
 --
--- Name: COLUMN collections.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.id IS 'Primary key';
 
 
 --
--- Name: COLUMN collections.name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.name IS 'Collection name';
 
 
 --
--- Name: COLUMN collections.title; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.title; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.title IS 'Display title';
 
 
 --
--- Name: COLUMN collections.description; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.description; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.description IS 'Collection description';
 
 
 --
--- Name: COLUMN collections.season; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.season; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.season IS 'Target season';
 
 
 --
--- Name: COLUMN collections.year; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.year; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.year IS 'Collection year';
 
 
 --
--- Name: COLUMN collections.theme; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.theme; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.theme IS 'Collection theme';
 
 
 --
--- Name: COLUMN collections.image_url; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.image_url; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.image_url IS 'Main collection image';
 
 
 --
--- Name: COLUMN collections.banner_image_url; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.banner_image_url; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.banner_image_url IS 'Banner/hero image';
 
 
 --
--- Name: COLUMN collections.image_urls; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.image_urls; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.image_urls IS 'Additional images (JSON array)';
 
 
 --
--- Name: COLUMN collections.status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.status IS 'Collection status';
 
 
 --
--- Name: COLUMN collections.featured; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.featured; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.featured IS 'Is featured collection';
 
 
 --
--- Name: COLUMN collections.sort_order; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.sort_order; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.sort_order IS 'Display order';
 
 
 --
--- Name: COLUMN collections.start_date; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.start_date; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.start_date IS 'Collection launch date';
 
 
 --
--- Name: COLUMN collections.end_date; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.end_date; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.end_date IS 'Collection end date';
 
 
 --
--- Name: COLUMN collections.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN collections.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN collections.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.collections.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: color_grade_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: color_grade_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.color_grade_options (
@@ -916,10 +874,8 @@ CREATE TABLE public.color_grade_options (
 );
 
 
-ALTER TABLE public.color_grade_options OWNER TO mirror_user;
-
 --
--- Name: color_grade_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: color_grade_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.color_grade_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -933,7 +889,7 @@ ALTER TABLE public.color_grade_options ALTER COLUMN id ADD GENERATED BY DEFAULT 
 
 
 --
--- Name: com_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: com_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.com_seq
@@ -944,10 +900,8 @@ CREATE SEQUENCE public.com_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.com_seq OWNER TO mirror_user;
-
 --
--- Name: component_optional_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: component_optional_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.component_optional_seq
@@ -958,10 +912,8 @@ CREATE SEQUENCE public.component_optional_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.component_optional_seq OWNER TO mirror_user;
-
 --
--- Name: component_optionals; Type: TABLE; Schema: public; Owner: postgres
+-- Name: component_optionals; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.component_optionals (
@@ -976,10 +928,8 @@ CREATE TABLE public.component_optionals (
 );
 
 
-ALTER TABLE public.component_optionals OWNER TO mirror_user;
-
 --
--- Name: component_ownership_log_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: component_ownership_log_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.component_ownership_log_seq
@@ -990,10 +940,8 @@ CREATE SEQUENCE public.component_ownership_log_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.component_ownership_log_seq OWNER TO mirror_user;
-
 --
--- Name: component_ownership_logs; Type: TABLE; Schema: public; Owner: postgres
+-- Name: component_ownership_logs; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.component_ownership_logs (
@@ -1023,10 +971,8 @@ CREATE TABLE public.component_ownership_logs (
 );
 
 
-ALTER TABLE public.component_ownership_logs OWNER TO mirror_user;
-
 --
--- Name: component_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: component_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.component_seq
@@ -1037,10 +983,8 @@ CREATE SEQUENCE public.component_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.component_seq OWNER TO mirror_user;
-
 --
--- Name: components; Type: TABLE; Schema: public; Owner: postgres
+-- Name: components; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.components (
@@ -1055,10 +999,8 @@ CREATE TABLE public.components (
 );
 
 
-ALTER TABLE public.components OWNER TO mirror_user;
-
 --
--- Name: country_of_origin_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: country_of_origin_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.country_of_origin_options (
@@ -1073,10 +1015,8 @@ CREATE TABLE public.country_of_origin_options (
 );
 
 
-ALTER TABLE public.country_of_origin_options OWNER TO mirror_user;
-
 --
--- Name: country_of_origin_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: country_of_origin_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.country_of_origin_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -1090,7 +1030,7 @@ ALTER TABLE public.country_of_origin_options ALTER COLUMN id ADD GENERATED BY DE
 
 
 --
--- Name: cpr_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: cpr_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.cpr_seq
@@ -1101,10 +1041,8 @@ CREATE SEQUENCE public.cpr_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.cpr_seq OWNER TO mirror_user;
-
 --
--- Name: databasechangelog; Type: TABLE; Schema: public; Owner: postgres
+-- Name: databasechangelog; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.databasechangelog (
@@ -1125,10 +1063,8 @@ CREATE TABLE public.databasechangelog (
 );
 
 
-ALTER TABLE public.databasechangelog OWNER TO mirror_user;
-
 --
--- Name: databasechangeloglock; Type: TABLE; Schema: public; Owner: postgres
+-- Name: databasechangeloglock; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.databasechangeloglock (
@@ -1139,10 +1075,8 @@ CREATE TABLE public.databasechangeloglock (
 );
 
 
-ALTER TABLE public.databasechangeloglock OWNER TO mirror_user;
-
 --
--- Name: des_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: des_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.des_seq
@@ -1153,10 +1087,8 @@ CREATE SEQUENCE public.des_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.des_seq OWNER TO mirror_user;
-
 --
--- Name: design_product_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: design_product_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.design_product_seq
@@ -1167,10 +1099,8 @@ CREATE SEQUENCE public.design_product_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.design_product_seq OWNER TO mirror_user;
-
 --
--- Name: design_products; Type: TABLE; Schema: public; Owner: postgres
+-- Name: design_products; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.design_products (
@@ -1200,10 +1130,8 @@ CREATE TABLE public.design_products (
 );
 
 
-ALTER TABLE public.design_products OWNER TO mirror_user;
-
 --
--- Name: design_sale_transaction_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: design_sale_transaction_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.design_sale_transaction_seq
@@ -1214,10 +1142,8 @@ CREATE SEQUENCE public.design_sale_transaction_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.design_sale_transaction_seq OWNER TO mirror_user;
-
 --
--- Name: design_sale_transactions; Type: TABLE; Schema: public; Owner: postgres
+-- Name: design_sale_transactions; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.design_sale_transactions (
@@ -1242,10 +1168,8 @@ CREATE TABLE public.design_sale_transactions (
 );
 
 
-ALTER TABLE public.design_sale_transactions OWNER TO mirror_user;
-
 --
--- Name: designer_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: designer_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.designer_seq
@@ -1256,10 +1180,8 @@ CREATE SEQUENCE public.designer_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.designer_seq OWNER TO mirror_user;
-
 --
--- Name: designers; Type: TABLE; Schema: public; Owner: postgres
+-- Name: designers; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.designers (
@@ -1295,10 +1217,8 @@ CREATE TABLE public.designers (
 );
 
 
-ALTER TABLE public.designers OWNER TO mirror_user;
-
 --
--- Name: dpr_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: dpr_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.dpr_seq
@@ -1309,10 +1229,8 @@ CREATE SEQUENCE public.dpr_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.dpr_seq OWNER TO mirror_user;
-
 --
--- Name: dst_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: dst_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.dst_seq
@@ -1323,10 +1241,8 @@ CREATE SEQUENCE public.dst_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.dst_seq OWNER TO mirror_user;
-
 --
--- Name: email_verification_tokens; Type: TABLE; Schema: public; Owner: postgres
+-- Name: email_verification_tokens; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.email_verification_tokens (
@@ -1339,10 +1255,8 @@ CREATE TABLE public.email_verification_tokens (
 );
 
 
-ALTER TABLE public.email_verification_tokens OWNER TO mirror_user;
-
 --
--- Name: email_verification_tokens_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: email_verification_tokens_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.email_verification_tokens ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -1356,7 +1270,7 @@ ALTER TABLE public.email_verification_tokens ALTER COLUMN id ADD GENERATED BY DE
 
 
 --
--- Name: fil_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: fil_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.fil_seq
@@ -1367,10 +1281,8 @@ CREATE SEQUENCE public.fil_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.fil_seq OWNER TO mirror_user;
-
 --
--- Name: file_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: file_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.file_seq
@@ -1381,10 +1293,8 @@ CREATE SEQUENCE public.file_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.file_seq OWNER TO mirror_user;
-
 --
--- Name: hol_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: hol_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.hol_seq
@@ -1395,10 +1305,8 @@ CREATE SEQUENCE public.hol_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.hol_seq OWNER TO mirror_user;
-
 --
--- Name: id_sequences; Type: TABLE; Schema: public; Owner: postgres
+-- Name: id_sequences; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.id_sequences (
@@ -1409,10 +1317,8 @@ CREATE TABLE public.id_sequences (
 );
 
 
-ALTER TABLE public.id_sequences OWNER TO mirror_user;
-
 --
--- Name: inp_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: inp_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.inp_seq
@@ -1423,10 +1329,8 @@ CREATE SEQUENCE public.inp_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.inp_seq OWNER TO mirror_user;
-
 --
--- Name: inventory_movements; Type: TABLE; Schema: public; Owner: postgres
+-- Name: inventory_movements; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.inventory_movements (
@@ -1449,122 +1353,120 @@ CREATE TABLE public.inventory_movements (
 );
 
 
-ALTER TABLE public.inventory_movements OWNER TO mirror_user;
-
 --
--- Name: COLUMN inventory_movements.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_movements.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_movements.id IS 'Primary key (IVM prefix)';
 
 
 --
--- Name: COLUMN inventory_movements.inventory_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_movements.inventory_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_movements.inventory_id IS 'Reference to partner_inventory';
 
 
 --
--- Name: COLUMN inventory_movements.partner_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_movements.partner_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_movements.partner_id IS 'Reference to pod_partners (denormalized)';
 
 
 --
--- Name: COLUMN inventory_movements.product_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_movements.product_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_movements.product_id IS 'Reference to mirror_products (denormalized)';
 
 
 --
--- Name: COLUMN inventory_movements.movement_type; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_movements.movement_type; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_movements.movement_type IS 'WHOLESALE_IN, SALE_OUT, ADJUSTMENT_IN, ADJUSTMENT_OUT, RETURN_IN, TRANSFER_OUT, DAMAGED_OUT';
 
 
 --
--- Name: COLUMN inventory_movements.quantity; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_movements.quantity; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_movements.quantity IS 'Quantity moved';
 
 
 --
--- Name: COLUMN inventory_movements.quantity_before; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_movements.quantity_before; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_movements.quantity_before IS 'Stock before movement';
 
 
 --
--- Name: COLUMN inventory_movements.quantity_after; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_movements.quantity_after; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_movements.quantity_after IS 'Stock after movement';
 
 
 --
--- Name: COLUMN inventory_movements.reference_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_movements.reference_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_movements.reference_id IS 'Reference to wholesale_order or partner_sale ID';
 
 
 --
--- Name: COLUMN inventory_movements.reference_type; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_movements.reference_type; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_movements.reference_type IS 'WHOLESALE_ORDER or PARTNER_SALE';
 
 
 --
--- Name: COLUMN inventory_movements.notes; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_movements.notes; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_movements.notes IS 'Movement notes';
 
 
 --
--- Name: COLUMN inventory_movements.created_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_movements.created_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_movements.created_by IS 'User who created the movement';
 
 
 --
--- Name: COLUMN inventory_movements.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_movements.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_movements.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN inventory_movements.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_movements.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_movements.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN inventory_movements.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_movements.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_movements.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN inventory_movements.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_movements.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_movements.is_active IS 'Active status flag';
 
 
 --
--- Name: inventory_position_history; Type: TABLE; Schema: public; Owner: postgres
+-- Name: inventory_position_history; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.inventory_position_history (
@@ -1599,206 +1501,204 @@ CREATE TABLE public.inventory_position_history (
 );
 
 
-ALTER TABLE public.inventory_position_history OWNER TO mirror_user;
-
 --
--- Name: COLUMN inventory_position_history.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.id IS 'Primary key (IPH prefix)';
 
 
 --
--- Name: COLUMN inventory_position_history.position_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.position_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.position_id IS 'FK to inventory_positions';
 
 
 --
--- Name: COLUMN inventory_position_history.product_code; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.product_code; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.product_code IS 'SKU code (denormalized for query performance)';
 
 
 --
--- Name: COLUMN inventory_position_history.action_type; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.action_type; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.action_type IS 'Action: PLACED, MOVED, REMOVED, STATUS_CHANGED, VERIFIED';
 
 
 --
--- Name: COLUMN inventory_position_history.from_warehouse_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.from_warehouse_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.from_warehouse_id IS 'Previous warehouse';
 
 
 --
--- Name: COLUMN inventory_position_history.from_warehouse_name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.from_warehouse_name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.from_warehouse_name IS 'Previous warehouse name (denormalized)';
 
 
 --
--- Name: COLUMN inventory_position_history.from_rack_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.from_rack_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.from_rack_id IS 'Previous rack';
 
 
 --
--- Name: COLUMN inventory_position_history.from_rack_code; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.from_rack_code; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.from_rack_code IS 'Previous rack code (denormalized)';
 
 
 --
--- Name: COLUMN inventory_position_history.from_slot_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.from_slot_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.from_slot_id IS 'Previous slot';
 
 
 --
--- Name: COLUMN inventory_position_history.from_slot_code; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.from_slot_code; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.from_slot_code IS 'Previous slot code (denormalized)';
 
 
 --
--- Name: COLUMN inventory_position_history.to_warehouse_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.to_warehouse_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.to_warehouse_id IS 'New warehouse';
 
 
 --
--- Name: COLUMN inventory_position_history.to_warehouse_name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.to_warehouse_name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.to_warehouse_name IS 'New warehouse name (denormalized)';
 
 
 --
--- Name: COLUMN inventory_position_history.to_rack_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.to_rack_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.to_rack_id IS 'New rack';
 
 
 --
--- Name: COLUMN inventory_position_history.to_rack_code; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.to_rack_code; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.to_rack_code IS 'New rack code (denormalized)';
 
 
 --
--- Name: COLUMN inventory_position_history.to_slot_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.to_slot_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.to_slot_id IS 'New slot';
 
 
 --
--- Name: COLUMN inventory_position_history.to_slot_code; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.to_slot_code; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.to_slot_code IS 'New slot code (denormalized)';
 
 
 --
--- Name: COLUMN inventory_position_history.from_status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.from_status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.from_status IS 'Previous position status';
 
 
 --
--- Name: COLUMN inventory_position_history.to_status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.to_status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.to_status IS 'New position status';
 
 
 --
--- Name: COLUMN inventory_position_history.quantity_before; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.quantity_before; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.quantity_before IS 'Quantity before change';
 
 
 --
--- Name: COLUMN inventory_position_history.quantity_after; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.quantity_after; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.quantity_after IS 'Quantity after change';
 
 
 --
--- Name: COLUMN inventory_position_history.reference_type; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.reference_type; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.reference_type IS 'Source: STOCK_INWARD, TRANSFER, ADJUSTMENT, RECONCILIATION, MANUAL';
 
 
 --
--- Name: COLUMN inventory_position_history.reference_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.reference_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.reference_id IS 'Reference document ID';
 
 
 --
--- Name: COLUMN inventory_position_history.performed_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.performed_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.performed_by IS 'User ID who performed the action';
 
 
 --
--- Name: COLUMN inventory_position_history.performed_by_name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.performed_by_name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.performed_by_name IS 'User name (denormalized)';
 
 
 --
--- Name: COLUMN inventory_position_history.performed_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.performed_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.performed_at IS 'When the action was performed';
 
 
 --
--- Name: COLUMN inventory_position_history.reason; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.reason; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.reason IS 'Reason for the change';
 
 
 --
--- Name: COLUMN inventory_position_history.notes; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.notes; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.notes IS 'Additional notes';
 
 
 --
--- Name: COLUMN inventory_position_history.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_position_history.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_position_history.created_at IS 'Record creation timestamp';
 
 
 --
--- Name: inventory_positions; Type: TABLE; Schema: public; Owner: postgres
+-- Name: inventory_positions; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.inventory_positions (
@@ -1823,136 +1723,134 @@ CREATE TABLE public.inventory_positions (
 );
 
 
-ALTER TABLE public.inventory_positions OWNER TO mirror_user;
-
 --
--- Name: COLUMN inventory_positions.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.id IS 'Primary key (INP prefix)';
 
 
 --
--- Name: COLUMN inventory_positions.product_code; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.product_code; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.product_code IS 'SKU code from mirror_products';
 
 
 --
--- Name: COLUMN inventory_positions.warehouse_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.warehouse_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.warehouse_id IS 'FK to locations (WAREHOUSE type) - required when qty > 0';
 
 
 --
--- Name: COLUMN inventory_positions.rack_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.rack_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.rack_id IS 'FK to warehouse_racks - optional';
 
 
 --
--- Name: COLUMN inventory_positions.slot_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.slot_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.slot_id IS 'FK to warehouse_slots - optional but recommended';
 
 
 --
--- Name: COLUMN inventory_positions.quantity; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.quantity; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.quantity IS 'Quantity at this position';
 
 
 --
--- Name: COLUMN inventory_positions.position_status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.position_status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.position_status IS 'Status: PLACED, PENDING_PLACEMENT, UNASSIGNED, IN_TRANSIT';
 
 
 --
--- Name: COLUMN inventory_positions.assigned_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.assigned_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.assigned_at IS 'When item was assigned to this position';
 
 
 --
--- Name: COLUMN inventory_positions.assigned_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.assigned_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.assigned_by IS 'User ID who assigned the position';
 
 
 --
--- Name: COLUMN inventory_positions.last_verified_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.last_verified_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.last_verified_at IS 'Last physical verification timestamp';
 
 
 --
--- Name: COLUMN inventory_positions.last_verified_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.last_verified_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.last_verified_by IS 'User ID who last verified';
 
 
 --
--- Name: COLUMN inventory_positions.reference_type; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.reference_type; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.reference_type IS 'Source: STOCK_INWARD, TRANSFER, ADJUSTMENT, RECONCILIATION';
 
 
 --
--- Name: COLUMN inventory_positions.reference_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.reference_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.reference_id IS 'Reference document ID';
 
 
 --
--- Name: COLUMN inventory_positions.notes; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.notes; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.notes IS 'Additional notes';
 
 
 --
--- Name: COLUMN inventory_positions.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN inventory_positions.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN inventory_positions.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN inventory_positions.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN inventory_positions.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.inventory_positions.is_active IS 'Active status flag';
 
 
 --
--- Name: iph_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: iph_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.iph_seq
@@ -1963,10 +1861,8 @@ CREATE SEQUENCE public.iph_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.iph_seq OWNER TO mirror_user;
-
 --
--- Name: itc_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: itc_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.itc_seq
@@ -1977,10 +1873,8 @@ CREATE SEQUENCE public.itc_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.itc_seq OWNER TO mirror_user;
-
 --
--- Name: item_variant_config_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: item_variant_config_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.item_variant_config_seq
@@ -1991,10 +1885,8 @@ CREATE SEQUENCE public.item_variant_config_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.item_variant_config_seq OWNER TO mirror_user;
-
 --
--- Name: item_variant_configs; Type: TABLE; Schema: public; Owner: postgres
+-- Name: item_variant_configs; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.item_variant_configs (
@@ -2008,10 +1900,8 @@ CREATE TABLE public.item_variant_configs (
 );
 
 
-ALTER TABLE public.item_variant_configs OWNER TO mirror_user;
-
 --
--- Name: item_variant_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: item_variant_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.item_variant_seq
@@ -2022,10 +1912,8 @@ CREATE SEQUENCE public.item_variant_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.item_variant_seq OWNER TO mirror_user;
-
 --
--- Name: item_variants; Type: TABLE; Schema: public; Owner: postgres
+-- Name: item_variants; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.item_variants (
@@ -2039,10 +1927,8 @@ CREATE TABLE public.item_variants (
 );
 
 
-ALTER TABLE public.item_variants OWNER TO mirror_user;
-
 --
--- Name: itv_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: itv_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.itv_seq
@@ -2053,10 +1939,8 @@ CREATE SEQUENCE public.itv_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.itv_seq OWNER TO mirror_user;
-
 --
--- Name: ivm_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: ivm_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.ivm_seq
@@ -2067,10 +1951,8 @@ CREATE SEQUENCE public.ivm_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ivm_seq OWNER TO mirror_user;
-
 --
--- Name: jewelry_technical_reports; Type: TABLE; Schema: public; Owner: postgres
+-- Name: jewelry_technical_reports; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.jewelry_technical_reports (
@@ -2114,10 +1996,8 @@ CREATE TABLE public.jewelry_technical_reports (
 );
 
 
-ALTER TABLE public.jewelry_technical_reports OWNER TO mirror_user;
-
 --
--- Name: jlc_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: jlc_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.jlc_seq
@@ -2128,10 +2008,8 @@ CREATE SEQUENCE public.jlc_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jlc_seq OWNER TO mirror_user;
-
 --
--- Name: jmc_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: jmc_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.jmc_seq
@@ -2142,10 +2020,8 @@ CREATE SEQUENCE public.jmc_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jmc_seq OWNER TO mirror_user;
-
 --
--- Name: jsc_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: jsc_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.jsc_seq
@@ -2156,10 +2032,8 @@ CREATE SEQUENCE public.jsc_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jsc_seq OWNER TO mirror_user;
-
 --
--- Name: jtr_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: jtr_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.jtr_seq
@@ -2170,10 +2044,8 @@ CREATE SEQUENCE public.jtr_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jtr_seq OWNER TO mirror_user;
-
 --
--- Name: jtrc_labor_component_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: jtrc_labor_component_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.jtrc_labor_component_seq
@@ -2184,10 +2056,8 @@ CREATE SEQUENCE public.jtrc_labor_component_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jtrc_labor_component_seq OWNER TO mirror_user;
-
 --
--- Name: jtrc_labor_components; Type: TABLE; Schema: public; Owner: postgres
+-- Name: jtrc_labor_components; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.jtrc_labor_components (
@@ -2204,10 +2074,8 @@ CREATE TABLE public.jtrc_labor_components (
 );
 
 
-ALTER TABLE public.jtrc_labor_components OWNER TO mirror_user;
-
 --
--- Name: jtrc_metal_component_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: jtrc_metal_component_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.jtrc_metal_component_seq
@@ -2218,10 +2086,8 @@ CREATE SEQUENCE public.jtrc_metal_component_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jtrc_metal_component_seq OWNER TO mirror_user;
-
 --
--- Name: jtrc_metal_components; Type: TABLE; Schema: public; Owner: postgres
+-- Name: jtrc_metal_components; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.jtrc_metal_components (
@@ -2242,10 +2108,8 @@ CREATE TABLE public.jtrc_metal_components (
 );
 
 
-ALTER TABLE public.jtrc_metal_components OWNER TO mirror_user;
-
 --
--- Name: jtrc_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: jtrc_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.jtrc_seq
@@ -2256,10 +2120,8 @@ CREATE SEQUENCE public.jtrc_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jtrc_seq OWNER TO mirror_user;
-
 --
--- Name: jtrc_stone_component_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: jtrc_stone_component_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.jtrc_stone_component_seq
@@ -2270,10 +2132,8 @@ CREATE SEQUENCE public.jtrc_stone_component_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jtrc_stone_component_seq OWNER TO mirror_user;
-
 --
--- Name: jtrc_stone_components; Type: TABLE; Schema: public; Owner: postgres
+-- Name: jtrc_stone_components; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.jtrc_stone_components (
@@ -2301,10 +2161,8 @@ CREATE TABLE public.jtrc_stone_components (
 );
 
 
-ALTER TABLE public.jtrc_stone_components OWNER TO mirror_user;
-
 --
--- Name: label_template_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: label_template_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.label_template_seq
@@ -2315,10 +2173,8 @@ CREATE SEQUENCE public.label_template_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.label_template_seq OWNER TO mirror_user;
-
 --
--- Name: label_templates; Type: TABLE; Schema: public; Owner: postgres
+-- Name: label_templates; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.label_templates (
@@ -2351,10 +2207,8 @@ CREATE TABLE public.label_templates (
 );
 
 
-ALTER TABLE public.label_templates OWNER TO mirror_user;
-
 --
--- Name: labor_type_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: labor_type_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.labor_type_options (
@@ -2369,10 +2223,8 @@ CREATE TABLE public.labor_type_options (
 );
 
 
-ALTER TABLE public.labor_type_options OWNER TO mirror_user;
-
 --
--- Name: labor_type_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: labor_type_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.labor_type_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -2386,7 +2238,7 @@ ALTER TABLE public.labor_type_options ALTER COLUMN id ADD GENERATED BY DEFAULT A
 
 
 --
--- Name: lbt_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: lbt_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.lbt_seq
@@ -2397,10 +2249,8 @@ CREATE SEQUENCE public.lbt_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.lbt_seq OWNER TO mirror_user;
-
 --
--- Name: loc_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: loc_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.loc_seq
@@ -2411,10 +2261,8 @@ CREATE SEQUENCE public.loc_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.loc_seq OWNER TO mirror_user;
-
 --
--- Name: locations; Type: TABLE; Schema: public; Owner: postgres
+-- Name: locations; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.locations (
@@ -2442,143 +2290,141 @@ CREATE TABLE public.locations (
 );
 
 
-ALTER TABLE public.locations OWNER TO mirror_user;
-
 --
--- Name: COLUMN locations.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.id IS 'Primary key';
 
 
 --
--- Name: COLUMN locations.name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.name IS 'Location name';
 
 
 --
--- Name: COLUMN locations.type; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.type; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.type IS 'Location type (SHOWROOM, BOUTIQUE, POD)';
 
 
 --
--- Name: COLUMN locations.address; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.address; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.address IS 'Full address';
 
 
 --
--- Name: COLUMN locations.city; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.city; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.city IS 'City or province';
 
 
 --
--- Name: COLUMN locations.latitude; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.latitude; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.latitude IS 'GPS latitude';
 
 
 --
--- Name: COLUMN locations.longitude; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.longitude; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.longitude IS 'GPS longitude';
 
 
 --
--- Name: COLUMN locations.hours; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.hours; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.hours IS 'Operating hours';
 
 
 --
--- Name: COLUMN locations.phone; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.phone; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.phone IS 'Contact phone number';
 
 
 --
--- Name: COLUMN locations.status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.status IS 'Location status (ACTIVE, INACTIVE, TEMPORARY)';
 
 
 --
--- Name: COLUMN locations.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN locations.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN locations.misa_warehouse_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.misa_warehouse_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.misa_warehouse_id IS 'MISA AMIS warehouse ID for sync';
 
 
 --
--- Name: COLUMN locations.misa_warehouse_code; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.misa_warehouse_code; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.misa_warehouse_code IS 'MISA AMIS warehouse code';
 
 
 --
--- Name: COLUMN locations.is_internal; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.is_internal; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.is_internal IS 'If true, hidden from customer-facing features';
 
 
 --
--- Name: COLUMN locations.capacity; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.capacity; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.capacity IS 'Maximum storage capacity (number of items or racks)';
 
 
 --
--- Name: COLUMN locations.manager_name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.manager_name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.manager_name IS 'Warehouse manager name';
 
 
 --
--- Name: COLUMN locations.manager_phone; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.manager_phone; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.manager_phone IS 'Warehouse manager phone';
 
 
 --
--- Name: COLUMN locations.misa_last_synced_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN locations.misa_last_synced_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.locations.misa_last_synced_at IS 'Last sync time with MISA AMIS';
 
 
 --
--- Name: market_trends; Type: TABLE; Schema: public; Owner: postgres
+-- Name: market_trends; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.market_trends (
@@ -2612,10 +2458,8 @@ CREATE TABLE public.market_trends (
 );
 
 
-ALTER TABLE public.market_trends OWNER TO mirror_user;
-
 --
--- Name: market_trends_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: market_trends_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.market_trends ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -2629,7 +2473,7 @@ ALTER TABLE public.market_trends ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDE
 
 
 --
--- Name: material_color_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: material_color_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.material_color_options (
@@ -2644,10 +2488,8 @@ CREATE TABLE public.material_color_options (
 );
 
 
-ALTER TABLE public.material_color_options OWNER TO mirror_user;
-
 --
--- Name: material_color_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: material_color_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.material_color_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -2661,7 +2503,7 @@ ALTER TABLE public.material_color_options ALTER COLUMN id ADD GENERATED BY DEFAU
 
 
 --
--- Name: material_inventory; Type: TABLE; Schema: public; Owner: postgres
+-- Name: material_inventory; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.material_inventory (
@@ -2681,10 +2523,8 @@ CREATE TABLE public.material_inventory (
 );
 
 
-ALTER TABLE public.material_inventory OWNER TO mirror_user;
-
 --
--- Name: material_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: material_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.material_options (
@@ -2699,10 +2539,8 @@ CREATE TABLE public.material_options (
 );
 
 
-ALTER TABLE public.material_options OWNER TO mirror_user;
-
 --
--- Name: material_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: material_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.material_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -2716,7 +2554,7 @@ ALTER TABLE public.material_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS 
 
 
 --
--- Name: metal_purity_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: metal_purity_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.metal_purity_options (
@@ -2731,10 +2569,8 @@ CREATE TABLE public.metal_purity_options (
 );
 
 
-ALTER TABLE public.metal_purity_options OWNER TO mirror_user;
-
 --
--- Name: metal_purity_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: metal_purity_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.metal_purity_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -2748,7 +2584,7 @@ ALTER TABLE public.metal_purity_options ALTER COLUMN id ADD GENERATED BY DEFAULT
 
 
 --
--- Name: metal_type_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: metal_type_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.metal_type_options (
@@ -2763,10 +2599,8 @@ CREATE TABLE public.metal_type_options (
 );
 
 
-ALTER TABLE public.metal_type_options OWNER TO mirror_user;
-
 --
--- Name: metal_type_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: metal_type_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.metal_type_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -2780,7 +2614,7 @@ ALTER TABLE public.metal_type_options ALTER COLUMN id ADD GENERATED BY DEFAULT A
 
 
 --
--- Name: mirror_diamonds; Type: TABLE; Schema: public; Owner: postgres
+-- Name: mirror_diamonds; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.mirror_diamonds (
@@ -2813,10 +2647,8 @@ CREATE TABLE public.mirror_diamonds (
 );
 
 
-ALTER TABLE public.mirror_diamonds OWNER TO mirror_user;
-
 --
--- Name: mirror_products; Type: TABLE; Schema: public; Owner: postgres
+-- Name: mirror_products; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.mirror_products (
@@ -2874,10 +2706,8 @@ CREATE TABLE public.mirror_products (
 );
 
 
-ALTER TABLE public.mirror_products OWNER TO mirror_user;
-
 --
--- Name: misa_balance_trackers; Type: TABLE; Schema: public; Owner: postgres
+-- Name: misa_balance_trackers; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.misa_balance_trackers (
@@ -2904,10 +2734,8 @@ CREATE TABLE public.misa_balance_trackers (
 );
 
 
-ALTER TABLE public.misa_balance_trackers OWNER TO mirror_user;
-
 --
--- Name: misa_balance_trackers_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: misa_balance_trackers_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.misa_balance_trackers ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -2921,7 +2749,7 @@ ALTER TABLE public.misa_balance_trackers ALTER COLUMN id ADD GENERATED BY DEFAUL
 
 
 --
--- Name: misa_callback_logs; Type: TABLE; Schema: public; Owner: postgres
+-- Name: misa_callback_logs; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.misa_callback_logs (
@@ -2949,10 +2777,8 @@ CREATE TABLE public.misa_callback_logs (
 );
 
 
-ALTER TABLE public.misa_callback_logs OWNER TO mirror_user;
-
 --
--- Name: misa_callback_logs_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: misa_callback_logs_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.misa_callback_logs ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -2966,7 +2792,7 @@ ALTER TABLE public.misa_callback_logs ALTER COLUMN id ADD GENERATED BY DEFAULT A
 
 
 --
--- Name: misa_customers; Type: TABLE; Schema: public; Owner: postgres
+-- Name: misa_customers; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.misa_customers (
@@ -3000,10 +2826,8 @@ CREATE TABLE public.misa_customers (
 );
 
 
-ALTER TABLE public.misa_customers OWNER TO mirror_user;
-
 --
--- Name: misa_customers_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: misa_customers_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.misa_customers ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -3017,7 +2841,7 @@ ALTER TABLE public.misa_customers ALTER COLUMN id ADD GENERATED BY DEFAULT AS ID
 
 
 --
--- Name: misa_inventory_items; Type: TABLE; Schema: public; Owner: postgres
+-- Name: misa_inventory_items; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.misa_inventory_items (
@@ -3063,10 +2887,8 @@ CREATE TABLE public.misa_inventory_items (
 );
 
 
-ALTER TABLE public.misa_inventory_items OWNER TO mirror_user;
-
 --
--- Name: misa_inventory_items_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: misa_inventory_items_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.misa_inventory_items ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -3080,7 +2902,7 @@ ALTER TABLE public.misa_inventory_items ALTER COLUMN id ADD GENERATED BY DEFAULT
 
 
 --
--- Name: misa_invoices; Type: TABLE; Schema: public; Owner: postgres
+-- Name: misa_invoices; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.misa_invoices (
@@ -3122,10 +2944,8 @@ CREATE TABLE public.misa_invoices (
 );
 
 
-ALTER TABLE public.misa_invoices OWNER TO mirror_user;
-
 --
--- Name: misa_invoices_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: misa_invoices_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.misa_invoices ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -3139,7 +2959,7 @@ ALTER TABLE public.misa_invoices ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDE
 
 
 --
--- Name: misa_product_categories; Type: TABLE; Schema: public; Owner: postgres
+-- Name: misa_product_categories; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.misa_product_categories (
@@ -3165,10 +2985,8 @@ CREATE TABLE public.misa_product_categories (
 );
 
 
-ALTER TABLE public.misa_product_categories OWNER TO mirror_user;
-
 --
--- Name: misa_product_categories_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: misa_product_categories_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.misa_product_categories ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -3182,7 +3000,7 @@ ALTER TABLE public.misa_product_categories ALTER COLUMN id ADD GENERATED BY DEFA
 
 
 --
--- Name: misa_sync_logs; Type: TABLE; Schema: public; Owner: postgres
+-- Name: misa_sync_logs; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.misa_sync_logs (
@@ -3203,10 +3021,8 @@ CREATE TABLE public.misa_sync_logs (
 );
 
 
-ALTER TABLE public.misa_sync_logs OWNER TO mirror_user;
-
 --
--- Name: misa_sync_logs_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: misa_sync_logs_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.misa_sync_logs ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -3220,7 +3036,7 @@ ALTER TABLE public.misa_sync_logs ALTER COLUMN id ADD GENERATED BY DEFAULT AS ID
 
 
 --
--- Name: misa_warehouses; Type: TABLE; Schema: public; Owner: postgres
+-- Name: misa_warehouses; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.misa_warehouses (
@@ -3243,10 +3059,8 @@ CREATE TABLE public.misa_warehouses (
 );
 
 
-ALTER TABLE public.misa_warehouses OWNER TO mirror_user;
-
 --
--- Name: misa_warehouses_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: misa_warehouses_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.misa_warehouses ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -3260,7 +3074,7 @@ ALTER TABLE public.misa_warehouses ALTER COLUMN id ADD GENERATED BY DEFAULT AS I
 
 
 --
--- Name: ops_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: ops_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.ops_seq
@@ -3271,10 +3085,8 @@ CREATE SEQUENCE public.ops_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ops_seq OWNER TO mirror_user;
-
 --
--- Name: opt_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: opt_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.opt_seq
@@ -3285,10 +3097,8 @@ CREATE SEQUENCE public.opt_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.opt_seq OWNER TO mirror_user;
-
 --
--- Name: ord_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: ord_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.ord_seq
@@ -3299,10 +3109,8 @@ CREATE SEQUENCE public.ord_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ord_seq OWNER TO mirror_user;
-
 --
--- Name: order_item_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: order_item_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.order_item_seq
@@ -3313,10 +3121,8 @@ CREATE SEQUENCE public.order_item_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.order_item_seq OWNER TO mirror_user;
-
 --
--- Name: order_items; Type: TABLE; Schema: public; Owner: postgres
+-- Name: order_items; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.order_items (
@@ -3336,10 +3142,8 @@ CREATE TABLE public.order_items (
 );
 
 
-ALTER TABLE public.order_items OWNER TO mirror_user;
-
 --
--- Name: order_payment_schedule; Type: TABLE; Schema: public; Owner: postgres
+-- Name: order_payment_schedule; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.order_payment_schedule (
@@ -3359,10 +3163,8 @@ CREATE TABLE public.order_payment_schedule (
 );
 
 
-ALTER TABLE public.order_payment_schedule OWNER TO mirror_user;
-
 --
--- Name: order_payment_schedule_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: order_payment_schedule_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.order_payment_schedule_seq
@@ -3373,10 +3175,8 @@ CREATE SEQUENCE public.order_payment_schedule_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.order_payment_schedule_seq OWNER TO mirror_user;
-
 --
--- Name: order_payment_transactions; Type: TABLE; Schema: public; Owner: postgres
+-- Name: order_payment_transactions; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.order_payment_transactions (
@@ -3395,10 +3195,8 @@ CREATE TABLE public.order_payment_transactions (
 );
 
 
-ALTER TABLE public.order_payment_transactions OWNER TO mirror_user;
-
 --
--- Name: order_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: order_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.order_seq
@@ -3409,10 +3207,8 @@ CREATE SEQUENCE public.order_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.order_seq OWNER TO mirror_user;
-
 --
--- Name: order_status_history; Type: TABLE; Schema: public; Owner: postgres
+-- Name: order_status_history; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.order_status_history (
@@ -3429,10 +3225,8 @@ CREATE TABLE public.order_status_history (
 );
 
 
-ALTER TABLE public.order_status_history OWNER TO mirror_user;
-
 --
--- Name: order_status_history_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: order_status_history_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.order_status_history_seq
@@ -3443,10 +3237,8 @@ CREATE SEQUENCE public.order_status_history_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.order_status_history_seq OWNER TO mirror_user;
-
 --
--- Name: orders; Type: TABLE; Schema: public; Owner: postgres
+-- Name: orders; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.orders (
@@ -3495,73 +3287,71 @@ CREATE TABLE public.orders (
 );
 
 
-ALTER TABLE public.orders OWNER TO mirror_user;
-
 --
--- Name: COLUMN orders.user_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN orders.user_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.orders.user_id IS 'ID of the user placing the order';
 
 
 --
--- Name: COLUMN orders.product_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN orders.product_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.orders.product_id IS 'Primary product related to the order';
 
 
 --
--- Name: COLUMN orders.status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN orders.status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.orders.status IS 'Current order status';
 
 
 --
--- Name: COLUMN orders.payment_status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN orders.payment_status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.orders.payment_status IS 'Aggregated payment status';
 
 
 --
--- Name: COLUMN orders.payment_terms_type; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN orders.payment_terms_type; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.orders.payment_terms_type IS 'Type of payment terms';
 
 
 --
--- Name: COLUMN orders.payment_terms; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN orders.payment_terms; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.orders.payment_terms IS 'Serialized payment terms details';
 
 
 --
--- Name: COLUMN orders.payment_outstanding; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN orders.payment_outstanding; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.orders.payment_outstanding IS 'Outstanding amount';
 
 
 --
--- Name: COLUMN orders.subtotal_amount; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN orders.subtotal_amount; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.orders.subtotal_amount IS 'Subtotal before adjustments';
 
 
 --
--- Name: COLUMN orders.total_amount; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN orders.total_amount; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.orders.total_amount IS 'Total amount due';
 
 
 --
--- Name: ori_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: ori_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.ori_seq
@@ -3572,10 +3362,8 @@ CREATE SEQUENCE public.ori_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ori_seq OWNER TO mirror_user;
-
 --
--- Name: osh_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: osh_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.osh_seq
@@ -3586,10 +3374,8 @@ CREATE SEQUENCE public.osh_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.osh_seq OWNER TO mirror_user;
-
 --
--- Name: partner_capabilities; Type: TABLE; Schema: public; Owner: postgres
+-- Name: partner_capabilities; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.partner_capabilities (
@@ -3609,10 +3395,8 @@ CREATE TABLE public.partner_capabilities (
 );
 
 
-ALTER TABLE public.partner_capabilities OWNER TO mirror_user;
-
 --
--- Name: partner_capability_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: partner_capability_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.partner_capability_seq
@@ -3623,10 +3407,8 @@ CREATE SEQUENCE public.partner_capability_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.partner_capability_seq OWNER TO mirror_user;
-
 --
--- Name: partner_inventory; Type: TABLE; Schema: public; Owner: postgres
+-- Name: partner_inventory; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.partner_inventory (
@@ -3650,129 +3432,127 @@ CREATE TABLE public.partner_inventory (
 );
 
 
-ALTER TABLE public.partner_inventory OWNER TO mirror_user;
-
 --
--- Name: COLUMN partner_inventory.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.id IS 'Primary key (PIV prefix)';
 
 
 --
--- Name: COLUMN partner_inventory.partner_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.partner_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.partner_id IS 'Reference to pod_partners';
 
 
 --
--- Name: COLUMN partner_inventory.product_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.product_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.product_id IS 'Reference to mirror_products';
 
 
 --
--- Name: COLUMN partner_inventory.quantity_on_hand; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.quantity_on_hand; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.quantity_on_hand IS 'Total physical stock';
 
 
 --
--- Name: COLUMN partner_inventory.quantity_reserved; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.quantity_reserved; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.quantity_reserved IS 'Reserved for pending sales';
 
 
 --
--- Name: COLUMN partner_inventory.quantity_available; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.quantity_available; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.quantity_available IS 'Available for sale (on_hand - reserved)';
 
 
 --
--- Name: COLUMN partner_inventory.wholesale_price; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.wholesale_price; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.wholesale_price IS 'Price partner paid for this product';
 
 
 --
--- Name: COLUMN partner_inventory.partner_retail_price; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.partner_retail_price; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.partner_retail_price IS 'Partner''s own retail price (null = use mirror price)';
 
 
 --
--- Name: COLUMN partner_inventory.mirror_retail_price; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.mirror_retail_price; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.mirror_retail_price IS 'Mirror''s official retail price';
 
 
 --
--- Name: COLUMN partner_inventory.reorder_level; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.reorder_level; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.reorder_level IS 'Low stock alert threshold';
 
 
 --
--- Name: COLUMN partner_inventory.max_stock_level; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.max_stock_level; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.max_stock_level IS 'Maximum stock level';
 
 
 --
--- Name: COLUMN partner_inventory.last_restocked_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.last_restocked_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.last_restocked_at IS 'Last restock timestamp';
 
 
 --
--- Name: COLUMN partner_inventory.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN partner_inventory.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN partner_inventory.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN partner_inventory.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.is_active IS 'Active status flag';
 
 
 --
--- Name: COLUMN partner_inventory.version; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_inventory.version; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_inventory.version IS 'Optimistic locking version';
 
 
 --
--- Name: partner_sale_items; Type: TABLE; Schema: public; Owner: postgres
+-- Name: partner_sale_items; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.partner_sale_items (
@@ -3792,101 +3572,99 @@ CREATE TABLE public.partner_sale_items (
 );
 
 
-ALTER TABLE public.partner_sale_items OWNER TO mirror_user;
-
 --
--- Name: COLUMN partner_sale_items.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sale_items.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sale_items.id IS 'Primary key (PSI prefix)';
 
 
 --
--- Name: COLUMN partner_sale_items.sale_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sale_items.sale_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sale_items.sale_id IS 'Reference to partner_sales';
 
 
 --
--- Name: COLUMN partner_sale_items.product_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sale_items.product_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sale_items.product_id IS 'Reference to mirror_products';
 
 
 --
--- Name: COLUMN partner_sale_items.inventory_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sale_items.inventory_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sale_items.inventory_id IS 'Reference to partner_inventory';
 
 
 --
--- Name: COLUMN partner_sale_items.quantity; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sale_items.quantity; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sale_items.quantity IS 'Quantity sold';
 
 
 --
--- Name: COLUMN partner_sale_items.wholesale_cost; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sale_items.wholesale_cost; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sale_items.wholesale_cost IS 'Cost per unit (wholesale price)';
 
 
 --
--- Name: COLUMN partner_sale_items.selling_price; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sale_items.selling_price; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sale_items.selling_price IS 'Selling price per unit';
 
 
 --
--- Name: COLUMN partner_sale_items.line_total; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sale_items.line_total; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sale_items.line_total IS 'Line total (selling_price * quantity)';
 
 
 --
--- Name: COLUMN partner_sale_items.profit; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sale_items.profit; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sale_items.profit IS 'Profit on this line item';
 
 
 --
--- Name: COLUMN partner_sale_items.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sale_items.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sale_items.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN partner_sale_items.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sale_items.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sale_items.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN partner_sale_items.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sale_items.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sale_items.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN partner_sale_items.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sale_items.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sale_items.is_active IS 'Active status flag';
 
 
 --
--- Name: partner_sales; Type: TABLE; Schema: public; Owner: postgres
+-- Name: partner_sales; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.partner_sales (
@@ -3918,185 +3696,183 @@ CREATE TABLE public.partner_sales (
 );
 
 
-ALTER TABLE public.partner_sales OWNER TO mirror_user;
-
 --
--- Name: COLUMN partner_sales.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.id IS 'Primary key (PSL prefix)';
 
 
 --
--- Name: COLUMN partner_sales.sale_number; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.sale_number; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.sale_number IS 'Human-readable sale number';
 
 
 --
--- Name: COLUMN partner_sales.partner_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.partner_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.partner_id IS 'Reference to pod_partners';
 
 
 --
--- Name: COLUMN partner_sales.pod_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.pod_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.pod_id IS 'Reference to pods (where the sale happened)';
 
 
 --
--- Name: COLUMN partner_sales.customer_name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.customer_name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.customer_name IS 'Customer name';
 
 
 --
--- Name: COLUMN partner_sales.customer_phone; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.customer_phone; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.customer_phone IS 'Customer phone';
 
 
 --
--- Name: COLUMN partner_sales.customer_email; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.customer_email; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.customer_email IS 'Customer email';
 
 
 --
--- Name: COLUMN partner_sales.status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.status IS 'Sale status';
 
 
 --
--- Name: COLUMN partner_sales.subtotal; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.subtotal; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.subtotal IS 'Sum of selling prices';
 
 
 --
--- Name: COLUMN partner_sales.discount_amount; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.discount_amount; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.discount_amount IS 'Sale discount';
 
 
 --
--- Name: COLUMN partner_sales.tax_amount; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.tax_amount; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.tax_amount IS 'Tax amount';
 
 
 --
--- Name: COLUMN partner_sales.total_amount; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.total_amount; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.total_amount IS 'Final total';
 
 
 --
--- Name: COLUMN partner_sales.cost_of_goods; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.cost_of_goods; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.cost_of_goods IS 'Total wholesale cost';
 
 
 --
--- Name: COLUMN partner_sales.profit_amount; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.profit_amount; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.profit_amount IS 'Profit (total - cost)';
 
 
 --
--- Name: COLUMN partner_sales.profit_margin_percent; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.profit_margin_percent; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.profit_margin_percent IS 'Profit margin %';
 
 
 --
--- Name: COLUMN partner_sales.currency; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.currency; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.currency IS 'Currency code';
 
 
 --
--- Name: COLUMN partner_sales.payment_method; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.payment_method; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.payment_method IS 'Payment method';
 
 
 --
--- Name: COLUMN partner_sales.payment_reference; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.payment_reference; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.payment_reference IS 'Payment reference';
 
 
 --
--- Name: COLUMN partner_sales.qr_code_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.qr_code_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.qr_code_id IS 'QR code that led to this sale';
 
 
 --
--- Name: COLUMN partner_sales.notes; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.notes; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.notes IS 'Sale notes';
 
 
 --
--- Name: COLUMN partner_sales.sold_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.sold_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.sold_at IS 'When the sale happened';
 
 
 --
--- Name: COLUMN partner_sales.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN partner_sales.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN partner_sales.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN partner_sales.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN partner_sales.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.partner_sales.is_active IS 'Active status flag';
 
 
 --
--- Name: pat_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: pat_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.pat_seq
@@ -4107,10 +3883,8 @@ CREATE SEQUENCE public.pat_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pat_seq OWNER TO mirror_user;
-
 --
--- Name: pcm_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: pcm_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.pcm_seq
@@ -4121,10 +3895,8 @@ CREATE SEQUENCE public.pcm_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pcm_seq OWNER TO mirror_user;
-
 --
--- Name: pcp_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: pcp_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.pcp_seq
@@ -4135,10 +3907,8 @@ CREATE SEQUENCE public.pcp_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pcp_seq OWNER TO mirror_user;
-
 --
--- Name: permissions; Type: TABLE; Schema: public; Owner: postgres
+-- Name: permissions; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.permissions (
@@ -4155,10 +3925,8 @@ CREATE TABLE public.permissions (
 );
 
 
-ALTER TABLE public.permissions OWNER TO mirror_user;
-
 --
--- Name: permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.permissions ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -4172,7 +3940,7 @@ ALTER TABLE public.permissions ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENT
 
 
 --
--- Name: piv_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: piv_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.piv_seq
@@ -4183,10 +3951,8 @@ CREATE SEQUENCE public.piv_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.piv_seq OWNER TO mirror_user;
-
 --
--- Name: pjb_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: pjb_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.pjb_seq
@@ -4197,10 +3963,8 @@ CREATE SEQUENCE public.pjb_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pjb_seq OWNER TO mirror_user;
-
 --
--- Name: pji_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: pji_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.pji_seq
@@ -4211,10 +3975,8 @@ CREATE SEQUENCE public.pji_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pji_seq OWNER TO mirror_user;
-
 --
--- Name: pod_attributions; Type: TABLE; Schema: public; Owner: postgres
+-- Name: pod_attributions; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.pod_attributions (
@@ -4244,171 +4006,169 @@ CREATE TABLE public.pod_attributions (
 );
 
 
-ALTER TABLE public.pod_attributions OWNER TO mirror_user;
-
 --
--- Name: COLUMN pod_attributions.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.id IS 'Primary key (PAT prefix)';
 
 
 --
--- Name: COLUMN pod_attributions.order_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.order_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.order_id IS 'Reference to orders';
 
 
 --
--- Name: COLUMN pod_attributions.pod_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.pod_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.pod_id IS 'Reference to pods';
 
 
 --
--- Name: COLUMN pod_attributions.partner_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.partner_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.partner_id IS 'Reference to pod_partners';
 
 
 --
--- Name: COLUMN pod_attributions.qr_code_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.qr_code_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.qr_code_id IS 'Reference to pod_qr_codes';
 
 
 --
--- Name: COLUMN pod_attributions.scan_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.scan_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.scan_id IS 'Reference to the original QR scan';
 
 
 --
--- Name: COLUMN pod_attributions.attribution_type; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.attribution_type; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.attribution_type IS 'Type: FIRST_TOUCH, LAST_TOUCH, MULTI_TOUCH';
 
 
 --
--- Name: COLUMN pod_attributions.attribution_weight; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.attribution_weight; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.attribution_weight IS 'Weight for multi-touch attribution (0.0-1.0)';
 
 
 --
--- Name: COLUMN pod_attributions.order_amount; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.order_amount; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.order_amount IS 'Order total amount';
 
 
 --
--- Name: COLUMN pod_attributions.attributed_amount; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.attributed_amount; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.attributed_amount IS 'Amount attributed to this POD (order_amount * weight)';
 
 
 --
--- Name: COLUMN pod_attributions.currency; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.currency; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.currency IS 'Currency code';
 
 
 --
--- Name: COLUMN pod_attributions.first_scan_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.first_scan_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.first_scan_at IS 'First scan timestamp in attribution window';
 
 
 --
--- Name: COLUMN pod_attributions.last_scan_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.last_scan_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.last_scan_at IS 'Last scan timestamp before order';
 
 
 --
--- Name: COLUMN pod_attributions.order_placed_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.order_placed_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.order_placed_at IS 'Order placement timestamp';
 
 
 --
--- Name: COLUMN pod_attributions.days_to_conversion; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.days_to_conversion; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.days_to_conversion IS 'Days between first scan and order';
 
 
 --
--- Name: COLUMN pod_attributions.touch_count; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.touch_count; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.touch_count IS 'Number of touches before conversion';
 
 
 --
--- Name: COLUMN pod_attributions.status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.status IS 'Attribution status (PENDING, CONFIRMED, CANCELLED)';
 
 
 --
--- Name: COLUMN pod_attributions.commission_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.commission_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.commission_id IS 'Reference to pod_commissions when commission is calculated';
 
 
 --
--- Name: COLUMN pod_attributions.notes; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.notes; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.notes IS 'Internal notes';
 
 
 --
--- Name: COLUMN pod_attributions.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN pod_attributions.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN pod_attributions.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN pod_attributions.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_attributions.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_attributions.is_active IS 'Active status flag';
 
 
 --
--- Name: pod_commissions; Type: TABLE; Schema: public; Owner: postgres
+-- Name: pod_commissions; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.pod_commissions (
@@ -4446,227 +4206,225 @@ CREATE TABLE public.pod_commissions (
 );
 
 
-ALTER TABLE public.pod_commissions OWNER TO mirror_user;
-
 --
--- Name: COLUMN pod_commissions.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.id IS 'Primary key (PCM prefix)';
 
 
 --
--- Name: COLUMN pod_commissions.partner_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.partner_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.partner_id IS 'FK to pod_partners';
 
 
 --
--- Name: COLUMN pod_commissions.pod_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.pod_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.pod_id IS 'FK to pods (optional)';
 
 
 --
--- Name: COLUMN pod_commissions.commission_rate; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.commission_rate; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.commission_rate IS 'Commission rate applied';
 
 
 --
--- Name: COLUMN pod_commissions.commission_amount; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.commission_amount; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.commission_amount IS 'Calculated commission amount';
 
 
 --
--- Name: COLUMN pod_commissions.status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.status IS 'Status: PENDING, APPROVED, PAID, CANCELLED';
 
 
 --
--- Name: COLUMN pod_commissions.attributed_scan_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.attributed_scan_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.attributed_scan_id IS 'FK to qr_scans (attribution source)';
 
 
 --
--- Name: COLUMN pod_commissions.approved_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.approved_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.approved_at IS 'When commission was approved';
 
 
 --
--- Name: COLUMN pod_commissions.approved_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.approved_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.approved_by IS 'Who approved the commission';
 
 
 --
--- Name: COLUMN pod_commissions.paid_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.paid_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.paid_at IS 'When commission was paid';
 
 
 --
--- Name: COLUMN pod_commissions.paid_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.paid_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.paid_by IS 'Who marked as paid';
 
 
 --
--- Name: COLUMN pod_commissions.payment_reference; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.payment_reference; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.payment_reference IS 'Payment reference/transaction ID';
 
 
 --
--- Name: COLUMN pod_commissions.notes; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.notes; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.notes IS 'Additional notes';
 
 
 --
--- Name: COLUMN pod_commissions.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN pod_commissions.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN pod_commissions.created_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.created_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.created_by IS 'User who created the record';
 
 
 --
--- Name: COLUMN pod_commissions.updated_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.updated_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.updated_by IS 'User who last updated the record';
 
 
 --
--- Name: COLUMN pod_commissions.adjustment_reason; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.adjustment_reason; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.adjustment_reason IS 'Reason for adjustment';
 
 
 --
--- Name: COLUMN pod_commissions.adjustments; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.adjustments; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.adjustments IS 'Adjustment amount';
 
 
 --
--- Name: COLUMN pod_commissions.attributed_amount; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.attributed_amount; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.attributed_amount IS 'Attributed amount';
 
 
 --
--- Name: COLUMN pod_commissions.bank_account; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.bank_account; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.bank_account IS 'Bank account number';
 
 
 --
--- Name: COLUMN pod_commissions.bank_name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.bank_name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.bank_name IS 'Bank name';
 
 
 --
--- Name: COLUMN pod_commissions.currency; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.currency; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.currency IS 'Currency';
 
 
 --
--- Name: COLUMN pod_commissions.final_amount; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.final_amount; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.final_amount IS 'Final amount';
 
 
 --
--- Name: COLUMN pod_commissions.payment_method; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.payment_method; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.payment_method IS 'Payment method';
 
 
 --
--- Name: COLUMN pod_commissions.total_order_amount; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.total_order_amount; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.total_order_amount IS 'Total order amount';
 
 
 --
--- Name: COLUMN pod_commissions.total_orders; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.total_orders; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.total_orders IS 'Total orders';
 
 
 --
--- Name: COLUMN pod_commissions.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN pod_commissions.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.is_active IS 'Active flag';
 
 
 --
--- Name: COLUMN pod_commissions.period_start; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.period_start; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.period_start IS 'Period start date';
 
 
 --
--- Name: COLUMN pod_commissions.period_end; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_commissions.period_end; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_commissions.period_end IS 'Period end date';
 
 
 --
--- Name: pod_partners; Type: TABLE; Schema: public; Owner: postgres
+-- Name: pod_partners; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.pod_partners (
@@ -4714,227 +4472,225 @@ CREATE TABLE public.pod_partners (
 );
 
 
-ALTER TABLE public.pod_partners OWNER TO mirror_user;
-
 --
--- Name: COLUMN pod_partners.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.id IS 'Primary key (PTR prefix)';
 
 
 --
--- Name: COLUMN pod_partners.business_name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.business_name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.business_name IS 'Partner business name';
 
 
 --
--- Name: COLUMN pod_partners.contact_name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.contact_name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.contact_name IS 'Primary contact person name';
 
 
 --
--- Name: COLUMN pod_partners.status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.status IS 'Status: PENDING, ACTIVE, SUSPENDED, TERMINATED';
 
 
 --
--- Name: COLUMN pod_partners.address; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.address; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.address IS 'Street address';
 
 
 --
--- Name: COLUMN pod_partners.city; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.city; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.city IS 'City';
 
 
 --
--- Name: COLUMN pod_partners.district; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.district; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.district IS 'District/Ward';
 
 
 --
--- Name: COLUMN pod_partners.commission_rate; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.commission_rate; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.commission_rate IS 'Commission rate for LOCATION type (e.g., 0.05 for 5%)';
 
 
 --
--- Name: COLUMN pod_partners.contract_start_date; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.contract_start_date; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.contract_start_date IS 'Contract start date';
 
 
 --
--- Name: COLUMN pod_partners.contract_end_date; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.contract_end_date; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.contract_end_date IS 'Contract end date';
 
 
 --
--- Name: COLUMN pod_partners.notes; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.notes; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.notes IS 'Additional notes';
 
 
 --
--- Name: COLUMN pod_partners.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN pod_partners.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN pod_partners.created_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.created_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.created_by IS 'User who created the record';
 
 
 --
--- Name: COLUMN pod_partners.updated_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.updated_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.updated_by IS 'User who last updated the record';
 
 
 --
--- Name: COLUMN pod_partners.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN pod_partners.address_line1; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.address_line1; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.address_line1 IS 'Address line 1';
 
 
 --
--- Name: COLUMN pod_partners.address_line2; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.address_line2; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.address_line2 IS 'Address line 2';
 
 
 --
--- Name: COLUMN pod_partners.state; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.state; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.state IS 'State/Province';
 
 
 --
--- Name: COLUMN pod_partners.postal_code; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.postal_code; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.postal_code IS 'Postal/ZIP code';
 
 
 --
--- Name: COLUMN pod_partners.country; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.country; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.country IS 'Country';
 
 
 --
--- Name: COLUMN pod_partners.approved_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.approved_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.approved_at IS 'Timestamp when partner was approved';
 
 
 --
--- Name: COLUMN pod_partners.approved_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.approved_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.approved_by IS 'User who approved the partner';
 
 
 --
--- Name: COLUMN pod_partners.business_license; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.business_license; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.business_license IS 'Business license number';
 
 
 --
--- Name: COLUMN pod_partners.tax_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.tax_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.tax_id IS 'Tax identification number';
 
 
 --
--- Name: COLUMN pod_partners.tier; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.tier; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.tier IS 'Partner tier';
 
 
 --
--- Name: COLUMN pod_partners.user_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.user_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.user_id IS 'Reference to users table for portal access';
 
 
 --
--- Name: COLUMN pod_partners.business_type; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.business_type; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.business_type IS 'Type of business';
 
 
 --
--- Name: COLUMN pod_partners.contact_email; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.contact_email; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.contact_email IS 'Primary contact email';
 
 
 --
--- Name: COLUMN pod_partners.contact_phone; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.contact_phone; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.contact_phone IS 'Primary contact phone';
 
 
 --
--- Name: COLUMN pod_partners.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_partners.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_partners.is_active IS 'Active status flag';
 
 
 --
--- Name: pod_products; Type: TABLE; Schema: public; Owner: postgres
+-- Name: pod_products; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.pod_products (
@@ -4949,66 +4705,64 @@ CREATE TABLE public.pod_products (
 );
 
 
-ALTER TABLE public.pod_products OWNER TO mirror_user;
-
 --
--- Name: COLUMN pod_products.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_products.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_products.id IS 'Primary key (auto-increment)';
 
 
 --
--- Name: COLUMN pod_products.pod_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_products.pod_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_products.pod_id IS 'FK to pods';
 
 
 --
--- Name: COLUMN pod_products.product_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_products.product_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_products.product_id IS 'FK to mirror_products';
 
 
 --
--- Name: COLUMN pod_products.display_order; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_products.display_order; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_products.display_order IS 'Display order within the POD';
 
 
 --
--- Name: COLUMN pod_products.assigned_date; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_products.assigned_date; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_products.assigned_date IS 'Date product was assigned to POD';
 
 
 --
--- Name: COLUMN pod_products.removed_date; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_products.removed_date; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_products.removed_date IS 'Date product was removed from POD (null if still active)';
 
 
 --
--- Name: COLUMN pod_products.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_products.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_products.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN pod_products.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_products.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_products.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: pod_products_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: pod_products_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.pod_products ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -5022,7 +4776,7 @@ ALTER TABLE public.pod_products ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDEN
 
 
 --
--- Name: pod_qr_codes; Type: TABLE; Schema: public; Owner: postgres
+-- Name: pod_qr_codes; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.pod_qr_codes (
@@ -5045,108 +4799,106 @@ CREATE TABLE public.pod_qr_codes (
 );
 
 
-ALTER TABLE public.pod_qr_codes OWNER TO mirror_user;
-
 --
--- Name: COLUMN pod_qr_codes.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_codes.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_codes.id IS 'Primary key (PQR prefix)';
 
 
 --
--- Name: COLUMN pod_qr_codes.pod_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_codes.pod_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_codes.pod_id IS 'Reference to pods';
 
 
 --
--- Name: COLUMN pod_qr_codes.product_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_codes.product_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_codes.product_id IS 'Reference to mirror_products';
 
 
 --
--- Name: COLUMN pod_qr_codes.short_code; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_codes.short_code; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_codes.short_code IS 'Short unique code for URL (e.g., ABC123)';
 
 
 --
--- Name: COLUMN pod_qr_codes.full_url; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_codes.full_url; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_codes.full_url IS 'Full redirect URL';
 
 
 --
--- Name: COLUMN pod_qr_codes.qr_image_url; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_codes.qr_image_url; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_codes.qr_image_url IS 'URL to QR code image in S3/R2';
 
 
 --
--- Name: COLUMN pod_qr_codes.status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_codes.status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_codes.status IS 'QR code status (ACTIVE, INACTIVE, EXPIRED)';
 
 
 --
--- Name: COLUMN pod_qr_codes.scan_count; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_codes.scan_count; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_codes.scan_count IS 'Total number of scans';
 
 
 --
--- Name: COLUMN pod_qr_codes.last_scanned_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_codes.last_scanned_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_codes.last_scanned_at IS 'Last scan timestamp';
 
 
 --
--- Name: COLUMN pod_qr_codes.expires_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_codes.expires_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_codes.expires_at IS 'Expiration timestamp (optional)';
 
 
 --
--- Name: COLUMN pod_qr_codes.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_codes.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_codes.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN pod_qr_codes.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_codes.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_codes.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN pod_qr_codes.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_codes.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_codes.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN pod_qr_codes.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_codes.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_codes.is_active IS 'Active status flag';
 
 
 --
--- Name: pod_qr_scans; Type: TABLE; Schema: public; Owner: postgres
+-- Name: pod_qr_scans; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.pod_qr_scans (
@@ -5174,157 +4926,155 @@ CREATE TABLE public.pod_qr_scans (
 );
 
 
-ALTER TABLE public.pod_qr_scans OWNER TO mirror_user;
-
 --
--- Name: COLUMN pod_qr_scans.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.id IS 'Primary key (PQS prefix)';
 
 
 --
--- Name: COLUMN pod_qr_scans.qr_code_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.qr_code_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.qr_code_id IS 'Reference to pod_qr_codes';
 
 
 --
--- Name: COLUMN pod_qr_scans.pod_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.pod_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.pod_id IS 'Reference to pods (denormalized for performance)';
 
 
 --
--- Name: COLUMN pod_qr_scans.product_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.product_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.product_id IS 'Reference to mirror_products (denormalized)';
 
 
 --
--- Name: COLUMN pod_qr_scans.partner_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.partner_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.partner_id IS 'Reference to pod_partners (denormalized)';
 
 
 --
--- Name: COLUMN pod_qr_scans.session_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.session_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.session_id IS 'Browser/device session identifier';
 
 
 --
--- Name: COLUMN pod_qr_scans.user_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.user_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.user_id IS 'User ID if logged in';
 
 
 --
--- Name: COLUMN pod_qr_scans.ip_address; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.ip_address; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.ip_address IS 'Client IP address (IPv4 or IPv6)';
 
 
 --
--- Name: COLUMN pod_qr_scans.user_agent; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.user_agent; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.user_agent IS 'Browser user agent string';
 
 
 --
--- Name: COLUMN pod_qr_scans.device_type; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.device_type; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.device_type IS 'Device type (MOBILE, TABLET, DESKTOP)';
 
 
 --
--- Name: COLUMN pod_qr_scans.os; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.os; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.os IS 'Operating system';
 
 
 --
--- Name: COLUMN pod_qr_scans.browser; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.browser; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.browser IS 'Browser name';
 
 
 --
--- Name: COLUMN pod_qr_scans.referer; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.referer; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.referer IS 'HTTP referer if available';
 
 
 --
--- Name: COLUMN pod_qr_scans.country; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.country; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.country IS 'Country from IP geolocation';
 
 
 --
--- Name: COLUMN pod_qr_scans.city; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.city; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.city IS 'City from IP geolocation';
 
 
 --
--- Name: COLUMN pod_qr_scans.scanned_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.scanned_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.scanned_at IS 'Scan timestamp';
 
 
 --
--- Name: COLUMN pod_qr_scans.is_unique; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.is_unique; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.is_unique IS 'Is this a unique scan (not duplicate within window)';
 
 
 --
--- Name: COLUMN pod_qr_scans.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN pod_qr_scans.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN pod_qr_scans.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN pod_qr_scans.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_qr_scans.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_qr_scans.is_active IS 'Active status flag';
 
 
 --
--- Name: pod_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: pod_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.pod_seq
@@ -5335,10 +5085,8 @@ CREATE SEQUENCE public.pod_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pod_seq OWNER TO mirror_user;
-
 --
--- Name: pod_user_attributions; Type: TABLE; Schema: public; Owner: postgres
+-- Name: pod_user_attributions; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.pod_user_attributions (
@@ -5358,101 +5106,99 @@ CREATE TABLE public.pod_user_attributions (
 );
 
 
-ALTER TABLE public.pod_user_attributions OWNER TO mirror_user;
-
 --
--- Name: COLUMN pod_user_attributions.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_user_attributions.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_user_attributions.id IS 'Primary key (PUA prefix)';
 
 
 --
--- Name: COLUMN pod_user_attributions.user_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_user_attributions.user_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_user_attributions.user_id IS 'Reference to users';
 
 
 --
--- Name: COLUMN pod_user_attributions.pod_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_user_attributions.pod_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_user_attributions.pod_id IS 'Reference to pods';
 
 
 --
--- Name: COLUMN pod_user_attributions.partner_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_user_attributions.partner_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_user_attributions.partner_id IS 'Reference to pod_partners';
 
 
 --
--- Name: COLUMN pod_user_attributions.product_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_user_attributions.product_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_user_attributions.product_id IS 'Product that was scanned';
 
 
 --
--- Name: COLUMN pod_user_attributions.qr_code_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_user_attributions.qr_code_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_user_attributions.qr_code_id IS 'QR code that was scanned';
 
 
 --
--- Name: COLUMN pod_user_attributions.first_scan_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_user_attributions.first_scan_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_user_attributions.first_scan_at IS 'Timestamp of the first scan';
 
 
 --
--- Name: COLUMN pod_user_attributions.expires_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_user_attributions.expires_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_user_attributions.expires_at IS 'Attribution expiry (first_scan_at + 30 days)';
 
 
 --
--- Name: COLUMN pod_user_attributions.status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_user_attributions.status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_user_attributions.status IS 'Attribution status (ACTIVE, EXPIRED)';
 
 
 --
--- Name: COLUMN pod_user_attributions.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_user_attributions.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_user_attributions.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN pod_user_attributions.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_user_attributions.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_user_attributions.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN pod_user_attributions.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_user_attributions.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_user_attributions.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN pod_user_attributions.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pod_user_attributions.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pod_user_attributions.is_active IS 'Active status flag';
 
 
 --
--- Name: pods; Type: TABLE; Schema: public; Owner: postgres
+-- Name: pods; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.pods (
@@ -5490,213 +5236,211 @@ CREATE TABLE public.pods (
 );
 
 
-ALTER TABLE public.pods OWNER TO mirror_user;
-
 --
--- Name: COLUMN pods.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.id IS 'Primary key (POD prefix)';
 
 
 --
--- Name: COLUMN pods.partner_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.partner_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.partner_id IS 'FK to pod_partners';
 
 
 --
--- Name: COLUMN pods.pod_type; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.pod_type; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.pod_type IS 'POD type: VITRINE, PHYGITAL, WALL, EVENT';
 
 
 --
--- Name: COLUMN pods.location; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.location; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.location IS 'Specific location within partner premises';
 
 
 --
--- Name: COLUMN pods.status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.status IS 'Status: SETUP, ACTIVE, MAINTENANCE, INACTIVE';
 
 
 --
--- Name: COLUMN pods.installed_date; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.installed_date; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.installed_date IS 'Date POD was installed';
 
 
 --
--- Name: COLUMN pods.max_products; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.max_products; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.max_products IS 'Maximum number of products this POD can display';
 
 
 --
--- Name: COLUMN pods.notes; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.notes; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.notes IS 'Additional notes';
 
 
 --
--- Name: COLUMN pods.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN pods.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN pods.created_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.created_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.created_by IS 'User who created the record';
 
 
 --
--- Name: COLUMN pods.updated_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.updated_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.updated_by IS 'User who last updated the record';
 
 
 --
--- Name: COLUMN pods.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN pods.description; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.description; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.description IS 'POD description';
 
 
 --
--- Name: COLUMN pods.location_name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.location_name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.location_name IS 'Physical location name';
 
 
 --
--- Name: COLUMN pods.address_line1; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.address_line1; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.address_line1 IS 'Address line 1';
 
 
 --
--- Name: COLUMN pods.address_line2; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.address_line2; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.address_line2 IS 'Address line 2';
 
 
 --
--- Name: COLUMN pods.city; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.city; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.city IS 'City';
 
 
 --
--- Name: COLUMN pods.state; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.state; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.state IS 'State/Province';
 
 
 --
--- Name: COLUMN pods.postal_code; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.postal_code; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.postal_code IS 'Postal/ZIP code';
 
 
 --
--- Name: COLUMN pods.country; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.country; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.country IS 'Country';
 
 
 --
--- Name: COLUMN pods.latitude; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.latitude; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.latitude IS 'GPS latitude';
 
 
 --
--- Name: COLUMN pods.longitude; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.longitude; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.longitude IS 'GPS longitude';
 
 
 --
--- Name: COLUMN pods.display_capacity; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.display_capacity; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.display_capacity IS 'Maximum number of products';
 
 
 --
--- Name: COLUMN pods.installation_date; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.installation_date; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.installation_date IS 'Date when POD was installed';
 
 
 --
--- Name: COLUMN pods.last_maintenance_date; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.last_maintenance_date; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.last_maintenance_date IS 'Last maintenance date';
 
 
 --
--- Name: COLUMN pods.next_maintenance_date; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.next_maintenance_date; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.next_maintenance_date IS 'Scheduled next maintenance';
 
 
 --
--- Name: COLUMN pods.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.is_active IS 'Active status flag';
 
 
 --
--- Name: COLUMN pods.name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN pods.name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.pods.name IS 'Display name for the POD';
 
 
 --
--- Name: por_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: por_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.por_seq
@@ -5707,10 +5451,8 @@ CREATE SEQUENCE public.por_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.por_seq OWNER TO mirror_user;
-
 --
--- Name: pos_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: pos_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.pos_seq
@@ -5721,10 +5463,8 @@ CREATE SEQUENCE public.pos_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pos_seq OWNER TO mirror_user;
-
 --
--- Name: ppl_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: ppl_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.ppl_seq
@@ -5735,10 +5475,8 @@ CREATE SEQUENCE public.ppl_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ppl_seq OWNER TO mirror_user;
-
 --
--- Name: pqr_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: pqr_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.pqr_seq
@@ -5749,10 +5487,8 @@ CREATE SEQUENCE public.pqr_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pqr_seq OWNER TO mirror_user;
-
 --
--- Name: pqs_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: pqs_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.pqs_seq
@@ -5763,10 +5499,8 @@ CREATE SEQUENCE public.pqs_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pqs_seq OWNER TO mirror_user;
-
 --
--- Name: prd_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: prd_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.prd_seq
@@ -5777,10 +5511,8 @@ CREATE SEQUENCE public.prd_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.prd_seq OWNER TO mirror_user;
-
 --
--- Name: print_job_items; Type: TABLE; Schema: public; Owner: postgres
+-- Name: print_job_items; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.print_job_items (
@@ -5799,10 +5531,8 @@ CREATE TABLE public.print_job_items (
 );
 
 
-ALTER TABLE public.print_job_items OWNER TO mirror_user;
-
 --
--- Name: print_jobs; Type: TABLE; Schema: public; Owner: postgres
+-- Name: print_jobs; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.print_jobs (
@@ -5827,10 +5557,8 @@ CREATE TABLE public.print_jobs (
 );
 
 
-ALTER TABLE public.print_jobs OWNER TO mirror_user;
-
 --
--- Name: product_certificates; Type: TABLE; Schema: public; Owner: postgres
+-- Name: product_certificates; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.product_certificates (
@@ -5841,24 +5569,22 @@ CREATE TABLE public.product_certificates (
 );
 
 
-ALTER TABLE public.product_certificates OWNER TO mirror_user;
-
 --
--- Name: COLUMN product_certificates.product_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN product_certificates.product_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.product_certificates.product_id IS 'Reference to mirror_products.id';
 
 
 --
--- Name: COLUMN product_certificates.certificate_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN product_certificates.certificate_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.product_certificates.certificate_id IS 'Reference to certificates.id';
 
 
 --
--- Name: product_certificates_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: product_certificates_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.product_certificates ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -5872,7 +5598,7 @@ ALTER TABLE public.product_certificates ALTER COLUMN id ADD GENERATED BY DEFAULT
 
 
 --
--- Name: product_finder_combinations; Type: TABLE; Schema: public; Owner: postgres
+-- Name: product_finder_combinations; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.product_finder_combinations (
@@ -5888,10 +5614,8 @@ CREATE TABLE public.product_finder_combinations (
 );
 
 
-ALTER TABLE public.product_finder_combinations OWNER TO mirror_user;
-
 --
--- Name: product_finder_combinations_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: product_finder_combinations_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.product_finder_combinations ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -5905,7 +5629,7 @@ ALTER TABLE public.product_finder_combinations ALTER COLUMN id ADD GENERATED BY 
 
 
 --
--- Name: product_finder_selections; Type: TABLE; Schema: public; Owner: postgres
+-- Name: product_finder_selections; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.product_finder_selections (
@@ -5927,10 +5651,8 @@ CREATE TABLE public.product_finder_selections (
 );
 
 
-ALTER TABLE public.product_finder_selections OWNER TO mirror_user;
-
 --
--- Name: product_finder_selections_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: product_finder_selections_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.product_finder_selections ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -5944,7 +5666,7 @@ ALTER TABLE public.product_finder_selections ALTER COLUMN id ADD GENERATED BY DE
 
 
 --
--- Name: product_finder_side_stone_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: product_finder_side_stone_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.product_finder_side_stone_options (
@@ -5961,10 +5683,8 @@ CREATE TABLE public.product_finder_side_stone_options (
 );
 
 
-ALTER TABLE public.product_finder_side_stone_options OWNER TO mirror_user;
-
 --
--- Name: product_finder_side_stone_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: product_finder_side_stone_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.product_finder_side_stone_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -5978,7 +5698,7 @@ ALTER TABLE public.product_finder_side_stone_options ALTER COLUMN id ADD GENERAT
 
 
 --
--- Name: production_order_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: production_order_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.production_order_seq
@@ -5989,10 +5709,8 @@ CREATE SEQUENCE public.production_order_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.production_order_seq OWNER TO mirror_user;
-
 --
--- Name: production_order_stage_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: production_order_stage_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.production_order_stage_seq
@@ -6003,10 +5721,8 @@ CREATE SEQUENCE public.production_order_stage_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.production_order_stage_seq OWNER TO mirror_user;
-
 --
--- Name: production_order_stages; Type: TABLE; Schema: public; Owner: postgres
+-- Name: production_order_stages; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.production_order_stages (
@@ -6040,10 +5756,8 @@ CREATE TABLE public.production_order_stages (
 );
 
 
-ALTER TABLE public.production_order_stages OWNER TO mirror_user;
-
 --
--- Name: production_orders; Type: TABLE; Schema: public; Owner: postgres
+-- Name: production_orders; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.production_orders (
@@ -6071,10 +5785,8 @@ CREATE TABLE public.production_orders (
 );
 
 
-ALTER TABLE public.production_orders OWNER TO mirror_user;
-
 --
--- Name: production_plan_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: production_plan_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.production_plan_seq
@@ -6085,10 +5797,8 @@ CREATE SEQUENCE public.production_plan_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.production_plan_seq OWNER TO mirror_user;
-
 --
--- Name: production_plans; Type: TABLE; Schema: public; Owner: postgres
+-- Name: production_plans; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.production_plans (
@@ -6114,10 +5824,8 @@ CREATE TABLE public.production_plans (
 );
 
 
-ALTER TABLE public.production_plans OWNER TO mirror_user;
-
 --
--- Name: psi_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: psi_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.psi_seq
@@ -6128,10 +5836,8 @@ CREATE SEQUENCE public.psi_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.psi_seq OWNER TO mirror_user;
-
 --
--- Name: psl_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: psl_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.psl_seq
@@ -6142,10 +5848,8 @@ CREATE SEQUENCE public.psl_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.psl_seq OWNER TO mirror_user;
-
 --
--- Name: ptn_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: ptn_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.ptn_seq
@@ -6156,10 +5860,8 @@ CREATE SEQUENCE public.ptn_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ptn_seq OWNER TO mirror_user;
-
 --
--- Name: ptr_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: ptr_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.ptr_seq
@@ -6170,10 +5872,8 @@ CREATE SEQUENCE public.ptr_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ptr_seq OWNER TO mirror_user;
-
 --
--- Name: ptx_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: ptx_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.ptx_seq
@@ -6184,10 +5884,8 @@ CREATE SEQUENCE public.ptx_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ptx_seq OWNER TO mirror_user;
-
 --
--- Name: pua_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: pua_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.pua_seq
@@ -6198,10 +5896,8 @@ CREATE SEQUENCE public.pua_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.pua_seq OWNER TO mirror_user;
-
 --
--- Name: purchase_order_age_group_allocations; Type: TABLE; Schema: public; Owner: postgres
+-- Name: purchase_order_age_group_allocations; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.purchase_order_age_group_allocations (
@@ -6213,10 +5909,8 @@ CREATE TABLE public.purchase_order_age_group_allocations (
 );
 
 
-ALTER TABLE public.purchase_order_age_group_allocations OWNER TO mirror_user;
-
 --
--- Name: purchase_order_item_variants; Type: TABLE; Schema: public; Owner: postgres
+-- Name: purchase_order_item_variants; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.purchase_order_item_variants (
@@ -6229,10 +5923,8 @@ CREATE TABLE public.purchase_order_item_variants (
 );
 
 
-ALTER TABLE public.purchase_order_item_variants OWNER TO mirror_user;
-
 --
--- Name: purchase_order_items; Type: TABLE; Schema: public; Owner: postgres
+-- Name: purchase_order_items; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.purchase_order_items (
@@ -6245,10 +5937,8 @@ CREATE TABLE public.purchase_order_items (
 );
 
 
-ALTER TABLE public.purchase_order_items OWNER TO mirror_user;
-
 --
--- Name: purchase_orders; Type: TABLE; Schema: public; Owner: postgres
+-- Name: purchase_orders; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.purchase_orders (
@@ -6261,10 +5951,8 @@ CREATE TABLE public.purchase_orders (
 );
 
 
-ALTER TABLE public.purchase_orders OWNER TO mirror_user;
-
 --
--- Name: qr_codes; Type: TABLE; Schema: public; Owner: postgres
+-- Name: qr_codes; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.qr_codes (
@@ -6285,108 +5973,106 @@ CREATE TABLE public.qr_codes (
 );
 
 
-ALTER TABLE public.qr_codes OWNER TO mirror_user;
-
 --
--- Name: COLUMN qr_codes.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_codes.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_codes.id IS 'Primary key (QRC prefix)';
 
 
 --
--- Name: COLUMN qr_codes.code; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_codes.code; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_codes.code IS 'Unique QR code value';
 
 
 --
--- Name: COLUMN qr_codes.qr_code_type; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_codes.qr_code_type; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_codes.qr_code_type IS 'Type: POD, PRODUCT, PARTNER, PHYGITAL';
 
 
 --
--- Name: COLUMN qr_codes.partner_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_codes.partner_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_codes.partner_id IS 'FK to pod_partners (optional)';
 
 
 --
--- Name: COLUMN qr_codes.pod_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_codes.pod_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_codes.pod_id IS 'FK to pods (optional)';
 
 
 --
--- Name: COLUMN qr_codes.product_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_codes.product_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_codes.product_id IS 'FK to mirror_products (optional)';
 
 
 --
--- Name: COLUMN qr_codes.status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_codes.status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_codes.status IS 'Status: ACTIVE, INACTIVE, EXPIRED';
 
 
 --
--- Name: COLUMN qr_codes.target_url; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_codes.target_url; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_codes.target_url IS 'Redirect target URL';
 
 
 --
--- Name: COLUMN qr_codes.expires_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_codes.expires_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_codes.expires_at IS 'Optional expiration datetime';
 
 
 --
--- Name: COLUMN qr_codes.description; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_codes.description; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_codes.description IS 'Description of the QR code';
 
 
 --
--- Name: COLUMN qr_codes.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_codes.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_codes.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN qr_codes.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_codes.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_codes.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN qr_codes.created_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_codes.created_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_codes.created_by IS 'User who created the record';
 
 
 --
--- Name: COLUMN qr_codes.updated_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_codes.updated_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_codes.updated_by IS 'User who last updated the record';
 
 
 --
--- Name: qr_scans; Type: TABLE; Schema: public; Owner: postgres
+-- Name: qr_scans; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.qr_scans (
@@ -6405,94 +6091,92 @@ CREATE TABLE public.qr_scans (
 );
 
 
-ALTER TABLE public.qr_scans OWNER TO mirror_user;
-
 --
--- Name: COLUMN qr_scans.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_scans.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_scans.id IS 'Primary key (SCN prefix)';
 
 
 --
--- Name: COLUMN qr_scans.qr_code_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_scans.qr_code_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_scans.qr_code_id IS 'FK to qr_codes';
 
 
 --
--- Name: COLUMN qr_scans.scanned_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_scans.scanned_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_scans.scanned_at IS 'When the scan occurred';
 
 
 --
--- Name: COLUMN qr_scans.device_fingerprint; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_scans.device_fingerprint; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_scans.device_fingerprint IS 'Device fingerprint for deduplication';
 
 
 --
--- Name: COLUMN qr_scans.ip_address; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_scans.ip_address; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_scans.ip_address IS 'IP address of scanner';
 
 
 --
--- Name: COLUMN qr_scans.user_agent; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_scans.user_agent; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_scans.user_agent IS 'Browser user agent';
 
 
 --
--- Name: COLUMN qr_scans.session_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_scans.session_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_scans.session_id IS 'Session ID for attribution tracking';
 
 
 --
--- Name: COLUMN qr_scans.attribution_expires_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_scans.attribution_expires_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_scans.attribution_expires_at IS 'Attribution window expiration (30 days from scan)';
 
 
 --
--- Name: COLUMN qr_scans.referrer; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_scans.referrer; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_scans.referrer IS 'Referrer URL';
 
 
 --
--- Name: COLUMN qr_scans.country; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_scans.country; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_scans.country IS 'Country from IP geolocation';
 
 
 --
--- Name: COLUMN qr_scans.city; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_scans.city; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_scans.city IS 'City from IP geolocation';
 
 
 --
--- Name: COLUMN qr_scans.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN qr_scans.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.qr_scans.created_at IS 'Creation timestamp';
 
 
 --
--- Name: qrc_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: qrc_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.qrc_seq
@@ -6503,10 +6187,8 @@ CREATE SEQUENCE public.qrc_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.qrc_seq OWNER TO mirror_user;
-
 --
--- Name: rak_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: rak_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.rak_seq
@@ -6517,10 +6199,8 @@ CREATE SEQUENCE public.rak_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.rak_seq OWNER TO mirror_user;
-
 --
--- Name: rec_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: rec_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.rec_seq
@@ -6531,10 +6211,8 @@ CREATE SEQUENCE public.rec_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.rec_seq OWNER TO mirror_user;
-
 --
--- Name: rfid_scan_logs; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rfid_scan_logs; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.rfid_scan_logs (
@@ -6562,10 +6240,8 @@ CREATE TABLE public.rfid_scan_logs (
 );
 
 
-ALTER TABLE public.rfid_scan_logs OWNER TO mirror_user;
-
 --
--- Name: rfid_tags; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rfid_tags; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.rfid_tags (
@@ -6591,10 +6267,8 @@ CREATE TABLE public.rfid_tags (
 );
 
 
-ALTER TABLE public.rfid_tags OWNER TO mirror_user;
-
 --
--- Name: rft_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: rft_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.rft_seq
@@ -6605,10 +6279,8 @@ CREATE SEQUENCE public.rft_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.rft_seq OWNER TO mirror_user;
-
 --
--- Name: role_matrix; Type: TABLE; Schema: public; Owner: postgres
+-- Name: role_matrix; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.role_matrix (
@@ -6621,10 +6293,8 @@ CREATE TABLE public.role_matrix (
 );
 
 
-ALTER TABLE public.role_matrix OWNER TO mirror_user;
-
 --
--- Name: role_matrix_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: role_matrix_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.role_matrix ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -6638,7 +6308,7 @@ ALTER TABLE public.role_matrix ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENT
 
 
 --
--- Name: role_permissions; Type: TABLE; Schema: public; Owner: postgres
+-- Name: role_permissions; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.role_permissions (
@@ -6647,10 +6317,8 @@ CREATE TABLE public.role_permissions (
 );
 
 
-ALTER TABLE public.role_permissions OWNER TO mirror_user;
-
 --
--- Name: roles; Type: TABLE; Schema: public; Owner: postgres
+-- Name: roles; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.roles (
@@ -6665,10 +6333,8 @@ CREATE TABLE public.roles (
 );
 
 
-ALTER TABLE public.roles OWNER TO mirror_user;
-
 --
--- Name: roles_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: roles_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.roles ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -6682,7 +6348,7 @@ ALTER TABLE public.roles ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
 
 
 --
--- Name: rsl_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: rsl_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.rsl_seq
@@ -6693,10 +6359,8 @@ CREATE SEQUENCE public.rsl_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.rsl_seq OWNER TO mirror_user;
-
 --
--- Name: s3_files; Type: TABLE; Schema: public; Owner: postgres
+-- Name: s3_files; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.s3_files (
@@ -6718,10 +6382,8 @@ CREATE TABLE public.s3_files (
 );
 
 
-ALTER TABLE public.s3_files OWNER TO mirror_user;
-
 --
--- Name: scn_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: scn_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.scn_seq
@@ -6732,10 +6394,8 @@ CREATE SEQUENCE public.scn_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.scn_seq OWNER TO mirror_user;
-
 --
--- Name: side_stones_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: side_stones_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.side_stones_options (
@@ -6750,10 +6410,8 @@ CREATE TABLE public.side_stones_options (
 );
 
 
-ALTER TABLE public.side_stones_options OWNER TO mirror_user;
-
 --
--- Name: side_stones_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: side_stones_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.side_stones_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -6767,7 +6425,7 @@ ALTER TABLE public.side_stones_options ALTER COLUMN id ADD GENERATED BY DEFAULT 
 
 
 --
--- Name: sku_prefix_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: sku_prefix_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.sku_prefix_options (
@@ -6782,10 +6440,8 @@ CREATE TABLE public.sku_prefix_options (
 );
 
 
-ALTER TABLE public.sku_prefix_options OWNER TO mirror_user;
-
 --
--- Name: sku_prefix_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: sku_prefix_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.sku_prefix_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -6799,7 +6455,7 @@ ALTER TABLE public.sku_prefix_options ALTER COLUMN id ADD GENERATED BY DEFAULT A
 
 
 --
--- Name: sku_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: sku_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.sku_seq
@@ -6810,10 +6466,8 @@ CREATE SEQUENCE public.sku_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.sku_seq OWNER TO mirror_user;
-
 --
--- Name: slt_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: slt_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.slt_seq
@@ -6824,10 +6478,8 @@ CREATE SEQUENCE public.slt_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.slt_seq OWNER TO mirror_user;
-
 --
--- Name: stock_reconciliation_records; Type: TABLE; Schema: public; Owner: postgres
+-- Name: stock_reconciliation_records; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.stock_reconciliation_records (
@@ -6856,164 +6508,162 @@ CREATE TABLE public.stock_reconciliation_records (
 );
 
 
-ALTER TABLE public.stock_reconciliation_records OWNER TO mirror_user;
-
 --
--- Name: COLUMN stock_reconciliation_records.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.id IS 'Primary key (REC prefix)';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.document_number; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.document_number; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.document_number IS 'Document number (e.g., KK-1704700000000)';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.warehouse_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.warehouse_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.warehouse_id IS 'MISA warehouse ID';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.warehouse_name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.warehouse_name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.warehouse_name IS 'Warehouse name';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.reconciliation_date; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.reconciliation_date; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.reconciliation_date IS 'Date/time of reconciliation';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.created_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.created_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.created_by IS 'User ID who created the record';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.created_by_name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.created_by_name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.created_by_name IS 'User name who created the record';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.summary; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.summary; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.summary IS 'Summary statistics (total, match, missing, excess, notInMisa)';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.items_data; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.items_data; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.items_data IS 'Full reconciliation items data';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.report_file_key; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.report_file_key; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.report_file_key IS 'R2/S3 file key for DOCX report';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.report_file_name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.report_file_name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.report_file_name IS 'Original report file name';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.report_file_url; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.report_file_url; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.report_file_url IS 'Public URL for report download';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.notes; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.notes; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.notes IS 'Additional notes';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.total_items; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.total_items; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.total_items IS 'Total number of items in reconciliation';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.matched_items; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.matched_items; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.matched_items IS 'Number of items that matched';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.missing_items; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.missing_items; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.missing_items IS 'Number of items missing (physical less than system)';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.excess_items; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.excess_items; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.excess_items IS 'Number of items in excess (physical greater than system)';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.not_in_system_items; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.not_in_system_items; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.not_in_system_items IS 'Number of items not found in MISA system';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN stock_reconciliation_records.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN stock_reconciliation_records.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.stock_reconciliation_records.is_active IS 'Active status flag';
 
 
 --
--- Name: stone_origin_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: stone_origin_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.stone_origin_options (
@@ -7028,10 +6678,8 @@ CREATE TABLE public.stone_origin_options (
 );
 
 
-ALTER TABLE public.stone_origin_options OWNER TO mirror_user;
-
 --
--- Name: stone_origin_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: stone_origin_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.stone_origin_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -7045,7 +6693,7 @@ ALTER TABLE public.stone_origin_options ALTER COLUMN id ADD GENERATED BY DEFAULT
 
 
 --
--- Name: stone_role_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: stone_role_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.stone_role_options (
@@ -7060,10 +6708,8 @@ CREATE TABLE public.stone_role_options (
 );
 
 
-ALTER TABLE public.stone_role_options OWNER TO mirror_user;
-
 --
--- Name: stone_role_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: stone_role_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.stone_role_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -7077,7 +6723,7 @@ ALTER TABLE public.stone_role_options ALTER COLUMN id ADD GENERATED BY DEFAULT A
 
 
 --
--- Name: stone_shape_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: stone_shape_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.stone_shape_options (
@@ -7096,10 +6742,8 @@ CREATE TABLE public.stone_shape_options (
 );
 
 
-ALTER TABLE public.stone_shape_options OWNER TO mirror_user;
-
 --
--- Name: stone_shape_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: stone_shape_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.stone_shape_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -7113,7 +6757,7 @@ ALTER TABLE public.stone_shape_options ALTER COLUMN id ADD GENERATED BY DEFAULT 
 
 
 --
--- Name: stone_type_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: stone_type_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.stone_type_options (
@@ -7128,10 +6772,8 @@ CREATE TABLE public.stone_type_options (
 );
 
 
-ALTER TABLE public.stone_type_options OWNER TO mirror_user;
-
 --
--- Name: stone_type_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: stone_type_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.stone_type_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -7145,7 +6787,7 @@ ALTER TABLE public.stone_type_options ALTER COLUMN id ADD GENERATED BY DEFAULT A
 
 
 --
--- Name: stone_weight_options; Type: TABLE; Schema: public; Owner: postgres
+-- Name: stone_weight_options; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.stone_weight_options (
@@ -7160,10 +6802,8 @@ CREATE TABLE public.stone_weight_options (
 );
 
 
-ALTER TABLE public.stone_weight_options OWNER TO mirror_user;
-
 --
--- Name: stone_weight_options_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: stone_weight_options_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.stone_weight_options ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -7177,7 +6817,7 @@ ALTER TABLE public.stone_weight_options ALTER COLUMN id ADD GENERATED BY DEFAULT
 
 
 --
--- Name: user_otps; Type: TABLE; Schema: public; Owner: postgres
+-- Name: user_otps; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.user_otps (
@@ -7193,10 +6833,8 @@ CREATE TABLE public.user_otps (
 );
 
 
-ALTER TABLE public.user_otps OWNER TO mirror_user;
-
 --
--- Name: user_otps_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: user_otps_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.user_otps ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -7210,7 +6848,7 @@ ALTER TABLE public.user_otps ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTIT
 
 
 --
--- Name: user_roles; Type: TABLE; Schema: public; Owner: postgres
+-- Name: user_roles; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.user_roles (
@@ -7219,10 +6857,8 @@ CREATE TABLE public.user_roles (
 );
 
 
-ALTER TABLE public.user_roles OWNER TO mirror_user;
-
 --
--- Name: users; Type: TABLE; Schema: public; Owner: postgres
+-- Name: users; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.users (
@@ -7251,10 +6887,8 @@ CREATE TABLE public.users (
 );
 
 
-ALTER TABLE public.users OWNER TO mirror_user;
-
 --
--- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.users ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
@@ -7268,7 +6902,7 @@ ALTER TABLE public.users ALTER COLUMN id ADD GENERATED BY DEFAULT AS IDENTITY (
 
 
 --
--- Name: ven_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: ven_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.ven_seq
@@ -7279,10 +6913,8 @@ CREATE SEQUENCE public.ven_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.ven_seq OWNER TO mirror_user;
-
 --
--- Name: vendor_products; Type: TABLE; Schema: public; Owner: postgres
+-- Name: vendor_products; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.vendor_products (
@@ -7297,10 +6929,8 @@ CREATE TABLE public.vendor_products (
 );
 
 
-ALTER TABLE public.vendor_products OWNER TO mirror_user;
-
 --
--- Name: vendors; Type: TABLE; Schema: public; Owner: postgres
+-- Name: vendors; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.vendors (
@@ -7333,10 +6963,8 @@ CREATE TABLE public.vendors (
 );
 
 
-ALTER TABLE public.vendors OWNER TO mirror_user;
-
 --
--- Name: vpr_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: vpr_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.vpr_seq
@@ -7347,10 +6975,8 @@ CREATE SEQUENCE public.vpr_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.vpr_seq OWNER TO mirror_user;
-
 --
--- Name: warehouse_racks; Type: TABLE; Schema: public; Owner: postgres
+-- Name: warehouse_racks; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.warehouse_racks (
@@ -7372,115 +6998,113 @@ CREATE TABLE public.warehouse_racks (
 );
 
 
-ALTER TABLE public.warehouse_racks OWNER TO mirror_user;
-
 --
--- Name: COLUMN warehouse_racks.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_racks.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_racks.id IS 'Primary key (RAK prefix)';
 
 
 --
--- Name: COLUMN warehouse_racks.warehouse_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_racks.warehouse_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_racks.warehouse_id IS 'FK to locations table (WAREHOUSE type)';
 
 
 --
--- Name: COLUMN warehouse_racks.rack_code; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_racks.rack_code; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_racks.rack_code IS 'Rack identifier code (e.g., A1, B2, C3)';
 
 
 --
--- Name: COLUMN warehouse_racks.rack_name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_racks.rack_name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_racks.rack_name IS 'Human-readable rack name';
 
 
 --
--- Name: COLUMN warehouse_racks.floor_level; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_racks.floor_level; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_racks.floor_level IS 'Floor level (1 = ground floor)';
 
 
 --
--- Name: COLUMN warehouse_racks.row_position; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_racks.row_position; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_racks.row_position IS 'Row position identifier (e.g., A, B, C)';
 
 
 --
--- Name: COLUMN warehouse_racks.column_position; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_racks.column_position; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_racks.column_position IS 'Column position identifier (e.g., 1, 2, 3)';
 
 
 --
--- Name: COLUMN warehouse_racks.description; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_racks.description; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_racks.description IS 'Additional description or notes';
 
 
 --
--- Name: COLUMN warehouse_racks.slot_capacity; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_racks.slot_capacity; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_racks.slot_capacity IS 'Maximum number of slots this rack can hold';
 
 
 --
--- Name: COLUMN warehouse_racks.current_slot_count; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_racks.current_slot_count; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_racks.current_slot_count IS 'Current number of slots';
 
 
 --
--- Name: COLUMN warehouse_racks.rack_type; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_racks.rack_type; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_racks.rack_type IS 'Type: JEWELRY, DIAMOND, GENERAL, MIXED';
 
 
 --
--- Name: COLUMN warehouse_racks.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_racks.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_racks.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN warehouse_racks.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_racks.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_racks.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN warehouse_racks.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_racks.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_racks.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN warehouse_racks.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_racks.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_racks.is_active IS 'Active status flag';
 
 
 --
--- Name: warehouse_slots; Type: TABLE; Schema: public; Owner: postgres
+-- Name: warehouse_slots; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.warehouse_slots (
@@ -7504,129 +7128,127 @@ CREATE TABLE public.warehouse_slots (
 );
 
 
-ALTER TABLE public.warehouse_slots OWNER TO mirror_user;
-
 --
--- Name: COLUMN warehouse_slots.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.id IS 'Primary key (SLT prefix)';
 
 
 --
--- Name: COLUMN warehouse_slots.rack_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.rack_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.rack_id IS 'FK to warehouse_racks table';
 
 
 --
--- Name: COLUMN warehouse_slots.slot_code; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.slot_code; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.slot_code IS 'Slot identifier code (e.g., 01, 02, A1)';
 
 
 --
--- Name: COLUMN warehouse_slots.slot_name; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.slot_name; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.slot_name IS 'Human-readable slot name or label';
 
 
 --
--- Name: COLUMN warehouse_slots.slot_type; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.slot_type; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.slot_type IS 'Type: JEWELRY, DIAMOND, RING, NECKLACE, BRACELET, EARRING, GENERAL';
 
 
 --
--- Name: COLUMN warehouse_slots.slot_size; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.slot_size; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.slot_size IS 'Size category: SMALL, MEDIUM, LARGE';
 
 
 --
--- Name: COLUMN warehouse_slots.row_in_rack; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.row_in_rack; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.row_in_rack IS 'Row position within the rack (vertical)';
 
 
 --
--- Name: COLUMN warehouse_slots.column_in_rack; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.column_in_rack; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.column_in_rack IS 'Column position within the rack (horizontal)';
 
 
 --
--- Name: COLUMN warehouse_slots.is_occupied; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.is_occupied; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.is_occupied IS 'Whether slot currently holds an item';
 
 
 --
--- Name: COLUMN warehouse_slots.current_product_code; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.current_product_code; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.current_product_code IS 'SKU code of item currently in this slot';
 
 
 --
--- Name: COLUMN warehouse_slots.occupied_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.occupied_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.occupied_at IS 'When the current item was placed';
 
 
 --
--- Name: COLUMN warehouse_slots.occupied_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.occupied_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.occupied_by IS 'User ID who placed the item';
 
 
 --
--- Name: COLUMN warehouse_slots.notes; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.notes; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.notes IS 'Additional notes';
 
 
 --
--- Name: COLUMN warehouse_slots.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN warehouse_slots.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN warehouse_slots.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN warehouse_slots.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN warehouse_slots.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.warehouse_slots.is_active IS 'Active status flag';
 
 
 --
--- Name: wfs_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: wfs_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.wfs_seq
@@ -7637,10 +7259,8 @@ CREATE SEQUENCE public.wfs_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.wfs_seq OWNER TO mirror_user;
-
 --
--- Name: wft_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: wft_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.wft_seq
@@ -7651,10 +7271,8 @@ CREATE SEQUENCE public.wft_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.wft_seq OWNER TO mirror_user;
-
 --
--- Name: who_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: who_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.who_seq
@@ -7665,10 +7283,8 @@ CREATE SEQUENCE public.who_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.who_seq OWNER TO mirror_user;
-
 --
--- Name: wholesale_order_items; Type: TABLE; Schema: public; Owner: postgres
+-- Name: wholesale_order_items; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.wholesale_order_items (
@@ -7688,101 +7304,99 @@ CREATE TABLE public.wholesale_order_items (
 );
 
 
-ALTER TABLE public.wholesale_order_items OWNER TO mirror_user;
-
 --
--- Name: COLUMN wholesale_order_items.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_order_items.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_order_items.id IS 'Primary key (WOI prefix)';
 
 
 --
--- Name: COLUMN wholesale_order_items.order_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_order_items.order_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_order_items.order_id IS 'Reference to wholesale_orders';
 
 
 --
--- Name: COLUMN wholesale_order_items.product_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_order_items.product_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_order_items.product_id IS 'Reference to mirror_products';
 
 
 --
--- Name: COLUMN wholesale_order_items.quantity; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_order_items.quantity; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_order_items.quantity IS 'Quantity ordered';
 
 
 --
--- Name: COLUMN wholesale_order_items.retail_price; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_order_items.retail_price; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_order_items.retail_price IS 'Mirror retail price at time of order';
 
 
 --
--- Name: COLUMN wholesale_order_items.wholesale_price; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_order_items.wholesale_price; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_order_items.wholesale_price IS 'Wholesale price for partner';
 
 
 --
--- Name: COLUMN wholesale_order_items.discount_percent; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_order_items.discount_percent; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_order_items.discount_percent IS 'Additional line discount';
 
 
 --
--- Name: COLUMN wholesale_order_items.line_total; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_order_items.line_total; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_order_items.line_total IS 'Line total (wholesale_price * quantity - discount)';
 
 
 --
--- Name: COLUMN wholesale_order_items.notes; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_order_items.notes; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_order_items.notes IS 'Item notes';
 
 
 --
--- Name: COLUMN wholesale_order_items.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_order_items.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_order_items.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN wholesale_order_items.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_order_items.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_order_items.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN wholesale_order_items.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_order_items.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_order_items.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN wholesale_order_items.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_order_items.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_order_items.is_active IS 'Active status flag';
 
 
 --
--- Name: wholesale_orders; Type: TABLE; Schema: public; Owner: postgres
+-- Name: wholesale_orders; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.wholesale_orders (
@@ -7819,220 +7433,218 @@ CREATE TABLE public.wholesale_orders (
 );
 
 
-ALTER TABLE public.wholesale_orders OWNER TO mirror_user;
-
 --
--- Name: COLUMN wholesale_orders.id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.id IS 'Primary key (WHO prefix)';
 
 
 --
--- Name: COLUMN wholesale_orders.order_number; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.order_number; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.order_number IS 'Human-readable order number';
 
 
 --
--- Name: COLUMN wholesale_orders.partner_id; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.partner_id; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.partner_id IS 'Reference to pod_partners';
 
 
 --
--- Name: COLUMN wholesale_orders.status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.status IS 'Order status';
 
 
 --
--- Name: COLUMN wholesale_orders.subtotal; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.subtotal; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.subtotal IS 'Sum of line items';
 
 
 --
--- Name: COLUMN wholesale_orders.discount_amount; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.discount_amount; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.discount_amount IS 'Total discount';
 
 
 --
--- Name: COLUMN wholesale_orders.tax_amount; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.tax_amount; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.tax_amount IS 'Tax amount';
 
 
 --
--- Name: COLUMN wholesale_orders.total_amount; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.total_amount; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.total_amount IS 'Final total';
 
 
 --
--- Name: COLUMN wholesale_orders.currency; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.currency; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.currency IS 'Currency code';
 
 
 --
--- Name: COLUMN wholesale_orders.shipping_address; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.shipping_address; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.shipping_address IS 'Delivery address';
 
 
 --
--- Name: COLUMN wholesale_orders.shipping_method; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.shipping_method; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.shipping_method IS 'Shipping method';
 
 
 --
--- Name: COLUMN wholesale_orders.shipping_cost; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.shipping_cost; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.shipping_cost IS 'Shipping cost';
 
 
 --
--- Name: COLUMN wholesale_orders.tracking_number; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.tracking_number; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.tracking_number IS 'Shipment tracking number';
 
 
 --
--- Name: COLUMN wholesale_orders.submitted_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.submitted_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.submitted_at IS 'When order was submitted';
 
 
 --
--- Name: COLUMN wholesale_orders.approved_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.approved_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.approved_at IS 'When order was approved';
 
 
 --
--- Name: COLUMN wholesale_orders.approved_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.approved_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.approved_by IS 'Who approved the order';
 
 
 --
--- Name: COLUMN wholesale_orders.shipped_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.shipped_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.shipped_at IS 'When order was shipped';
 
 
 --
--- Name: COLUMN wholesale_orders.delivered_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.delivered_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.delivered_at IS 'When order was delivered';
 
 
 --
--- Name: COLUMN wholesale_orders.completed_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.completed_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.completed_at IS 'When order was completed';
 
 
 --
--- Name: COLUMN wholesale_orders.cancelled_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.cancelled_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.cancelled_at IS 'When order was cancelled';
 
 
 --
--- Name: COLUMN wholesale_orders.cancelled_by; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.cancelled_by; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.cancelled_by IS 'Who cancelled the order';
 
 
 --
--- Name: COLUMN wholesale_orders.cancellation_reason; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.cancellation_reason; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.cancellation_reason IS 'Reason for cancellation';
 
 
 --
--- Name: COLUMN wholesale_orders.payment_method; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.payment_method; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.payment_method IS 'Payment method';
 
 
 --
--- Name: COLUMN wholesale_orders.payment_reference; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.payment_reference; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.payment_reference IS 'Payment reference number';
 
 
 --
--- Name: COLUMN wholesale_orders.payment_status; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.payment_status; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.payment_status IS 'Payment status';
 
 
 --
--- Name: COLUMN wholesale_orders.notes; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.notes; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.notes IS 'Order notes';
 
 
 --
--- Name: COLUMN wholesale_orders.created_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.created_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.created_at IS 'Creation timestamp';
 
 
 --
--- Name: COLUMN wholesale_orders.updated_at; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.updated_at; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.updated_at IS 'Last update timestamp';
 
 
 --
--- Name: COLUMN wholesale_orders.is_deleted; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.is_deleted; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.is_deleted IS 'Soft delete flag';
 
 
 --
--- Name: COLUMN wholesale_orders.is_active; Type: COMMENT; Schema: public; Owner: postgres
+-- Name: COLUMN wholesale_orders.is_active; Type: COMMENT; Schema: public; Owner: -
 --
 
 COMMENT ON COLUMN public.wholesale_orders.is_active IS 'Active status flag';
 
 
 --
--- Name: woi_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: woi_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.woi_seq
@@ -8043,10 +7655,8 @@ CREATE SEQUENCE public.woi_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.woi_seq OWNER TO mirror_user;
-
 --
--- Name: workflow_stage_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: workflow_stage_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.workflow_stage_seq
@@ -8057,10 +7667,8 @@ CREATE SEQUENCE public.workflow_stage_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.workflow_stage_seq OWNER TO mirror_user;
-
 --
--- Name: workflow_stages; Type: TABLE; Schema: public; Owner: postgres
+-- Name: workflow_stages; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.workflow_stages (
@@ -8082,10 +7690,8 @@ CREATE TABLE public.workflow_stages (
 );
 
 
-ALTER TABLE public.workflow_stages OWNER TO mirror_user;
-
 --
--- Name: workflow_template_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: workflow_template_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 CREATE SEQUENCE public.workflow_template_seq
@@ -8096,10 +7702,8 @@ CREATE SEQUENCE public.workflow_template_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.workflow_template_seq OWNER TO mirror_user;
-
 --
--- Name: workflow_templates; Type: TABLE; Schema: public; Owner: postgres
+-- Name: workflow_templates; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.workflow_templates (
@@ -8119,10 +7723,8 @@ CREATE TABLE public.workflow_templates (
 );
 
 
-ALTER TABLE public.workflow_templates OWNER TO mirror_user;
-
 --
--- Name: age_group_preferences age_group_preferences_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: age_group_preferences age_group_preferences_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.age_group_preferences
@@ -8130,7 +7732,7 @@ ALTER TABLE ONLY public.age_group_preferences
 
 
 --
--- Name: age_groups age_groups_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: age_groups age_groups_name_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.age_groups
@@ -8138,7 +7740,7 @@ ALTER TABLE ONLY public.age_groups
 
 
 --
--- Name: age_groups age_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: age_groups age_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.age_groups
@@ -8146,7 +7748,7 @@ ALTER TABLE ONLY public.age_groups
 
 
 --
--- Name: appointments appointments_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: appointments appointments_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.appointments
@@ -8154,7 +7756,7 @@ ALTER TABLE ONLY public.appointments
 
 
 --
--- Name: audit_logs audit_logs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: audit_logs audit_logs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.audit_logs
@@ -8162,7 +7764,7 @@ ALTER TABLE ONLY public.audit_logs
 
 
 --
--- Name: band_style_options band_style_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: band_style_options band_style_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.band_style_options
@@ -8170,7 +7772,7 @@ ALTER TABLE ONLY public.band_style_options
 
 
 --
--- Name: band_style_options band_style_options_style_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: band_style_options band_style_options_style_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.band_style_options
@@ -8178,7 +7780,7 @@ ALTER TABLE ONLY public.band_style_options
 
 
 --
--- Name: blocked_slots blocked_slots_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: blocked_slots blocked_slots_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.blocked_slots
@@ -8186,7 +7788,7 @@ ALTER TABLE ONLY public.blocked_slots
 
 
 --
--- Name: certificates certificates_certificate_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: certificates certificates_certificate_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.certificates
@@ -8194,7 +7796,7 @@ ALTER TABLE ONLY public.certificates
 
 
 --
--- Name: certificates certificates_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: certificates certificates_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.certificates
@@ -8202,7 +7804,7 @@ ALTER TABLE ONLY public.certificates
 
 
 --
--- Name: clarity_grade_options clarity_grade_options_clarity_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: clarity_grade_options clarity_grade_options_clarity_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.clarity_grade_options
@@ -8210,7 +7812,7 @@ ALTER TABLE ONLY public.clarity_grade_options
 
 
 --
--- Name: clarity_grade_options clarity_grade_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: clarity_grade_options clarity_grade_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.clarity_grade_options
@@ -8218,7 +7820,7 @@ ALTER TABLE ONLY public.clarity_grade_options
 
 
 --
--- Name: collection_age_group_allocations collection_age_group_allocations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: collection_age_group_allocations collection_age_group_allocations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.collection_age_group_allocations
@@ -8226,7 +7828,7 @@ ALTER TABLE ONLY public.collection_age_group_allocations
 
 
 --
--- Name: collection_plan_items collection_plan_items_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: collection_plan_items collection_plan_items_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.collection_plan_items
@@ -8234,7 +7836,7 @@ ALTER TABLE ONLY public.collection_plan_items
 
 
 --
--- Name: collection_plans collection_plans_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: collection_plans collection_plans_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.collection_plans
@@ -8242,7 +7844,7 @@ ALTER TABLE ONLY public.collection_plans
 
 
 --
--- Name: collection_products collection_products_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: collection_products collection_products_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.collection_products
@@ -8250,7 +7852,7 @@ ALTER TABLE ONLY public.collection_products
 
 
 --
--- Name: collections collections_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: collections collections_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.collections
@@ -8258,7 +7860,7 @@ ALTER TABLE ONLY public.collections
 
 
 --
--- Name: color_grade_options color_grade_options_grade_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: color_grade_options color_grade_options_grade_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.color_grade_options
@@ -8266,7 +7868,7 @@ ALTER TABLE ONLY public.color_grade_options
 
 
 --
--- Name: color_grade_options color_grade_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: color_grade_options color_grade_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.color_grade_options
@@ -8274,7 +7876,7 @@ ALTER TABLE ONLY public.color_grade_options
 
 
 --
--- Name: component_optionals component_optionals_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: component_optionals component_optionals_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.component_optionals
@@ -8282,7 +7884,7 @@ ALTER TABLE ONLY public.component_optionals
 
 
 --
--- Name: component_ownership_logs component_ownership_logs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: component_ownership_logs component_ownership_logs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.component_ownership_logs
@@ -8290,7 +7892,7 @@ ALTER TABLE ONLY public.component_ownership_logs
 
 
 --
--- Name: components components_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: components components_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.components
@@ -8298,7 +7900,7 @@ ALTER TABLE ONLY public.components
 
 
 --
--- Name: country_of_origin_options country_of_origin_options_country_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: country_of_origin_options country_of_origin_options_country_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.country_of_origin_options
@@ -8306,7 +7908,7 @@ ALTER TABLE ONLY public.country_of_origin_options
 
 
 --
--- Name: country_of_origin_options country_of_origin_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: country_of_origin_options country_of_origin_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.country_of_origin_options
@@ -8314,7 +7916,7 @@ ALTER TABLE ONLY public.country_of_origin_options
 
 
 --
--- Name: databasechangeloglock databasechangeloglock_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: databasechangeloglock databasechangeloglock_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.databasechangeloglock
@@ -8322,7 +7924,7 @@ ALTER TABLE ONLY public.databasechangeloglock
 
 
 --
--- Name: design_products design_products_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: design_products design_products_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.design_products
@@ -8330,7 +7932,7 @@ ALTER TABLE ONLY public.design_products
 
 
 --
--- Name: design_products design_products_product_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: design_products design_products_product_id_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.design_products
@@ -8338,7 +7940,7 @@ ALTER TABLE ONLY public.design_products
 
 
 --
--- Name: design_sale_transactions design_sale_transactions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: design_sale_transactions design_sale_transactions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.design_sale_transactions
@@ -8346,7 +7948,7 @@ ALTER TABLE ONLY public.design_sale_transactions
 
 
 --
--- Name: designers designers_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: designers designers_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.designers
@@ -8354,7 +7956,7 @@ ALTER TABLE ONLY public.designers
 
 
 --
--- Name: designers designers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: designers designers_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.designers
@@ -8362,7 +7964,7 @@ ALTER TABLE ONLY public.designers
 
 
 --
--- Name: email_verification_tokens email_verification_tokens_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: email_verification_tokens email_verification_tokens_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.email_verification_tokens
@@ -8370,7 +7972,7 @@ ALTER TABLE ONLY public.email_verification_tokens
 
 
 --
--- Name: email_verification_tokens email_verification_tokens_token_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: email_verification_tokens email_verification_tokens_token_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.email_verification_tokens
@@ -8378,7 +7980,7 @@ ALTER TABLE ONLY public.email_verification_tokens
 
 
 --
--- Name: id_sequences id_sequences_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: id_sequences id_sequences_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.id_sequences
@@ -8386,7 +7988,7 @@ ALTER TABLE ONLY public.id_sequences
 
 
 --
--- Name: inventory_movements inventory_movements_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: inventory_movements inventory_movements_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.inventory_movements
@@ -8394,7 +7996,7 @@ ALTER TABLE ONLY public.inventory_movements
 
 
 --
--- Name: inventory_position_history inventory_position_history_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: inventory_position_history inventory_position_history_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.inventory_position_history
@@ -8402,7 +8004,7 @@ ALTER TABLE ONLY public.inventory_position_history
 
 
 --
--- Name: inventory_positions inventory_positions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: inventory_positions inventory_positions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.inventory_positions
@@ -8410,7 +8012,7 @@ ALTER TABLE ONLY public.inventory_positions
 
 
 --
--- Name: item_variant_configs item_variant_configs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: item_variant_configs item_variant_configs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.item_variant_configs
@@ -8418,7 +8020,7 @@ ALTER TABLE ONLY public.item_variant_configs
 
 
 --
--- Name: item_variants item_variants_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: item_variants item_variants_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.item_variants
@@ -8426,7 +8028,7 @@ ALTER TABLE ONLY public.item_variants
 
 
 --
--- Name: jewelry_technical_reports jewelry_technical_reports_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: jewelry_technical_reports jewelry_technical_reports_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.jewelry_technical_reports
@@ -8434,7 +8036,7 @@ ALTER TABLE ONLY public.jewelry_technical_reports
 
 
 --
--- Name: jewelry_technical_reports jewelry_technical_reports_report_number_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: jewelry_technical_reports jewelry_technical_reports_report_number_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.jewelry_technical_reports
@@ -8442,7 +8044,7 @@ ALTER TABLE ONLY public.jewelry_technical_reports
 
 
 --
--- Name: jtrc_labor_components jtrc_labor_components_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: jtrc_labor_components jtrc_labor_components_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.jtrc_labor_components
@@ -8450,7 +8052,7 @@ ALTER TABLE ONLY public.jtrc_labor_components
 
 
 --
--- Name: jtrc_metal_components jtrc_metal_components_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: jtrc_metal_components jtrc_metal_components_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.jtrc_metal_components
@@ -8458,7 +8060,7 @@ ALTER TABLE ONLY public.jtrc_metal_components
 
 
 --
--- Name: jtrc_stone_components jtrc_stone_components_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: jtrc_stone_components jtrc_stone_components_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.jtrc_stone_components
@@ -8466,7 +8068,7 @@ ALTER TABLE ONLY public.jtrc_stone_components
 
 
 --
--- Name: mirror_diamonds lab_grown_diamonds_cert_number_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: mirror_diamonds lab_grown_diamonds_cert_number_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.mirror_diamonds
@@ -8474,7 +8076,7 @@ ALTER TABLE ONLY public.mirror_diamonds
 
 
 --
--- Name: mirror_diamonds lab_grown_diamonds_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: mirror_diamonds lab_grown_diamonds_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.mirror_diamonds
@@ -8482,7 +8084,7 @@ ALTER TABLE ONLY public.mirror_diamonds
 
 
 --
--- Name: mirror_diamonds lab_grown_diamonds_sku_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: mirror_diamonds lab_grown_diamonds_sku_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.mirror_diamonds
@@ -8490,7 +8092,7 @@ ALTER TABLE ONLY public.mirror_diamonds
 
 
 --
--- Name: label_templates label_templates_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: label_templates label_templates_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.label_templates
@@ -8498,7 +8100,7 @@ ALTER TABLE ONLY public.label_templates
 
 
 --
--- Name: labor_type_options labor_type_options_labor_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: labor_type_options labor_type_options_labor_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.labor_type_options
@@ -8506,7 +8108,7 @@ ALTER TABLE ONLY public.labor_type_options
 
 
 --
--- Name: labor_type_options labor_type_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: labor_type_options labor_type_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.labor_type_options
@@ -8514,7 +8116,7 @@ ALTER TABLE ONLY public.labor_type_options
 
 
 --
--- Name: locations locations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: locations locations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.locations
@@ -8522,7 +8124,7 @@ ALTER TABLE ONLY public.locations
 
 
 --
--- Name: market_trends market_trends_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: market_trends market_trends_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.market_trends
@@ -8530,7 +8132,7 @@ ALTER TABLE ONLY public.market_trends
 
 
 --
--- Name: market_trends market_trends_trend_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: market_trends market_trends_trend_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.market_trends
@@ -8538,7 +8140,7 @@ ALTER TABLE ONLY public.market_trends
 
 
 --
--- Name: material_color_options material_color_options_color_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: material_color_options material_color_options_color_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.material_color_options
@@ -8546,7 +8148,7 @@ ALTER TABLE ONLY public.material_color_options
 
 
 --
--- Name: material_color_options material_color_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: material_color_options material_color_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.material_color_options
@@ -8554,7 +8156,7 @@ ALTER TABLE ONLY public.material_color_options
 
 
 --
--- Name: material_inventory material_inventory_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: material_inventory material_inventory_name_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.material_inventory
@@ -8562,7 +8164,7 @@ ALTER TABLE ONLY public.material_inventory
 
 
 --
--- Name: material_inventory material_inventory_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: material_inventory material_inventory_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.material_inventory
@@ -8570,7 +8172,7 @@ ALTER TABLE ONLY public.material_inventory
 
 
 --
--- Name: material_options material_options_material_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: material_options material_options_material_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.material_options
@@ -8578,7 +8180,7 @@ ALTER TABLE ONLY public.material_options
 
 
 --
--- Name: material_options material_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: material_options material_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.material_options
@@ -8586,7 +8188,7 @@ ALTER TABLE ONLY public.material_options
 
 
 --
--- Name: metal_purity_options metal_purity_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: metal_purity_options metal_purity_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.metal_purity_options
@@ -8594,7 +8196,7 @@ ALTER TABLE ONLY public.metal_purity_options
 
 
 --
--- Name: metal_purity_options metal_purity_options_purity_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: metal_purity_options metal_purity_options_purity_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.metal_purity_options
@@ -8602,7 +8204,7 @@ ALTER TABLE ONLY public.metal_purity_options
 
 
 --
--- Name: metal_type_options metal_type_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: metal_type_options metal_type_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.metal_type_options
@@ -8610,7 +8212,7 @@ ALTER TABLE ONLY public.metal_type_options
 
 
 --
--- Name: metal_type_options metal_type_options_type_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: metal_type_options metal_type_options_type_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.metal_type_options
@@ -8618,7 +8220,7 @@ ALTER TABLE ONLY public.metal_type_options
 
 
 --
--- Name: mirror_products mirror_products_barcode_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: mirror_products mirror_products_barcode_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.mirror_products
@@ -8626,7 +8228,7 @@ ALTER TABLE ONLY public.mirror_products
 
 
 --
--- Name: mirror_products mirror_products_mirror_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: mirror_products mirror_products_mirror_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.mirror_products
@@ -8634,7 +8236,7 @@ ALTER TABLE ONLY public.mirror_products
 
 
 --
--- Name: mirror_products mirror_products_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: mirror_products mirror_products_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.mirror_products
@@ -8642,7 +8244,7 @@ ALTER TABLE ONLY public.mirror_products
 
 
 --
--- Name: misa_balance_trackers misa_balance_trackers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: misa_balance_trackers misa_balance_trackers_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.misa_balance_trackers
@@ -8650,7 +8252,7 @@ ALTER TABLE ONLY public.misa_balance_trackers
 
 
 --
--- Name: misa_callback_logs misa_callback_logs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: misa_callback_logs misa_callback_logs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.misa_callback_logs
@@ -8658,7 +8260,7 @@ ALTER TABLE ONLY public.misa_callback_logs
 
 
 --
--- Name: misa_customers misa_customers_customer_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: misa_customers misa_customers_customer_id_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.misa_customers
@@ -8666,7 +8268,7 @@ ALTER TABLE ONLY public.misa_customers
 
 
 --
--- Name: misa_customers misa_customers_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: misa_customers misa_customers_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.misa_customers
@@ -8674,7 +8276,7 @@ ALTER TABLE ONLY public.misa_customers
 
 
 --
--- Name: misa_inventory_items misa_inventory_items_inventory_item_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: misa_inventory_items misa_inventory_items_inventory_item_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.misa_inventory_items
@@ -8682,7 +8284,7 @@ ALTER TABLE ONLY public.misa_inventory_items
 
 
 --
--- Name: misa_inventory_items misa_inventory_items_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: misa_inventory_items misa_inventory_items_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.misa_inventory_items
@@ -8690,7 +8292,7 @@ ALTER TABLE ONLY public.misa_inventory_items
 
 
 --
--- Name: misa_invoices misa_invoices_invoice_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: misa_invoices misa_invoices_invoice_id_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.misa_invoices
@@ -8698,7 +8300,7 @@ ALTER TABLE ONLY public.misa_invoices
 
 
 --
--- Name: misa_invoices misa_invoices_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: misa_invoices misa_invoices_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.misa_invoices
@@ -8706,7 +8308,7 @@ ALTER TABLE ONLY public.misa_invoices
 
 
 --
--- Name: misa_product_categories misa_product_categories_category_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: misa_product_categories misa_product_categories_category_id_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.misa_product_categories
@@ -8714,7 +8316,7 @@ ALTER TABLE ONLY public.misa_product_categories
 
 
 --
--- Name: misa_product_categories misa_product_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: misa_product_categories misa_product_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.misa_product_categories
@@ -8722,7 +8324,7 @@ ALTER TABLE ONLY public.misa_product_categories
 
 
 --
--- Name: misa_sync_logs misa_sync_logs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: misa_sync_logs misa_sync_logs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.misa_sync_logs
@@ -8730,7 +8332,7 @@ ALTER TABLE ONLY public.misa_sync_logs
 
 
 --
--- Name: misa_warehouses misa_warehouses_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: misa_warehouses misa_warehouses_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.misa_warehouses
@@ -8738,7 +8340,7 @@ ALTER TABLE ONLY public.misa_warehouses
 
 
 --
--- Name: misa_warehouses misa_warehouses_stock_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: misa_warehouses misa_warehouses_stock_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.misa_warehouses
@@ -8746,7 +8348,7 @@ ALTER TABLE ONLY public.misa_warehouses
 
 
 --
--- Name: misa_warehouses misa_warehouses_stock_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: misa_warehouses misa_warehouses_stock_id_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.misa_warehouses
@@ -8754,7 +8356,7 @@ ALTER TABLE ONLY public.misa_warehouses
 
 
 --
--- Name: order_items order_items_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: order_items order_items_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.order_items
@@ -8762,7 +8364,7 @@ ALTER TABLE ONLY public.order_items
 
 
 --
--- Name: order_payment_schedule order_payment_schedule_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: order_payment_schedule order_payment_schedule_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.order_payment_schedule
@@ -8770,7 +8372,7 @@ ALTER TABLE ONLY public.order_payment_schedule
 
 
 --
--- Name: order_payment_transactions order_payment_transactions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: order_payment_transactions order_payment_transactions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.order_payment_transactions
@@ -8778,7 +8380,7 @@ ALTER TABLE ONLY public.order_payment_transactions
 
 
 --
--- Name: order_status_history order_status_history_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: order_status_history order_status_history_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.order_status_history
@@ -8786,7 +8388,7 @@ ALTER TABLE ONLY public.order_status_history
 
 
 --
--- Name: orders orders_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orders orders_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.orders
@@ -8794,7 +8396,7 @@ ALTER TABLE ONLY public.orders
 
 
 --
--- Name: partner_capabilities partner_capabilities_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: partner_capabilities partner_capabilities_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.partner_capabilities
@@ -8802,7 +8404,7 @@ ALTER TABLE ONLY public.partner_capabilities
 
 
 --
--- Name: partner_inventory partner_inventory_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: partner_inventory partner_inventory_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.partner_inventory
@@ -8810,7 +8412,7 @@ ALTER TABLE ONLY public.partner_inventory
 
 
 --
--- Name: partner_sale_items partner_sale_items_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: partner_sale_items partner_sale_items_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.partner_sale_items
@@ -8818,7 +8420,7 @@ ALTER TABLE ONLY public.partner_sale_items
 
 
 --
--- Name: partner_sales partner_sales_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: partner_sales partner_sales_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.partner_sales
@@ -8826,7 +8428,7 @@ ALTER TABLE ONLY public.partner_sales
 
 
 --
--- Name: partner_sales partner_sales_sale_number_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: partner_sales partner_sales_sale_number_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.partner_sales
@@ -8834,7 +8436,7 @@ ALTER TABLE ONLY public.partner_sales
 
 
 --
--- Name: permissions permissions_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: permissions permissions_name_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.permissions
@@ -8842,7 +8444,7 @@ ALTER TABLE ONLY public.permissions
 
 
 --
--- Name: permissions permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: permissions permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.permissions
@@ -8850,7 +8452,7 @@ ALTER TABLE ONLY public.permissions
 
 
 --
--- Name: role_matrix pk_role_matrix; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: role_matrix pk_role_matrix; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.role_matrix
@@ -8858,7 +8460,7 @@ ALTER TABLE ONLY public.role_matrix
 
 
 --
--- Name: pod_attributions pod_attributions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_attributions pod_attributions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_attributions
@@ -8866,7 +8468,7 @@ ALTER TABLE ONLY public.pod_attributions
 
 
 --
--- Name: pod_commissions pod_commissions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_commissions pod_commissions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_commissions
@@ -8874,7 +8476,7 @@ ALTER TABLE ONLY public.pod_commissions
 
 
 --
--- Name: pod_partners pod_partners_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_partners pod_partners_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_partners
@@ -8882,7 +8484,7 @@ ALTER TABLE ONLY public.pod_partners
 
 
 --
--- Name: pod_products pod_products_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_products pod_products_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_products
@@ -8890,7 +8492,7 @@ ALTER TABLE ONLY public.pod_products
 
 
 --
--- Name: pod_qr_codes pod_qr_codes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_qr_codes pod_qr_codes_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_qr_codes
@@ -8898,7 +8500,7 @@ ALTER TABLE ONLY public.pod_qr_codes
 
 
 --
--- Name: pod_qr_codes pod_qr_codes_short_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_qr_codes pod_qr_codes_short_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_qr_codes
@@ -8906,7 +8508,7 @@ ALTER TABLE ONLY public.pod_qr_codes
 
 
 --
--- Name: pod_qr_scans pod_qr_scans_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_qr_scans pod_qr_scans_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_qr_scans
@@ -8914,7 +8516,7 @@ ALTER TABLE ONLY public.pod_qr_scans
 
 
 --
--- Name: pod_user_attributions pod_user_attributions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_user_attributions pod_user_attributions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_user_attributions
@@ -8922,7 +8524,7 @@ ALTER TABLE ONLY public.pod_user_attributions
 
 
 --
--- Name: pods pods_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pods pods_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pods
@@ -8930,7 +8532,7 @@ ALTER TABLE ONLY public.pods
 
 
 --
--- Name: print_job_items print_job_items_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: print_job_items print_job_items_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.print_job_items
@@ -8938,7 +8540,7 @@ ALTER TABLE ONLY public.print_job_items
 
 
 --
--- Name: print_jobs print_jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: print_jobs print_jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.print_jobs
@@ -8946,7 +8548,7 @@ ALTER TABLE ONLY public.print_jobs
 
 
 --
--- Name: product_certificates product_certificates_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: product_certificates product_certificates_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.product_certificates
@@ -8954,7 +8556,7 @@ ALTER TABLE ONLY public.product_certificates
 
 
 --
--- Name: product_finder_combinations product_finder_combinations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: product_finder_combinations product_finder_combinations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.product_finder_combinations
@@ -8962,7 +8564,7 @@ ALTER TABLE ONLY public.product_finder_combinations
 
 
 --
--- Name: product_finder_selections product_finder_selections_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: product_finder_selections product_finder_selections_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.product_finder_selections
@@ -8970,7 +8572,7 @@ ALTER TABLE ONLY public.product_finder_selections
 
 
 --
--- Name: product_finder_side_stone_options product_finder_side_stone_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: product_finder_side_stone_options product_finder_side_stone_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.product_finder_side_stone_options
@@ -8978,7 +8580,7 @@ ALTER TABLE ONLY public.product_finder_side_stone_options
 
 
 --
--- Name: product_finder_side_stone_options product_finder_side_stone_options_stone_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: product_finder_side_stone_options product_finder_side_stone_options_stone_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.product_finder_side_stone_options
@@ -8986,7 +8588,7 @@ ALTER TABLE ONLY public.product_finder_side_stone_options
 
 
 --
--- Name: production_order_stages production_order_stages_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: production_order_stages production_order_stages_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.production_order_stages
@@ -8994,7 +8596,7 @@ ALTER TABLE ONLY public.production_order_stages
 
 
 --
--- Name: production_orders production_orders_order_number_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: production_orders production_orders_order_number_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.production_orders
@@ -9002,7 +8604,7 @@ ALTER TABLE ONLY public.production_orders
 
 
 --
--- Name: production_orders production_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: production_orders production_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.production_orders
@@ -9010,7 +8612,7 @@ ALTER TABLE ONLY public.production_orders
 
 
 --
--- Name: production_plans production_plans_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: production_plans production_plans_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.production_plans
@@ -9018,7 +8620,7 @@ ALTER TABLE ONLY public.production_plans
 
 
 --
--- Name: purchase_order_age_group_allocations purchase_order_age_group_allocations_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: purchase_order_age_group_allocations purchase_order_age_group_allocations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.purchase_order_age_group_allocations
@@ -9026,7 +8628,7 @@ ALTER TABLE ONLY public.purchase_order_age_group_allocations
 
 
 --
--- Name: purchase_order_item_variants purchase_order_item_variants_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: purchase_order_item_variants purchase_order_item_variants_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.purchase_order_item_variants
@@ -9034,7 +8636,7 @@ ALTER TABLE ONLY public.purchase_order_item_variants
 
 
 --
--- Name: purchase_order_items purchase_order_items_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: purchase_order_items purchase_order_items_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.purchase_order_items
@@ -9042,7 +8644,7 @@ ALTER TABLE ONLY public.purchase_order_items
 
 
 --
--- Name: purchase_orders purchase_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: purchase_orders purchase_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.purchase_orders
@@ -9050,7 +8652,7 @@ ALTER TABLE ONLY public.purchase_orders
 
 
 --
--- Name: qr_codes qr_codes_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: qr_codes qr_codes_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.qr_codes
@@ -9058,7 +8660,7 @@ ALTER TABLE ONLY public.qr_codes
 
 
 --
--- Name: qr_codes qr_codes_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: qr_codes qr_codes_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.qr_codes
@@ -9066,7 +8668,7 @@ ALTER TABLE ONLY public.qr_codes
 
 
 --
--- Name: qr_scans qr_scans_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: qr_scans qr_scans_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.qr_scans
@@ -9074,7 +8676,7 @@ ALTER TABLE ONLY public.qr_scans
 
 
 --
--- Name: rfid_scan_logs rfid_scan_logs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rfid_scan_logs rfid_scan_logs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.rfid_scan_logs
@@ -9082,7 +8684,7 @@ ALTER TABLE ONLY public.rfid_scan_logs
 
 
 --
--- Name: rfid_tags rfid_tags_epc_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rfid_tags rfid_tags_epc_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.rfid_tags
@@ -9090,7 +8692,7 @@ ALTER TABLE ONLY public.rfid_tags
 
 
 --
--- Name: rfid_tags rfid_tags_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rfid_tags rfid_tags_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.rfid_tags
@@ -9098,7 +8700,7 @@ ALTER TABLE ONLY public.rfid_tags
 
 
 --
--- Name: role_permissions role_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: role_permissions role_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.role_permissions
@@ -9106,7 +8708,7 @@ ALTER TABLE ONLY public.role_permissions
 
 
 --
--- Name: roles roles_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: roles roles_name_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.roles
@@ -9114,7 +8716,7 @@ ALTER TABLE ONLY public.roles
 
 
 --
--- Name: roles roles_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: roles roles_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.roles
@@ -9122,7 +8724,7 @@ ALTER TABLE ONLY public.roles
 
 
 --
--- Name: s3_files s3_files_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: s3_files s3_files_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.s3_files
@@ -9130,7 +8732,7 @@ ALTER TABLE ONLY public.s3_files
 
 
 --
--- Name: s3_files s3_files_s3_key_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: s3_files s3_files_s3_key_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.s3_files
@@ -9138,7 +8740,7 @@ ALTER TABLE ONLY public.s3_files
 
 
 --
--- Name: side_stones_options side_stones_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: side_stones_options side_stones_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.side_stones_options
@@ -9146,7 +8748,7 @@ ALTER TABLE ONLY public.side_stones_options
 
 
 --
--- Name: side_stones_options side_stones_options_stone_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: side_stones_options side_stones_options_stone_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.side_stones_options
@@ -9154,7 +8756,7 @@ ALTER TABLE ONLY public.side_stones_options
 
 
 --
--- Name: sku_prefix_options sku_prefix_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: sku_prefix_options sku_prefix_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.sku_prefix_options
@@ -9162,7 +8764,7 @@ ALTER TABLE ONLY public.sku_prefix_options
 
 
 --
--- Name: sku_prefix_options sku_prefix_options_prefix_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: sku_prefix_options sku_prefix_options_prefix_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.sku_prefix_options
@@ -9170,7 +8772,7 @@ ALTER TABLE ONLY public.sku_prefix_options
 
 
 --
--- Name: stock_reconciliation_records stock_reconciliation_records_document_number_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stock_reconciliation_records stock_reconciliation_records_document_number_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.stock_reconciliation_records
@@ -9178,7 +8780,7 @@ ALTER TABLE ONLY public.stock_reconciliation_records
 
 
 --
--- Name: stock_reconciliation_records stock_reconciliation_records_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stock_reconciliation_records stock_reconciliation_records_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.stock_reconciliation_records
@@ -9186,7 +8788,7 @@ ALTER TABLE ONLY public.stock_reconciliation_records
 
 
 --
--- Name: stone_origin_options stone_origin_options_origin_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stone_origin_options stone_origin_options_origin_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.stone_origin_options
@@ -9194,7 +8796,7 @@ ALTER TABLE ONLY public.stone_origin_options
 
 
 --
--- Name: stone_origin_options stone_origin_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stone_origin_options stone_origin_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.stone_origin_options
@@ -9202,7 +8804,7 @@ ALTER TABLE ONLY public.stone_origin_options
 
 
 --
--- Name: stone_role_options stone_role_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stone_role_options stone_role_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.stone_role_options
@@ -9210,7 +8812,7 @@ ALTER TABLE ONLY public.stone_role_options
 
 
 --
--- Name: stone_role_options stone_role_options_role_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stone_role_options stone_role_options_role_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.stone_role_options
@@ -9218,7 +8820,7 @@ ALTER TABLE ONLY public.stone_role_options
 
 
 --
--- Name: stone_shape_options stone_shape_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stone_shape_options stone_shape_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.stone_shape_options
@@ -9226,7 +8828,7 @@ ALTER TABLE ONLY public.stone_shape_options
 
 
 --
--- Name: stone_shape_options stone_shape_options_shape_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stone_shape_options stone_shape_options_shape_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.stone_shape_options
@@ -9234,7 +8836,7 @@ ALTER TABLE ONLY public.stone_shape_options
 
 
 --
--- Name: stone_type_options stone_type_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stone_type_options stone_type_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.stone_type_options
@@ -9242,7 +8844,7 @@ ALTER TABLE ONLY public.stone_type_options
 
 
 --
--- Name: stone_type_options stone_type_options_type_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stone_type_options stone_type_options_type_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.stone_type_options
@@ -9250,7 +8852,7 @@ ALTER TABLE ONLY public.stone_type_options
 
 
 --
--- Name: stone_weight_options stone_weight_options_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stone_weight_options stone_weight_options_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.stone_weight_options
@@ -9258,7 +8860,7 @@ ALTER TABLE ONLY public.stone_weight_options
 
 
 --
--- Name: stone_weight_options stone_weight_options_weight_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stone_weight_options stone_weight_options_weight_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.stone_weight_options
@@ -9266,7 +8868,7 @@ ALTER TABLE ONLY public.stone_weight_options
 
 
 --
--- Name: label_templates uk_label_template_name; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: label_templates uk_label_template_name; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.label_templates
@@ -9274,7 +8876,7 @@ ALTER TABLE ONLY public.label_templates
 
 
 --
--- Name: production_order_stages uk_order_stage_order; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: production_order_stages uk_order_stage_order; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.production_order_stages
@@ -9282,7 +8884,7 @@ ALTER TABLE ONLY public.production_order_stages
 
 
 --
--- Name: partner_inventory uk_partner_inventory_partner_product; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: partner_inventory uk_partner_inventory_partner_product; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.partner_inventory
@@ -9290,7 +8892,7 @@ ALTER TABLE ONLY public.partner_inventory
 
 
 --
--- Name: product_finder_combinations uk_pfc_combination; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: product_finder_combinations uk_pfc_combination; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.product_finder_combinations
@@ -9298,7 +8900,7 @@ ALTER TABLE ONLY public.product_finder_combinations
 
 
 --
--- Name: inventory_positions uk_position_product_code; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: inventory_positions uk_position_product_code; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.inventory_positions
@@ -9306,7 +8908,7 @@ ALTER TABLE ONLY public.inventory_positions
 
 
 --
--- Name: product_certificates uk_product_certificate; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: product_certificates uk_product_certificate; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.product_certificates
@@ -9314,7 +8916,7 @@ ALTER TABLE ONLY public.product_certificates
 
 
 --
--- Name: warehouse_racks uk_rack_code_per_warehouse; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: warehouse_racks uk_rack_code_per_warehouse; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.warehouse_racks
@@ -9322,7 +8924,7 @@ ALTER TABLE ONLY public.warehouse_racks
 
 
 --
--- Name: role_matrix uk_role_matrix_role_name; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: role_matrix uk_role_matrix_role_name; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.role_matrix
@@ -9330,7 +8932,7 @@ ALTER TABLE ONLY public.role_matrix
 
 
 --
--- Name: warehouse_slots uk_slot_code_per_rack; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: warehouse_slots uk_slot_code_per_rack; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.warehouse_slots
@@ -9338,7 +8940,7 @@ ALTER TABLE ONLY public.warehouse_slots
 
 
 --
--- Name: workflow_stages uk_template_stage_name; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: workflow_stages uk_template_stage_name; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.workflow_stages
@@ -9346,7 +8948,7 @@ ALTER TABLE ONLY public.workflow_stages
 
 
 --
--- Name: workflow_stages uk_template_stage_order; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: workflow_stages uk_template_stage_order; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.workflow_stages
@@ -9354,7 +8956,7 @@ ALTER TABLE ONLY public.workflow_stages
 
 
 --
--- Name: partner_capabilities uk_vendor_capability; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: partner_capabilities uk_vendor_capability; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.partner_capabilities
@@ -9362,7 +8964,7 @@ ALTER TABLE ONLY public.partner_capabilities
 
 
 --
--- Name: user_otps user_otps_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: user_otps user_otps_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.user_otps
@@ -9370,7 +8972,7 @@ ALTER TABLE ONLY public.user_otps
 
 
 --
--- Name: user_roles user_roles_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: user_roles user_roles_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.user_roles
@@ -9378,7 +8980,7 @@ ALTER TABLE ONLY public.user_roles
 
 
 --
--- Name: users users_email_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: users users_email_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.users
@@ -9386,7 +8988,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.users
@@ -9394,7 +8996,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: users users_username_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: users users_username_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.users
@@ -9402,7 +9004,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: vendor_products vendor_products_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: vendor_products vendor_products_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.vendor_products
@@ -9410,7 +9012,7 @@ ALTER TABLE ONLY public.vendor_products
 
 
 --
--- Name: vendor_products vendor_products_product_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: vendor_products vendor_products_product_id_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.vendor_products
@@ -9418,7 +9020,7 @@ ALTER TABLE ONLY public.vendor_products
 
 
 --
--- Name: vendors vendors_code_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: vendors vendors_code_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.vendors
@@ -9426,7 +9028,7 @@ ALTER TABLE ONLY public.vendors
 
 
 --
--- Name: vendors vendors_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: vendors vendors_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.vendors
@@ -9434,7 +9036,7 @@ ALTER TABLE ONLY public.vendors
 
 
 --
--- Name: warehouse_racks warehouse_racks_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: warehouse_racks warehouse_racks_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.warehouse_racks
@@ -9442,7 +9044,7 @@ ALTER TABLE ONLY public.warehouse_racks
 
 
 --
--- Name: warehouse_slots warehouse_slots_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: warehouse_slots warehouse_slots_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.warehouse_slots
@@ -9450,7 +9052,7 @@ ALTER TABLE ONLY public.warehouse_slots
 
 
 --
--- Name: wholesale_order_items wholesale_order_items_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: wholesale_order_items wholesale_order_items_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.wholesale_order_items
@@ -9458,7 +9060,7 @@ ALTER TABLE ONLY public.wholesale_order_items
 
 
 --
--- Name: wholesale_orders wholesale_orders_order_number_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: wholesale_orders wholesale_orders_order_number_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.wholesale_orders
@@ -9466,7 +9068,7 @@ ALTER TABLE ONLY public.wholesale_orders
 
 
 --
--- Name: wholesale_orders wholesale_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: wholesale_orders wholesale_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.wholesale_orders
@@ -9474,7 +9076,7 @@ ALTER TABLE ONLY public.wholesale_orders
 
 
 --
--- Name: workflow_stages workflow_stages_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: workflow_stages workflow_stages_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.workflow_stages
@@ -9482,7 +9084,7 @@ ALTER TABLE ONLY public.workflow_stages
 
 
 --
--- Name: workflow_templates workflow_templates_name_key; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: workflow_templates workflow_templates_name_key; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.workflow_templates
@@ -9490,7 +9092,7 @@ ALTER TABLE ONLY public.workflow_templates
 
 
 --
--- Name: workflow_templates workflow_templates_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: workflow_templates workflow_templates_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.workflow_templates
@@ -9498,2387 +9100,2387 @@ ALTER TABLE ONLY public.workflow_templates
 
 
 --
--- Name: idx_age_group_preference_values_preference_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_age_group_preference_values_preference_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_age_group_preference_values_preference_id ON public.age_group_preference_values USING btree (preference_id);
 
 
 --
--- Name: idx_age_group_preferences_age_group_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_age_group_preferences_age_group_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_age_group_preferences_age_group_id ON public.age_group_preferences USING btree (age_group_id);
 
 
 --
--- Name: idx_age_group_preferences_attribute_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_age_group_preferences_attribute_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_age_group_preferences_attribute_type ON public.age_group_preferences USING btree (attribute_type);
 
 
 --
--- Name: idx_age_groups_name; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_age_groups_name; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_age_groups_name ON public.age_groups USING btree (name);
 
 
 --
--- Name: idx_appointment_customer_email; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_appointment_customer_email; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_appointment_customer_email ON public.appointments USING btree (customer_email);
 
 
 --
--- Name: idx_appointment_date; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_appointment_date; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_appointment_date ON public.appointments USING btree (appointment_date);
 
 
 --
--- Name: idx_appointment_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_appointment_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_appointment_status ON public.appointments USING btree (status);
 
 
 --
--- Name: idx_appointment_venue_date; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_appointment_venue_date; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_appointment_venue_date ON public.appointments USING btree (venue_id, appointment_date);
 
 
 --
--- Name: idx_attribution_order; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_attribution_order; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_attribution_order ON public.pod_attributions USING btree (order_id);
 
 
 --
--- Name: idx_attribution_order_placed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_attribution_order_placed; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_attribution_order_placed ON public.pod_attributions USING btree (order_placed_at);
 
 
 --
--- Name: idx_attribution_partner; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_attribution_partner; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_attribution_partner ON public.pod_attributions USING btree (partner_id);
 
 
 --
--- Name: idx_attribution_partner_date; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_attribution_partner_date; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_attribution_partner_date ON public.pod_attributions USING btree (partner_id, order_placed_at);
 
 
 --
--- Name: idx_attribution_pod; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_attribution_pod; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_attribution_pod ON public.pod_attributions USING btree (pod_id);
 
 
 --
--- Name: idx_attribution_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_attribution_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_attribution_status ON public.pod_attributions USING btree (status);
 
 
 --
--- Name: idx_audit_action; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_audit_action; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_audit_action ON public.audit_logs USING btree (action);
 
 
 --
--- Name: idx_audit_ip; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_audit_ip; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_audit_ip ON public.audit_logs USING btree (ip_address);
 
 
 --
--- Name: idx_audit_timestamp; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_audit_timestamp; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_audit_timestamp ON public.audit_logs USING btree ("timestamp");
 
 
 --
--- Name: idx_audit_user; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_audit_user; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_audit_user ON public.audit_logs USING btree (username);
 
 
 --
--- Name: idx_balance_tracker_item_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_balance_tracker_item_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_balance_tracker_item_code ON public.misa_balance_trackers USING btree (inventory_item_code);
 
 
 --
--- Name: idx_balance_tracker_org_ref_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_balance_tracker_org_ref_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_balance_tracker_org_ref_id ON public.misa_balance_trackers USING btree (org_ref_id);
 
 
 --
--- Name: idx_balance_tracker_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_balance_tracker_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_balance_tracker_status ON public.misa_balance_trackers USING btree (status);
 
 
 --
--- Name: idx_barcode; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_barcode; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_barcode ON public.mirror_products USING btree (barcode);
 
 
 --
--- Name: idx_blocked_slot_date; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_blocked_slot_date; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_blocked_slot_date ON public.blocked_slots USING btree (block_date);
 
 
 --
--- Name: idx_blocked_slot_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_blocked_slot_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_blocked_slot_type ON public.blocked_slots USING btree (block_type);
 
 
 --
--- Name: idx_blocked_slot_venue_date; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_blocked_slot_venue_date; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_blocked_slot_venue_date ON public.blocked_slots USING btree (venue_id, block_date);
 
 
 --
--- Name: idx_callback_data_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_callback_data_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_callback_data_type ON public.misa_callback_logs USING btree (data_type);
 
 
 --
--- Name: idx_callback_misa_ref_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_callback_misa_ref_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_callback_misa_ref_id ON public.misa_callback_logs USING btree (misa_ref_id);
 
 
 --
--- Name: idx_callback_misa_success; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_callback_misa_success; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_callback_misa_success ON public.misa_callback_logs USING btree (misa_success);
 
 
 --
--- Name: idx_callback_org_ref_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_callback_org_ref_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_callback_org_ref_id ON public.misa_callback_logs USING btree (org_ref_id);
 
 
 --
--- Name: idx_callback_processed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_callback_processed; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_callback_processed ON public.misa_callback_logs USING btree (processed);
 
 
 --
--- Name: idx_callback_received_at; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_callback_received_at; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_callback_received_at ON public.misa_callback_logs USING btree (received_at);
 
 
 --
--- Name: idx_certificate_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_certificate_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_certificate_code ON public.certificates USING btree (certificate_code);
 
 
 --
--- Name: idx_certificate_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_certificate_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_certificate_type ON public.certificates USING btree (certificate_type);
 
 
 --
--- Name: idx_col_from_vendor; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_col_from_vendor; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_col_from_vendor ON public.component_ownership_logs USING btree (from_vendor_id);
 
 
 --
--- Name: idx_col_handoff_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_col_handoff_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_col_handoff_type ON public.component_ownership_logs USING btree (handoff_type);
 
 
 --
--- Name: idx_col_initiated_at; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_col_initiated_at; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_col_initiated_at ON public.component_ownership_logs USING btree (initiated_at);
 
 
 --
--- Name: idx_col_pending_receipts; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_col_pending_receipts; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_col_pending_receipts ON public.component_ownership_logs USING btree (to_vendor_id, status);
 
 
 --
--- Name: idx_col_production_order; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_col_production_order; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_col_production_order ON public.component_ownership_logs USING btree (production_order_id);
 
 
 --
--- Name: idx_col_stage; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_col_stage; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_col_stage ON public.component_ownership_logs USING btree (stage_id);
 
 
 --
--- Name: idx_col_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_col_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_col_status ON public.component_ownership_logs USING btree (status);
 
 
 --
--- Name: idx_col_to_vendor; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_col_to_vendor; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_col_to_vendor ON public.component_ownership_logs USING btree (to_vendor_id);
 
 
 --
--- Name: idx_collection_age_group_allocations_age_group_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_collection_age_group_allocations_age_group_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_collection_age_group_allocations_age_group_id ON public.collection_age_group_allocations USING btree (age_group_id);
 
 
 --
--- Name: idx_collection_age_group_allocations_collection_plan_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_collection_age_group_allocations_collection_plan_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_collection_age_group_allocations_collection_plan_id ON public.collection_age_group_allocations USING btree (collection_plan_id);
 
 
 --
--- Name: idx_collection_plan_items_collection_plan_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_collection_plan_items_collection_plan_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_collection_plan_items_collection_plan_id ON public.collection_plan_items USING btree (collection_plan_id);
 
 
 --
--- Name: idx_collection_plan_items_product_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_collection_plan_items_product_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_collection_plan_items_product_type ON public.collection_plan_items USING btree (product_type);
 
 
 --
--- Name: idx_collection_plans_deadline; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_collection_plans_deadline; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_collection_plans_deadline ON public.collection_plans USING btree (deadline);
 
 
 --
--- Name: idx_collection_plans_name; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_collection_plans_name; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_collection_plans_name ON public.collection_plans USING btree (name);
 
 
 --
--- Name: idx_collection_plans_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_collection_plans_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_collection_plans_status ON public.collection_plans USING btree (status);
 
 
 --
--- Name: idx_collection_products_collection_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_collection_products_collection_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_collection_products_collection_id ON public.collection_products USING btree (collection_id);
 
 
 --
--- Name: idx_collection_products_product_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_collection_products_product_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_collection_products_product_id ON public.collection_products USING btree (product_id);
 
 
 --
--- Name: idx_collections_featured; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_collections_featured; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_collections_featured ON public.collections USING btree (featured);
 
 
 --
--- Name: idx_collections_season_year; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_collections_season_year; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_collections_season_year ON public.collections USING btree (season, year);
 
 
 --
--- Name: idx_collections_sort_order; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_collections_sort_order; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_collections_sort_order ON public.collections USING btree (sort_order);
 
 
 --
--- Name: idx_collections_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_collections_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_collections_status ON public.collections USING btree (status);
 
 
 --
--- Name: idx_component_optionals_name_component_active; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_component_optionals_name_component_active; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_component_optionals_name_component_active ON public.component_optionals USING btree (component_optional_name, component_id, is_active, is_deleted);
 
 
 --
--- Name: idx_components_name_sku_active; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_components_name_sku_active; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_components_name_sku_active ON public.components USING btree (component_name, product_id, is_active, is_deleted);
 
 
 --
--- Name: idx_design_products_designer_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_design_products_designer_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_design_products_designer_id ON public.design_products USING btree (designer_id);
 
 
 --
--- Name: idx_design_products_featured; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_design_products_featured; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_design_products_featured ON public.design_products USING btree (featured_design);
 
 
 --
--- Name: idx_design_products_product_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_design_products_product_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_design_products_product_id ON public.design_products USING btree (product_id);
 
 
 --
--- Name: idx_design_products_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_design_products_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_design_products_status ON public.design_products USING btree (design_status);
 
 
 --
--- Name: idx_design_sale_transactions_design_product_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_design_sale_transactions_design_product_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_design_sale_transactions_design_product_id ON public.design_sale_transactions USING btree (design_product_id);
 
 
 --
--- Name: idx_design_sale_transactions_order_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_design_sale_transactions_order_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_design_sale_transactions_order_id ON public.design_sale_transactions USING btree (order_id);
 
 
 --
--- Name: idx_design_sale_transactions_processed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_design_sale_transactions_processed; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_design_sale_transactions_processed ON public.design_sale_transactions USING btree (processed);
 
 
 --
--- Name: idx_design_sale_transactions_sale_date; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_design_sale_transactions_sale_date; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_design_sale_transactions_sale_date ON public.design_sale_transactions USING btree (sale_date);
 
 
 --
--- Name: idx_designers_active_deleted; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_designers_active_deleted; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_designers_active_deleted ON public.designers USING btree (is_active, is_deleted);
 
 
 --
--- Name: idx_designers_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_designers_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_designers_code ON public.designers USING btree (code);
 
 
 --
--- Name: idx_designers_owner_user_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_designers_owner_user_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_designers_owner_user_id ON public.designers USING btree (owner_user_id);
 
 
 --
--- Name: idx_designers_specialty; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_designers_specialty; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_designers_specialty ON public.designers USING btree (specialty);
 
 
 --
--- Name: idx_designers_verified_featured; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_designers_verified_featured; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_designers_verified_featured ON public.designers USING btree (verified, featured);
 
 
 --
--- Name: idx_inv_movements_inventory; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_inv_movements_inventory; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_inv_movements_inventory ON public.inventory_movements USING btree (inventory_id);
 
 
 --
--- Name: idx_inv_movements_partner_date; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_inv_movements_partner_date; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_inv_movements_partner_date ON public.inventory_movements USING btree (partner_id, created_at);
 
 
 --
--- Name: idx_inv_movements_product; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_inv_movements_product; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_inv_movements_product ON public.inventory_movements USING btree (product_id);
 
 
 --
--- Name: idx_item_variants_url_active; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_item_variants_url_active; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_item_variants_url_active ON public.item_variants USING btree (item_variant_url, is_active, is_deleted);
 
 
 --
--- Name: idx_jtrc_category; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_jtrc_category; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_jtrc_category ON public.jewelry_technical_reports USING btree (category);
 
 
 --
--- Name: idx_jtrc_collection; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_jtrc_collection; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_jtrc_collection ON public.jewelry_technical_reports USING btree (collection);
 
 
 --
--- Name: idx_jtrc_labor_jtrc_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_jtrc_labor_jtrc_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_jtrc_labor_jtrc_id ON public.jtrc_labor_components USING btree (jtrc_id);
 
 
 --
--- Name: idx_jtrc_labor_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_jtrc_labor_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_jtrc_labor_type ON public.jtrc_labor_components USING btree (labor_type);
 
 
 --
--- Name: idx_jtrc_metal_jtrc_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_jtrc_metal_jtrc_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_jtrc_metal_jtrc_id ON public.jtrc_metal_components USING btree (jtrc_id);
 
 
 --
--- Name: idx_jtrc_product_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_jtrc_product_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_jtrc_product_id ON public.jewelry_technical_reports USING btree (product_id);
 
 
 --
--- Name: idx_jtrc_report_number; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_jtrc_report_number; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_jtrc_report_number ON public.jewelry_technical_reports USING btree (report_number);
 
 
 --
--- Name: idx_jtrc_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_jtrc_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_jtrc_status ON public.jewelry_technical_reports USING btree (status);
 
 
 --
--- Name: idx_jtrc_stone_jtrc_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_jtrc_stone_jtrc_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_jtrc_stone_jtrc_id ON public.jtrc_stone_components USING btree (jtrc_id);
 
 
 --
--- Name: idx_jtrc_stone_role; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_jtrc_stone_role; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_jtrc_stone_role ON public.jtrc_stone_components USING btree (stone_role);
 
 
 --
--- Name: idx_label_templates_is_default; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_label_templates_is_default; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_label_templates_is_default ON public.label_templates USING btree (is_default);
 
 
 --
--- Name: idx_label_templates_name; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_label_templates_name; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_label_templates_name ON public.label_templates USING btree (name);
 
 
 --
--- Name: idx_label_templates_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_label_templates_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_label_templates_status ON public.label_templates USING btree (status);
 
 
 --
--- Name: idx_lbt_is_active; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_lbt_is_active; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_lbt_is_active ON public.label_templates USING btree (is_active);
 
 
 --
--- Name: idx_lbt_is_default; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_lbt_is_default; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_lbt_is_default ON public.label_templates USING btree (is_default);
 
 
 --
--- Name: idx_lbt_label_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_lbt_label_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_lbt_label_type ON public.label_templates USING btree (label_type);
 
 
 --
--- Name: idx_lbt_name; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_lbt_name; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_lbt_name ON public.label_templates USING btree (name);
 
 
 --
--- Name: idx_lgd_carat_weight; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_lgd_carat_weight; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_lgd_carat_weight ON public.mirror_diamonds USING btree (carat_weight);
 
 
 --
--- Name: idx_lgd_cert_number; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_lgd_cert_number; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_lgd_cert_number ON public.mirror_diamonds USING btree (cert_number);
 
 
 --
--- Name: idx_lgd_color_clarity; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_lgd_color_clarity; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_lgd_color_clarity ON public.mirror_diamonds USING btree (color, clarity);
 
 
 --
--- Name: idx_lgd_invoice; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_lgd_invoice; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_lgd_invoice ON public.mirror_diamonds USING btree (invoice_number);
 
 
 --
--- Name: idx_lgd_manufacturer; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_lgd_manufacturer; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_lgd_manufacturer ON public.mirror_diamonds USING btree (manufacturer_code);
 
 
 --
--- Name: idx_lgd_sku_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_lgd_sku_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_lgd_sku_code ON public.mirror_diamonds USING btree (sku_code);
 
 
 --
--- Name: idx_lgd_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_lgd_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_lgd_status ON public.mirror_diamonds USING btree (status);
 
 
 --
--- Name: idx_locations_city; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_locations_city; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_locations_city ON public.locations USING btree (city);
 
 
 --
--- Name: idx_locations_is_internal; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_locations_is_internal; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_locations_is_internal ON public.locations USING btree (is_internal);
 
 
 --
--- Name: idx_locations_misa_warehouse_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_locations_misa_warehouse_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_locations_misa_warehouse_id ON public.locations USING btree (misa_warehouse_id);
 
 
 --
--- Name: idx_locations_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_locations_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_locations_status ON public.locations USING btree (status);
 
 
 --
--- Name: idx_locations_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_locations_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_locations_type ON public.locations USING btree (type);
 
 
 --
--- Name: idx_market_trends_active; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_market_trends_active; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_market_trends_active ON public.market_trends USING btree (active);
 
 
 --
--- Name: idx_market_trends_adoption_stage; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_market_trends_adoption_stage; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_market_trends_adoption_stage ON public.market_trends USING btree (adoption_stage);
 
 
 --
--- Name: idx_market_trends_confidence_level; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_market_trends_confidence_level; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_market_trends_confidence_level ON public.market_trends USING btree (confidence_level);
 
 
 --
--- Name: idx_market_trends_period; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_market_trends_period; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_market_trends_period ON public.market_trends USING btree (trend_period_start, trend_period_end);
 
 
 --
--- Name: idx_market_trends_trend_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_market_trends_trend_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_market_trends_trend_code ON public.market_trends USING btree (trend_code);
 
 
 --
--- Name: idx_market_trends_trend_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_market_trends_trend_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_market_trends_trend_type ON public.market_trends USING btree (trend_type);
 
 
 --
--- Name: idx_material_inventory_name; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_material_inventory_name; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_material_inventory_name ON public.material_inventory USING btree (name);
 
 
 --
--- Name: idx_material_inventory_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_material_inventory_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_material_inventory_type ON public.material_inventory USING btree (type);
 
 
 --
--- Name: idx_material_inventory_vendor_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_material_inventory_vendor_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_material_inventory_vendor_id ON public.material_inventory USING btree (vendor_id);
 
 
 --
--- Name: idx_mirror_category; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_mirror_category; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_mirror_category ON public.mirror_products USING btree (category);
 
 
 --
--- Name: idx_mirror_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_mirror_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_mirror_code ON public.mirror_products USING btree (mirror_code);
 
 
 --
--- Name: idx_mirror_design_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_mirror_design_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_mirror_design_id ON public.mirror_products USING btree (design_id);
 
 
 --
--- Name: idx_mirror_designer_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_mirror_designer_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_mirror_designer_id ON public.mirror_products USING btree (designer_id);
 
 
 --
--- Name: idx_mirror_featured; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_mirror_featured; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_mirror_featured ON public.mirror_products USING btree (featured);
 
 
 --
--- Name: idx_mirror_is_active; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_mirror_is_active; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_mirror_is_active ON public.mirror_products USING btree (is_active);
 
 
 --
--- Name: idx_mirror_is_deleted; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_mirror_is_deleted; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_mirror_is_deleted ON public.mirror_products USING btree (is_deleted);
 
 
 --
--- Name: idx_mirror_misa_item_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_mirror_misa_item_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_mirror_misa_item_code ON public.mirror_products USING btree (misa_item_code);
 
 
 --
--- Name: idx_mirror_products_descriptive_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_mirror_products_descriptive_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_mirror_products_descriptive_code ON public.mirror_products USING btree (descriptive_code);
 
 
 --
--- Name: idx_mirror_products_is_active; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_mirror_products_is_active; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_mirror_products_is_active ON public.mirror_products USING btree (is_active);
 
 
 --
--- Name: idx_mirror_products_misa_category_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_mirror_products_misa_category_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_mirror_products_misa_category_id ON public.mirror_products USING btree (misa_category_id);
 
 
 --
--- Name: idx_mirror_products_misa_inventory_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_mirror_products_misa_inventory_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_mirror_products_misa_inventory_id ON public.mirror_products USING btree (misa_inventory_id);
 
 
 --
--- Name: idx_mirror_products_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_mirror_products_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_mirror_products_status ON public.mirror_products USING btree (status);
 
 
 --
--- Name: idx_misa_cat_active; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_cat_active; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_cat_active ON public.misa_product_categories USING btree (is_active);
 
 
 --
--- Name: idx_misa_cat_category_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_cat_category_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_cat_category_id ON public.misa_product_categories USING btree (category_id);
 
 
 --
--- Name: idx_misa_cat_parent_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_cat_parent_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_cat_parent_id ON public.misa_product_categories USING btree (parent_id);
 
 
 --
--- Name: idx_misa_customers_active; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_customers_active; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_customers_active ON public.misa_customers USING btree (is_active);
 
 
 --
--- Name: idx_misa_customers_customer_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_customers_customer_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_customers_customer_code ON public.misa_customers USING btree (customer_code);
 
 
 --
--- Name: idx_misa_customers_customer_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_customers_customer_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_customers_customer_id ON public.misa_customers USING btree (customer_id);
 
 
 --
--- Name: idx_misa_customers_customer_name; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_customers_customer_name; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_customers_customer_name ON public.misa_customers USING btree (customer_name);
 
 
 --
--- Name: idx_misa_customers_email; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_customers_email; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_customers_email ON public.misa_customers USING btree (email);
 
 
 --
--- Name: idx_misa_customers_last_sync; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_customers_last_sync; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_customers_last_sync ON public.misa_customers USING btree (last_sync_date);
 
 
 --
--- Name: idx_misa_customers_member_level; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_customers_member_level; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_customers_member_level ON public.misa_customers USING btree (member_level_id);
 
 
 --
--- Name: idx_misa_customers_phone; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_customers_phone; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_customers_phone ON public.misa_customers USING btree (phone);
 
 
 --
--- Name: idx_misa_customers_sync_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_customers_sync_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_customers_sync_status ON public.misa_customers USING btree (sync_status);
 
 
 --
--- Name: idx_misa_invoices_branch_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_invoices_branch_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_invoices_branch_id ON public.misa_invoices USING btree (branch_id);
 
 
 --
--- Name: idx_misa_invoices_customer_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_invoices_customer_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_invoices_customer_id ON public.misa_invoices USING btree (customer_id);
 
 
 --
--- Name: idx_misa_invoices_invoice_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_invoices_invoice_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_invoices_invoice_code ON public.misa_invoices USING btree (invoice_code);
 
 
 --
--- Name: idx_misa_invoices_invoice_date; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_invoices_invoice_date; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_invoices_invoice_date ON public.misa_invoices USING btree (invoice_date);
 
 
 --
--- Name: idx_misa_invoices_invoice_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_invoices_invoice_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_invoices_invoice_id ON public.misa_invoices USING btree (invoice_id);
 
 
 --
--- Name: idx_misa_invoices_last_sync; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_invoices_last_sync; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_invoices_last_sync ON public.misa_invoices USING btree (last_sync_date);
 
 
 --
--- Name: idx_misa_invoices_payment_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_invoices_payment_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_invoices_payment_status ON public.misa_invoices USING btree (payment_status);
 
 
 --
--- Name: idx_misa_invoices_sync_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_invoices_sync_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_invoices_sync_status ON public.misa_invoices USING btree (sync_status);
 
 
 --
--- Name: idx_misa_items_active; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_items_active; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_items_active ON public.misa_inventory_items USING btree (is_active);
 
 
 --
--- Name: idx_misa_items_barcode; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_items_barcode; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_items_barcode ON public.misa_inventory_items USING btree (barcode);
 
 
 --
--- Name: idx_misa_items_brand; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_items_brand; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_items_brand ON public.misa_inventory_items USING btree (brand_name);
 
 
 --
--- Name: idx_misa_items_category; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_items_category; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_items_category ON public.misa_inventory_items USING btree (inventory_item_category_id);
 
 
 --
--- Name: idx_misa_items_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_items_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_items_code ON public.misa_inventory_items USING btree (inventory_item_code);
 
 
 --
--- Name: idx_misa_items_last_sync; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_items_last_sync; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_items_last_sync ON public.misa_inventory_items USING btree (last_sync_date);
 
 
 --
--- Name: idx_misa_items_sync_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_items_sync_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_items_sync_status ON public.misa_inventory_items USING btree (sync_status);
 
 
 --
--- Name: idx_misa_sync_created_at; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_sync_created_at; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_sync_created_at ON public.misa_sync_logs USING btree (created_at);
 
 
 --
--- Name: idx_misa_sync_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_sync_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_sync_status ON public.misa_sync_logs USING btree (status);
 
 
 --
--- Name: idx_misa_sync_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_sync_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_sync_type ON public.misa_sync_logs USING btree (sync_type);
 
 
 --
--- Name: idx_misa_warehouses_branch_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_warehouses_branch_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_warehouses_branch_id ON public.misa_warehouses USING btree (branch_id);
 
 
 --
--- Name: idx_misa_warehouses_is_inactive; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_warehouses_is_inactive; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_warehouses_is_inactive ON public.misa_warehouses USING btree (is_inactive);
 
 
 --
--- Name: idx_misa_warehouses_stock_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_misa_warehouses_stock_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_misa_warehouses_stock_code ON public.misa_warehouses USING btree (stock_code);
 
 
 --
--- Name: idx_one_pending_per_user; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_one_pending_per_user; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE UNIQUE INDEX idx_one_pending_per_user ON public.email_verification_tokens USING btree (user_id) WHERE (verified_at IS NULL);
 
 
 --
--- Name: idx_order_invoice_forwarded; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_order_invoice_forwarded; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_order_invoice_forwarded ON public.orders USING btree (invoice_forwarded);
 
 
 --
--- Name: idx_order_items_order_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_order_items_order_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_order_items_order_id ON public.order_items USING btree (order_id);
 
 
 --
--- Name: idx_order_misa_item_created; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_order_misa_item_created; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_order_misa_item_created ON public.orders USING btree (misa_item_created);
 
 
 --
--- Name: idx_order_misa_sale_recorded; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_order_misa_sale_recorded; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_order_misa_sale_recorded ON public.orders USING btree (misa_sale_recorded);
 
 
 --
--- Name: idx_order_payment_schedule_order; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_order_payment_schedule_order; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_order_payment_schedule_order ON public.order_payment_schedule USING btree (order_id);
 
 
 --
--- Name: idx_order_payment_schedule_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_order_payment_schedule_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_order_payment_schedule_status ON public.order_payment_schedule USING btree (status);
 
 
 --
--- Name: idx_order_status_history_order; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_order_status_history_order; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_order_status_history_order ON public.order_status_history USING btree (order_id);
 
 
 --
--- Name: idx_orders_payment_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_orders_payment_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_orders_payment_status ON public.orders USING btree (payment_status);
 
 
 --
--- Name: idx_orders_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_orders_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_orders_status ON public.orders USING btree (status);
 
 
 --
--- Name: idx_orders_user_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_orders_user_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_orders_user_id ON public.orders USING btree (user_id);
 
 
 --
--- Name: idx_orders_vendor_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_orders_vendor_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_orders_vendor_id ON public.orders USING btree (vendor_id);
 
 
 --
--- Name: idx_otp_cleanup; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_otp_cleanup; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_otp_cleanup ON public.user_otps USING btree (created_at, verified_at);
 
 
 --
--- Name: idx_otp_email_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_otp_email_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_otp_email_type ON public.user_otps USING btree (email, type, verified_at);
 
 
 --
--- Name: idx_otp_user_pending; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_otp_user_pending; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_otp_user_pending ON public.user_otps USING btree (user_id, type, verified_at);
 
 
 --
--- Name: idx_partner_cap_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_partner_cap_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_partner_cap_type ON public.partner_capabilities USING btree (capability_type);
 
 
 --
--- Name: idx_partner_cap_vendor; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_partner_cap_vendor; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_partner_cap_vendor ON public.partner_capabilities USING btree (vendor_id);
 
 
 --
--- Name: idx_partner_inventory_low_stock; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_partner_inventory_low_stock; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_partner_inventory_low_stock ON public.partner_inventory USING btree (partner_id, quantity_available);
 
 
 --
--- Name: idx_partner_inventory_partner; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_partner_inventory_partner; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_partner_inventory_partner ON public.partner_inventory USING btree (partner_id);
 
 
 --
--- Name: idx_partner_inventory_product; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_partner_inventory_product; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_partner_inventory_product ON public.partner_inventory USING btree (product_id);
 
 
 --
--- Name: idx_partner_sales_partner_date; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_partner_sales_partner_date; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_partner_sales_partner_date ON public.partner_sales USING btree (partner_id, sold_at);
 
 
 --
--- Name: idx_partner_sales_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_partner_sales_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_partner_sales_status ON public.partner_sales USING btree (status);
 
 
 --
--- Name: idx_payment_transactions_order_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_payment_transactions_order_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_payment_transactions_order_id ON public.order_payment_transactions USING btree (order_id);
 
 
 --
--- Name: idx_payment_transactions_schedule_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_payment_transactions_schedule_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_payment_transactions_schedule_id ON public.order_payment_transactions USING btree (schedule_id);
 
 
 --
--- Name: idx_permission_name; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_permission_name; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_permission_name ON public.permissions USING btree (name);
 
 
 --
--- Name: idx_permission_resource; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_permission_resource; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_permission_resource ON public.permissions USING btree (resource);
 
 
 --
--- Name: idx_pfc_band_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pfc_band_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pfc_band_code ON public.product_finder_combinations USING btree (band_code);
 
 
 --
--- Name: idx_pfc_is_active; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pfc_is_active; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pfc_is_active ON public.product_finder_combinations USING btree (is_active);
 
 
 --
--- Name: idx_pfc_main_stone_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pfc_main_stone_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pfc_main_stone_code ON public.product_finder_combinations USING btree (main_stone_code);
 
 
 --
--- Name: idx_pfs_created_at; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pfs_created_at; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pfs_created_at ON public.product_finder_selections USING btree (created_at);
 
 
 --
--- Name: idx_pfs_user_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pfs_user_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pfs_user_id ON public.product_finder_selections USING btree (user_id);
 
 
 --
--- Name: idx_po_age_group_allocations_age_group_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_po_age_group_allocations_age_group_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_po_age_group_allocations_age_group_id ON public.purchase_order_age_group_allocations USING btree (age_group_id);
 
 
 --
--- Name: idx_po_age_group_allocations_po_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_po_age_group_allocations_po_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_po_age_group_allocations_po_id ON public.purchase_order_age_group_allocations USING btree (purchase_order_id);
 
 
 --
--- Name: idx_po_item_variants_age_group_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_po_item_variants_age_group_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_po_item_variants_age_group_id ON public.purchase_order_item_variants USING btree (age_group_id);
 
 
 --
--- Name: idx_po_item_variants_material_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_po_item_variants_material_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_po_item_variants_material_id ON public.purchase_order_item_variants USING btree (material_id);
 
 
 --
--- Name: idx_po_item_variants_po_item_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_po_item_variants_po_item_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_po_item_variants_po_item_id ON public.purchase_order_item_variants USING btree (purchase_order_item_id);
 
 
 --
--- Name: idx_pod_commissions_created_at; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pod_commissions_created_at; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pod_commissions_created_at ON public.pod_commissions USING btree (created_at);
 
 
 --
--- Name: idx_pod_commissions_partner_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pod_commissions_partner_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pod_commissions_partner_id ON public.pod_commissions USING btree (partner_id);
 
 
 --
--- Name: idx_pod_commissions_pod_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pod_commissions_pod_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pod_commissions_pod_id ON public.pod_commissions USING btree (pod_id);
 
 
 --
--- Name: idx_pod_commissions_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pod_commissions_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pod_commissions_status ON public.pod_commissions USING btree (status);
 
 
 --
--- Name: idx_pod_partners_business_name; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pod_partners_business_name; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pod_partners_business_name ON public.pod_partners USING btree (business_name);
 
 
 --
--- Name: idx_pod_partners_is_deleted; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pod_partners_is_deleted; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pod_partners_is_deleted ON public.pod_partners USING btree (is_deleted);
 
 
 --
--- Name: idx_pod_partners_partner_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pod_partners_partner_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pod_partners_partner_type ON public.pod_partners USING btree (partner_type);
 
 
 --
--- Name: idx_pod_partners_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pod_partners_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pod_partners_status ON public.pod_partners USING btree (status);
 
 
 --
--- Name: idx_pod_products_assigned_date; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pod_products_assigned_date; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pod_products_assigned_date ON public.pod_products USING btree (assigned_date);
 
 
 --
--- Name: idx_pod_products_pod_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pod_products_pod_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pod_products_pod_id ON public.pod_products USING btree (pod_id);
 
 
 --
--- Name: idx_pod_products_product_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pod_products_product_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pod_products_product_id ON public.pod_products USING btree (product_id);
 
 
 --
--- Name: idx_pod_qr_codes_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pod_qr_codes_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pod_qr_codes_type ON public.pod_qr_codes USING btree (qr_code_type);
 
 
 --
--- Name: idx_pods_is_deleted; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pods_is_deleted; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pods_is_deleted ON public.pods USING btree (is_deleted);
 
 
 --
--- Name: idx_pods_location_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pods_location_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pods_location_id ON public.pods USING btree (location_id);
 
 
 --
--- Name: idx_pods_partner_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pods_partner_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pods_partner_id ON public.pods USING btree (partner_id);
 
 
 --
--- Name: idx_pods_pod_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pods_pod_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pods_pod_type ON public.pods USING btree (pod_type);
 
 
 --
--- Name: idx_pods_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pods_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pods_status ON public.pods USING btree (status);
 
 
 --
--- Name: idx_por_collection_plan_item; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_por_collection_plan_item; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_por_collection_plan_item ON public.production_orders USING btree (collection_plan_item_id);
 
 
 --
--- Name: idx_por_current_holder; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_por_current_holder; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_por_current_holder ON public.production_orders USING btree (current_holder_id);
 
 
 --
--- Name: idx_por_estimated_completion; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_por_estimated_completion; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_por_estimated_completion ON public.production_orders USING btree (estimated_completion_date);
 
 
 --
--- Name: idx_por_jtrc; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_por_jtrc; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_por_jtrc ON public.production_orders USING btree (jtrc_id);
 
 
 --
--- Name: idx_por_needs_spec_review; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_por_needs_spec_review; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_por_needs_spec_review ON public.production_orders USING btree (needs_spec_review);
 
 
 --
--- Name: idx_por_order_number; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_por_order_number; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_por_order_number ON public.production_orders USING btree (order_number);
 
 
 --
--- Name: idx_por_production_plan; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_por_production_plan; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_por_production_plan ON public.production_orders USING btree (production_plan_id);
 
 
 --
--- Name: idx_por_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_por_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_por_status ON public.production_orders USING btree (status);
 
 
 --
--- Name: idx_pos_assigned_vendor; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pos_assigned_vendor; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pos_assigned_vendor ON public.production_order_stages USING btree (assigned_vendor_id);
 
 
 --
--- Name: idx_pos_capability; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pos_capability; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pos_capability ON public.production_order_stages USING btree (required_capability);
 
 
 --
--- Name: idx_pos_history_action_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pos_history_action_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pos_history_action_type ON public.inventory_position_history USING btree (action_type);
 
 
 --
--- Name: idx_pos_history_performed_at; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pos_history_performed_at; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pos_history_performed_at ON public.inventory_position_history USING btree (performed_at);
 
 
 --
--- Name: idx_pos_history_performed_by; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pos_history_performed_by; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pos_history_performed_by ON public.inventory_position_history USING btree (performed_by);
 
 
 --
--- Name: idx_pos_history_position_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pos_history_position_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pos_history_position_id ON public.inventory_position_history USING btree (position_id);
 
 
 --
--- Name: idx_pos_history_product_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pos_history_product_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pos_history_product_code ON public.inventory_position_history USING btree (product_code);
 
 
 --
--- Name: idx_pos_history_reference; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pos_history_reference; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pos_history_reference ON public.inventory_position_history USING btree (reference_type, reference_id);
 
 
 --
--- Name: idx_pos_history_to_warehouse; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pos_history_to_warehouse; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pos_history_to_warehouse ON public.inventory_position_history USING btree (to_warehouse_id);
 
 
 --
--- Name: idx_pos_production_order; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pos_production_order; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pos_production_order ON public.production_order_stages USING btree (production_order_id);
 
 
 --
--- Name: idx_pos_stage_order; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pos_stage_order; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pos_stage_order ON public.production_order_stages USING btree (stage_order);
 
 
 --
--- Name: idx_pos_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pos_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pos_status ON public.production_order_stages USING btree (status);
 
 
 --
--- Name: idx_pos_workflow_stage; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pos_workflow_stage; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pos_workflow_stage ON public.production_order_stages USING btree (workflow_stage_id);
 
 
 --
--- Name: idx_positions_is_active; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_positions_is_active; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_positions_is_active ON public.inventory_positions USING btree (is_active);
 
 
 --
--- Name: idx_positions_product_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_positions_product_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_positions_product_code ON public.inventory_positions USING btree (product_code);
 
 
 --
--- Name: idx_positions_rack_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_positions_rack_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_positions_rack_id ON public.inventory_positions USING btree (rack_id);
 
 
 --
--- Name: idx_positions_slot_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_positions_slot_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_positions_slot_id ON public.inventory_positions USING btree (slot_id);
 
 
 --
--- Name: idx_positions_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_positions_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_positions_status ON public.inventory_positions USING btree (position_status);
 
 
 --
--- Name: idx_positions_warehouse_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_positions_warehouse_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_positions_warehouse_id ON public.inventory_positions USING btree (warehouse_id);
 
 
 --
--- Name: idx_ppl_collection_plan; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_ppl_collection_plan; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_ppl_collection_plan ON public.production_plans USING btree (collection_plan_id);
 
 
 --
--- Name: idx_ppl_name; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_ppl_name; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_ppl_name ON public.production_plans USING btree (name);
 
 
 --
--- Name: idx_ppl_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_ppl_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_ppl_status ON public.production_plans USING btree (status);
 
 
 --
--- Name: idx_ppl_target_end; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_ppl_target_end; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_ppl_target_end ON public.production_plans USING btree (target_end_date);
 
 
 --
--- Name: idx_ppl_target_start; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_ppl_target_start; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_ppl_target_start ON public.production_plans USING btree (target_start_date);
 
 
 --
--- Name: idx_ppl_workflow_template; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_ppl_workflow_template; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_ppl_workflow_template ON public.production_plans USING btree (workflow_template_id);
 
 
 --
--- Name: idx_print_job_items_epc; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_print_job_items_epc; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_print_job_items_epc ON public.print_job_items USING btree (epc);
 
 
 --
--- Name: idx_print_job_items_job; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_print_job_items_job; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_print_job_items_job ON public.print_job_items USING btree (print_job_id);
 
 
 --
--- Name: idx_print_job_items_product; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_print_job_items_product; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_print_job_items_product ON public.print_job_items USING btree (product_id);
 
 
 --
--- Name: idx_print_job_items_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_print_job_items_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_print_job_items_status ON public.print_job_items USING btree (status);
 
 
 --
--- Name: idx_print_jobs_created_at; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_print_jobs_created_at; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_print_jobs_created_at ON public.print_jobs USING btree (created_at DESC);
 
 
 --
--- Name: idx_print_jobs_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_print_jobs_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_print_jobs_status ON public.print_jobs USING btree (status);
 
 
 --
--- Name: idx_print_jobs_template; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_print_jobs_template; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_print_jobs_template ON public.print_jobs USING btree (template_id);
 
 
 --
--- Name: idx_product_certificates_certificate_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_product_certificates_certificate_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_product_certificates_certificate_id ON public.product_certificates USING btree (certificate_id);
 
 
 --
--- Name: idx_product_certificates_product_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_product_certificates_product_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_product_certificates_product_id ON public.product_certificates USING btree (product_id);
 
 
 --
--- Name: idx_product_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_product_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_product_status ON public.mirror_products USING btree (status);
 
 
 --
--- Name: idx_pua_expires; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pua_expires; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pua_expires ON public.pod_user_attributions USING btree (expires_at);
 
 
 --
--- Name: idx_pua_partner; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pua_partner; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pua_partner ON public.pod_user_attributions USING btree (partner_id);
 
 
 --
--- Name: idx_pua_user_pod; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pua_user_pod; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pua_user_pod ON public.pod_user_attributions USING btree (user_id, pod_id);
 
 
 --
--- Name: idx_pua_user_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_pua_user_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_pua_user_status ON public.pod_user_attributions USING btree (user_id, status);
 
 
 --
--- Name: idx_purchase_order_items_material_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_purchase_order_items_material_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_purchase_order_items_material_id ON public.purchase_order_items USING btree (material_id);
 
 
 --
--- Name: idx_purchase_order_items_purchase_order_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_purchase_order_items_purchase_order_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_purchase_order_items_purchase_order_id ON public.purchase_order_items USING btree (purchase_order_id);
 
 
 --
--- Name: idx_purchase_orders_created_at; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_purchase_orders_created_at; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_purchase_orders_created_at ON public.purchase_orders USING btree (created_at);
 
 
 --
--- Name: idx_purchase_orders_expected_delivery_date; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_purchase_orders_expected_delivery_date; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_purchase_orders_expected_delivery_date ON public.purchase_orders USING btree (expected_delivery_date);
 
 
 --
--- Name: idx_purchase_orders_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_purchase_orders_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_purchase_orders_status ON public.purchase_orders USING btree (status);
 
 
 --
--- Name: idx_purchase_orders_vendor_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_purchase_orders_vendor_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_purchase_orders_vendor_id ON public.purchase_orders USING btree (vendor_id);
 
 
 --
--- Name: idx_qr_code_pod; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_code_pod; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_code_pod ON public.pod_qr_codes USING btree (pod_id);
 
 
 --
--- Name: idx_qr_code_product; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_code_product; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_code_product ON public.pod_qr_codes USING btree (product_id);
 
 
 --
--- Name: idx_qr_code_short_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_code_short_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_code_short_code ON public.pod_qr_codes USING btree (short_code);
 
 
 --
--- Name: idx_qr_code_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_code_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_code_status ON public.pod_qr_codes USING btree (status);
 
 
 --
--- Name: idx_qr_codes_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_codes_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_codes_code ON public.qr_codes USING btree (code);
 
 
 --
--- Name: idx_qr_codes_partner_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_codes_partner_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_codes_partner_id ON public.qr_codes USING btree (partner_id);
 
 
 --
--- Name: idx_qr_codes_pod_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_codes_pod_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_codes_pod_id ON public.qr_codes USING btree (pod_id);
 
 
 --
--- Name: idx_qr_codes_product_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_codes_product_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_codes_product_id ON public.qr_codes USING btree (product_id);
 
 
 --
--- Name: idx_qr_codes_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_codes_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_codes_status ON public.qr_codes USING btree (status);
 
 
 --
--- Name: idx_qr_codes_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_codes_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_codes_type ON public.qr_codes USING btree (qr_code_type);
 
 
 --
--- Name: idx_qr_scan_partner; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_scan_partner; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_scan_partner ON public.pod_qr_scans USING btree (partner_id);
 
 
 --
--- Name: idx_qr_scan_partner_date; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_scan_partner_date; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_scan_partner_date ON public.pod_qr_scans USING btree (partner_id, scanned_at);
 
 
 --
--- Name: idx_qr_scan_pod; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_scan_pod; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_scan_pod ON public.pod_qr_scans USING btree (pod_id);
 
 
 --
--- Name: idx_qr_scan_product; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_scan_product; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_scan_product ON public.pod_qr_scans USING btree (product_id);
 
 
 --
--- Name: idx_qr_scan_qr_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_scan_qr_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_scan_qr_code ON public.pod_qr_scans USING btree (qr_code_id);
 
 
 --
--- Name: idx_qr_scan_scanned_at; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_scan_scanned_at; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_scan_scanned_at ON public.pod_qr_scans USING btree (scanned_at);
 
 
 --
--- Name: idx_qr_scan_session; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_scan_session; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_scan_session ON public.pod_qr_scans USING btree (session_id);
 
 
 --
--- Name: idx_qr_scan_user; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_scan_user; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_scan_user ON public.pod_qr_scans USING btree (user_id);
 
 
 --
--- Name: idx_qr_scans_attribution_expires; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_scans_attribution_expires; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_scans_attribution_expires ON public.qr_scans USING btree (attribution_expires_at);
 
 
 --
--- Name: idx_qr_scans_dedup; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_scans_dedup; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_scans_dedup ON public.qr_scans USING btree (qr_code_id, device_fingerprint, scanned_at);
 
 
 --
--- Name: idx_qr_scans_device_fingerprint; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_scans_device_fingerprint; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_scans_device_fingerprint ON public.qr_scans USING btree (device_fingerprint);
 
 
 --
--- Name: idx_qr_scans_qr_code_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_scans_qr_code_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_scans_qr_code_id ON public.qr_scans USING btree (qr_code_id);
 
 
 --
--- Name: idx_qr_scans_scanned_at; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_scans_scanned_at; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_scans_scanned_at ON public.qr_scans USING btree (scanned_at);
 
 
 --
--- Name: idx_qr_scans_session_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_qr_scans_session_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_qr_scans_session_id ON public.qr_scans USING btree (session_id);
 
 
 --
--- Name: idx_racks_floor_level; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_racks_floor_level; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_racks_floor_level ON public.warehouse_racks USING btree (floor_level);
 
 
 --
--- Name: idx_racks_is_active; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_racks_is_active; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_racks_is_active ON public.warehouse_racks USING btree (is_active);
 
 
 --
--- Name: idx_racks_rack_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_racks_rack_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_racks_rack_code ON public.warehouse_racks USING btree (rack_code);
 
 
 --
--- Name: idx_racks_warehouse_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_racks_warehouse_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_racks_warehouse_id ON public.warehouse_racks USING btree (warehouse_id);
 
 
 --
--- Name: idx_recon_created_by; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_recon_created_by; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_recon_created_by ON public.stock_reconciliation_records USING btree (created_by);
 
 
 --
--- Name: idx_recon_date; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_recon_date; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_recon_date ON public.stock_reconciliation_records USING btree (reconciliation_date);
 
 
 --
--- Name: idx_recon_document_number; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_recon_document_number; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_recon_document_number ON public.stock_reconciliation_records USING btree (document_number);
 
 
 --
--- Name: idx_recon_warehouse_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_recon_warehouse_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_recon_warehouse_id ON public.stock_reconciliation_records USING btree (warehouse_id);
 
 
 --
--- Name: idx_rfid_scan_logs_device; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_rfid_scan_logs_device; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_rfid_scan_logs_device ON public.rfid_scan_logs USING btree (device_id);
 
 
 --
--- Name: idx_rfid_scan_logs_epc; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_rfid_scan_logs_epc; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_rfid_scan_logs_epc ON public.rfid_scan_logs USING btree (epc);
 
 
 --
--- Name: idx_rfid_scan_logs_location; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_rfid_scan_logs_location; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_rfid_scan_logs_location ON public.rfid_scan_logs USING btree (location);
 
 
 --
--- Name: idx_rfid_scan_logs_product; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_rfid_scan_logs_product; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_rfid_scan_logs_product ON public.rfid_scan_logs USING btree (product_id);
 
 
 --
--- Name: idx_rfid_scan_logs_scanned_at; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_rfid_scan_logs_scanned_at; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_rfid_scan_logs_scanned_at ON public.rfid_scan_logs USING btree (scanned_at DESC);
 
 
 --
--- Name: idx_rfid_scan_logs_tag; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_rfid_scan_logs_tag; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_rfid_scan_logs_tag ON public.rfid_scan_logs USING btree (tag_id);
 
 
 --
--- Name: idx_rfid_tags_epc; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_rfid_tags_epc; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE UNIQUE INDEX idx_rfid_tags_epc ON public.rfid_tags USING btree (epc);
 
 
 --
--- Name: idx_rfid_tags_print_job; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_rfid_tags_print_job; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_rfid_tags_print_job ON public.rfid_tags USING btree (print_job_id);
 
 
 --
--- Name: idx_rfid_tags_product; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_rfid_tags_product; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_rfid_tags_product ON public.rfid_tags USING btree (product_id);
 
 
 --
--- Name: idx_rfid_tags_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_rfid_tags_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_rfid_tags_status ON public.rfid_tags USING btree (status);
 
 
 --
--- Name: idx_role_name; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_role_name; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_role_name ON public.roles USING btree (name);
 
 
 --
--- Name: idx_s3_files_active_deleted; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_s3_files_active_deleted; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_s3_files_active_deleted ON public.s3_files USING btree (is_active, is_deleted);
 
 
 --
--- Name: idx_s3_files_content_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_s3_files_content_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_s3_files_content_type ON public.s3_files USING btree (content_type);
 
 
 --
--- Name: idx_s3_files_s3_key; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_s3_files_s3_key; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_s3_files_s3_key ON public.s3_files USING btree (s3_key);
 
 
 --
--- Name: idx_sale_items_sale; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_sale_items_sale; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_sale_items_sale ON public.partner_sale_items USING btree (sale_id);
 
 
 --
--- Name: idx_slots_current_product; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_slots_current_product; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_slots_current_product ON public.warehouse_slots USING btree (current_product_code);
 
 
 --
--- Name: idx_slots_is_active; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_slots_is_active; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_slots_is_active ON public.warehouse_slots USING btree (is_active);
 
 
 --
--- Name: idx_slots_is_occupied; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_slots_is_occupied; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_slots_is_occupied ON public.warehouse_slots USING btree (is_occupied);
 
 
 --
--- Name: idx_slots_rack_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_slots_rack_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_slots_rack_id ON public.warehouse_slots USING btree (rack_id);
 
 
 --
--- Name: idx_slots_slot_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_slots_slot_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_slots_slot_code ON public.warehouse_slots USING btree (slot_code);
 
 
 --
--- Name: idx_slots_slot_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_slots_slot_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_slots_slot_type ON public.warehouse_slots USING btree (slot_type);
 
 
 --
--- Name: idx_user_email; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_user_email; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_user_email ON public.users USING btree (email);
 
 
 --
--- Name: idx_user_username; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_user_username; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_user_username ON public.users USING btree (username);
 
 
 --
--- Name: idx_vendor_products_product_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_vendor_products_product_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_vendor_products_product_id ON public.vendor_products USING btree (product_id);
 
 
 --
--- Name: idx_vendor_products_vendor_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_vendor_products_vendor_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_vendor_products_vendor_id ON public.vendor_products USING btree (vendor_id);
 
 
 --
--- Name: idx_vendors_active_deleted; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_vendors_active_deleted; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_vendors_active_deleted ON public.vendors USING btree (is_active, is_deleted);
 
 
 --
--- Name: idx_vendors_code; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_vendors_code; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_vendors_code ON public.vendors USING btree (code);
 
 
 --
--- Name: idx_vendors_country; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_vendors_country; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_vendors_country ON public.vendors USING btree (country);
 
 
 --
--- Name: idx_vendors_owner_user_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_vendors_owner_user_id; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_vendors_owner_user_id ON public.vendors USING btree (owner_user_id);
 
 
 --
--- Name: idx_vendors_vendor_type; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_vendors_vendor_type; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_vendors_vendor_type ON public.vendors USING btree (vendor_type);
 
 
 --
--- Name: idx_verification_cleanup; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_verification_cleanup; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_verification_cleanup ON public.email_verification_tokens USING btree (expires_at, verified_at);
 
 
 --
--- Name: idx_verification_token; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_verification_token; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_verification_token ON public.email_verification_tokens USING btree (token);
 
 
 --
--- Name: idx_verification_user_pending; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_verification_user_pending; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_verification_user_pending ON public.email_verification_tokens USING btree (user_id, verified_at);
 
 
 --
--- Name: idx_wfs_capability; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_wfs_capability; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_wfs_capability ON public.workflow_stages USING btree (required_capability);
 
 
 --
--- Name: idx_wfs_stage_order; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_wfs_stage_order; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_wfs_stage_order ON public.workflow_stages USING btree (stage_order);
 
 
 --
--- Name: idx_wfs_template; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_wfs_template; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_wfs_template ON public.workflow_stages USING btree (template_id);
 
 
 --
--- Name: idx_wft_category; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_wft_category; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_wft_category ON public.workflow_templates USING btree (category);
 
 
 --
--- Name: idx_wft_is_default; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_wft_is_default; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_wft_is_default ON public.workflow_templates USING btree (is_default);
 
 
 --
--- Name: idx_wft_name; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_wft_name; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_wft_name ON public.workflow_templates USING btree (name);
 
 
 --
--- Name: idx_wft_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_wft_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_wft_status ON public.workflow_templates USING btree (status);
 
 
 --
--- Name: idx_wholesale_orders_created; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_wholesale_orders_created; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_wholesale_orders_created ON public.wholesale_orders USING btree (created_at);
 
 
 --
--- Name: idx_wholesale_orders_partner; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_wholesale_orders_partner; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_wholesale_orders_partner ON public.wholesale_orders USING btree (partner_id);
 
 
 --
--- Name: idx_wholesale_orders_status; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_wholesale_orders_status; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_wholesale_orders_status ON public.wholesale_orders USING btree (status);
 
 
 --
--- Name: idx_wo_items_order; Type: INDEX; Schema: public; Owner: postgres
+-- Name: idx_wo_items_order; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE INDEX idx_wo_items_order ON public.wholesale_order_items USING btree (order_id);
 
 
 --
--- Name: uk_pua_user_pod_active; Type: INDEX; Schema: public; Owner: postgres
+-- Name: uk_pua_user_pod_active; Type: INDEX; Schema: public; Owner: -
 --
 
 CREATE UNIQUE INDEX uk_pua_user_pod_active ON public.pod_user_attributions USING btree (user_id, pod_id) WHERE (((status)::text = 'ACTIVE'::text) AND (is_deleted = false));
 
 
 --
--- Name: age_group_preference_values fk_age_group_preference_values_preference; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: age_group_preference_values fk_age_group_preference_values_preference; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.age_group_preference_values
@@ -11886,7 +11488,7 @@ ALTER TABLE ONLY public.age_group_preference_values
 
 
 --
--- Name: age_group_preferences fk_age_group_preferences_age_group; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: age_group_preferences fk_age_group_preferences_age_group; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.age_group_preferences
@@ -11894,7 +11496,7 @@ ALTER TABLE ONLY public.age_group_preferences
 
 
 --
--- Name: appointments fk_appointment_venue; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: appointments fk_appointment_venue; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.appointments
@@ -11902,7 +11504,7 @@ ALTER TABLE ONLY public.appointments
 
 
 --
--- Name: pod_attributions fk_attribution_commission; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_attributions fk_attribution_commission; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_attributions
@@ -11910,7 +11512,7 @@ ALTER TABLE ONLY public.pod_attributions
 
 
 --
--- Name: pod_attributions fk_attribution_order; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_attributions fk_attribution_order; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_attributions
@@ -11918,7 +11520,7 @@ ALTER TABLE ONLY public.pod_attributions
 
 
 --
--- Name: pod_attributions fk_attribution_partner; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_attributions fk_attribution_partner; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_attributions
@@ -11926,7 +11528,7 @@ ALTER TABLE ONLY public.pod_attributions
 
 
 --
--- Name: pod_attributions fk_attribution_pod; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_attributions fk_attribution_pod; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_attributions
@@ -11934,7 +11536,7 @@ ALTER TABLE ONLY public.pod_attributions
 
 
 --
--- Name: pod_attributions fk_attribution_qr_code; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_attributions fk_attribution_qr_code; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_attributions
@@ -11942,7 +11544,7 @@ ALTER TABLE ONLY public.pod_attributions
 
 
 --
--- Name: pod_attributions fk_attribution_scan; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_attributions fk_attribution_scan; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_attributions
@@ -11950,7 +11552,7 @@ ALTER TABLE ONLY public.pod_attributions
 
 
 --
--- Name: blocked_slots fk_blocked_slot_venue; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: blocked_slots fk_blocked_slot_venue; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.blocked_slots
@@ -11958,7 +11560,7 @@ ALTER TABLE ONLY public.blocked_slots
 
 
 --
--- Name: component_ownership_logs fk_col_from_vendor; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: component_ownership_logs fk_col_from_vendor; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.component_ownership_logs
@@ -11966,7 +11568,7 @@ ALTER TABLE ONLY public.component_ownership_logs
 
 
 --
--- Name: component_ownership_logs fk_col_production_order; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: component_ownership_logs fk_col_production_order; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.component_ownership_logs
@@ -11974,7 +11576,7 @@ ALTER TABLE ONLY public.component_ownership_logs
 
 
 --
--- Name: component_ownership_logs fk_col_stage; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: component_ownership_logs fk_col_stage; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.component_ownership_logs
@@ -11982,7 +11584,7 @@ ALTER TABLE ONLY public.component_ownership_logs
 
 
 --
--- Name: component_ownership_logs fk_col_to_vendor; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: component_ownership_logs fk_col_to_vendor; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.component_ownership_logs
@@ -11990,7 +11592,7 @@ ALTER TABLE ONLY public.component_ownership_logs
 
 
 --
--- Name: collection_age_group_allocations fk_collection_age_group_allocations_age_group; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: collection_age_group_allocations fk_collection_age_group_allocations_age_group; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.collection_age_group_allocations
@@ -11998,7 +11600,7 @@ ALTER TABLE ONLY public.collection_age_group_allocations
 
 
 --
--- Name: collection_age_group_allocations fk_collection_age_group_allocations_collection_plan; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: collection_age_group_allocations fk_collection_age_group_allocations_collection_plan; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.collection_age_group_allocations
@@ -12006,7 +11608,7 @@ ALTER TABLE ONLY public.collection_age_group_allocations
 
 
 --
--- Name: collection_plan_items fk_collection_plan_items_collection_plan; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: collection_plan_items fk_collection_plan_items_collection_plan; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.collection_plan_items
@@ -12014,7 +11616,7 @@ ALTER TABLE ONLY public.collection_plan_items
 
 
 --
--- Name: collection_products fk_collection_products_collection; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: collection_products fk_collection_products_collection; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.collection_products
@@ -12022,7 +11624,7 @@ ALTER TABLE ONLY public.collection_products
 
 
 --
--- Name: collection_products fk_collection_products_mirror_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: collection_products fk_collection_products_mirror_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.collection_products
@@ -12030,7 +11632,7 @@ ALTER TABLE ONLY public.collection_products
 
 
 --
--- Name: component_optionals fk_component_optional_component; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: component_optionals fk_component_optional_component; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.component_optionals
@@ -12038,7 +11640,7 @@ ALTER TABLE ONLY public.component_optionals
 
 
 --
--- Name: components fk_component_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: components fk_component_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.components
@@ -12046,7 +11648,7 @@ ALTER TABLE ONLY public.components
 
 
 --
--- Name: design_products fk_design_products_designer; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: design_products fk_design_products_designer; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.design_products
@@ -12054,7 +11656,7 @@ ALTER TABLE ONLY public.design_products
 
 
 --
--- Name: design_products fk_design_products_mirror_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: design_products fk_design_products_mirror_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.design_products
@@ -12062,7 +11664,7 @@ ALTER TABLE ONLY public.design_products
 
 
 --
--- Name: design_sale_transactions fk_design_sale_transactions_design_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: design_sale_transactions fk_design_sale_transactions_design_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.design_sale_transactions
@@ -12070,7 +11672,7 @@ ALTER TABLE ONLY public.design_sale_transactions
 
 
 --
--- Name: inventory_movements fk_inv_movement_inventory; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: inventory_movements fk_inv_movement_inventory; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.inventory_movements
@@ -12078,7 +11680,7 @@ ALTER TABLE ONLY public.inventory_movements
 
 
 --
--- Name: inventory_movements fk_inv_movement_partner; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: inventory_movements fk_inv_movement_partner; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.inventory_movements
@@ -12086,7 +11688,7 @@ ALTER TABLE ONLY public.inventory_movements
 
 
 --
--- Name: item_variant_configs fk_item_variant_config_component_optional; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: item_variant_configs fk_item_variant_config_component_optional; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.item_variant_configs
@@ -12094,7 +11696,7 @@ ALTER TABLE ONLY public.item_variant_configs
 
 
 --
--- Name: item_variant_configs fk_item_variant_config_item_variant; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: item_variant_configs fk_item_variant_config_item_variant; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.item_variant_configs
@@ -12102,7 +11704,7 @@ ALTER TABLE ONLY public.item_variant_configs
 
 
 --
--- Name: jtrc_labor_components fk_jtrc_labor_jtrc; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: jtrc_labor_components fk_jtrc_labor_jtrc; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.jtrc_labor_components
@@ -12110,7 +11712,7 @@ ALTER TABLE ONLY public.jtrc_labor_components
 
 
 --
--- Name: jtrc_metal_components fk_jtrc_metal_jtrc; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: jtrc_metal_components fk_jtrc_metal_jtrc; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.jtrc_metal_components
@@ -12118,7 +11720,7 @@ ALTER TABLE ONLY public.jtrc_metal_components
 
 
 --
--- Name: jtrc_stone_components fk_jtrc_stone_jtrc; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: jtrc_stone_components fk_jtrc_stone_jtrc; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.jtrc_stone_components
@@ -12126,7 +11728,7 @@ ALTER TABLE ONLY public.jtrc_stone_components
 
 
 --
--- Name: mirror_diamonds fk_lab_grown_diamonds_mirror_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: mirror_diamonds fk_lab_grown_diamonds_mirror_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.mirror_diamonds
@@ -12134,7 +11736,7 @@ ALTER TABLE ONLY public.mirror_diamonds
 
 
 --
--- Name: material_inventory fk_material_inventory_vendor; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: material_inventory fk_material_inventory_vendor; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.material_inventory
@@ -12142,7 +11744,7 @@ ALTER TABLE ONLY public.material_inventory
 
 
 --
--- Name: mirror_products fk_mirror_misa_item; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: mirror_products fk_mirror_misa_item; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.mirror_products
@@ -12150,7 +11752,7 @@ ALTER TABLE ONLY public.mirror_products
 
 
 --
--- Name: misa_product_categories fk_misa_cat_parent; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: misa_product_categories fk_misa_cat_parent; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.misa_product_categories
@@ -12158,7 +11760,7 @@ ALTER TABLE ONLY public.misa_product_categories
 
 
 --
--- Name: misa_invoices fk_misa_invoice_customer; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: misa_invoices fk_misa_invoice_customer; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.misa_invoices
@@ -12166,7 +11768,7 @@ ALTER TABLE ONLY public.misa_invoices
 
 
 --
--- Name: order_items fk_order_items_mirror_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: order_items fk_order_items_mirror_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.order_items
@@ -12174,7 +11776,7 @@ ALTER TABLE ONLY public.order_items
 
 
 --
--- Name: order_items fk_order_items_order; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: order_items fk_order_items_order; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.order_items
@@ -12182,7 +11784,7 @@ ALTER TABLE ONLY public.order_items
 
 
 --
--- Name: order_payment_schedule fk_order_payment_schedule_order; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: order_payment_schedule fk_order_payment_schedule_order; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.order_payment_schedule
@@ -12190,7 +11792,7 @@ ALTER TABLE ONLY public.order_payment_schedule
 
 
 --
--- Name: order_status_history fk_order_status_history_order; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: order_status_history fk_order_status_history_order; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.order_status_history
@@ -12198,7 +11800,7 @@ ALTER TABLE ONLY public.order_status_history
 
 
 --
--- Name: orders fk_orders_mirror_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orders fk_orders_mirror_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.orders
@@ -12206,7 +11808,7 @@ ALTER TABLE ONLY public.orders
 
 
 --
--- Name: orders fk_orders_vendor; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orders fk_orders_vendor; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.orders
@@ -12214,7 +11816,7 @@ ALTER TABLE ONLY public.orders
 
 
 --
--- Name: partner_capabilities fk_partner_cap_vendor; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: partner_capabilities fk_partner_cap_vendor; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.partner_capabilities
@@ -12222,7 +11824,7 @@ ALTER TABLE ONLY public.partner_capabilities
 
 
 --
--- Name: partner_inventory fk_partner_inventory_partner; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: partner_inventory fk_partner_inventory_partner; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.partner_inventory
@@ -12230,7 +11832,7 @@ ALTER TABLE ONLY public.partner_inventory
 
 
 --
--- Name: partner_inventory fk_partner_inventory_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: partner_inventory fk_partner_inventory_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.partner_inventory
@@ -12238,7 +11840,7 @@ ALTER TABLE ONLY public.partner_inventory
 
 
 --
--- Name: partner_sales fk_partner_sale_partner; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: partner_sales fk_partner_sale_partner; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.partner_sales
@@ -12246,7 +11848,7 @@ ALTER TABLE ONLY public.partner_sales
 
 
 --
--- Name: partner_sales fk_partner_sale_pod; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: partner_sales fk_partner_sale_pod; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.partner_sales
@@ -12254,7 +11856,7 @@ ALTER TABLE ONLY public.partner_sales
 
 
 --
--- Name: partner_sales fk_partner_sale_qr; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: partner_sales fk_partner_sale_qr; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.partner_sales
@@ -12262,7 +11864,7 @@ ALTER TABLE ONLY public.partner_sales
 
 
 --
--- Name: order_payment_transactions fk_payment_transaction_order; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: order_payment_transactions fk_payment_transaction_order; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.order_payment_transactions
@@ -12270,7 +11872,7 @@ ALTER TABLE ONLY public.order_payment_transactions
 
 
 --
--- Name: order_payment_transactions fk_payment_transaction_schedule; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: order_payment_transactions fk_payment_transaction_schedule; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.order_payment_transactions
@@ -12278,7 +11880,7 @@ ALTER TABLE ONLY public.order_payment_transactions
 
 
 --
--- Name: purchase_order_age_group_allocations fk_po_age_group_allocations_age_group; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: purchase_order_age_group_allocations fk_po_age_group_allocations_age_group; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.purchase_order_age_group_allocations
@@ -12286,7 +11888,7 @@ ALTER TABLE ONLY public.purchase_order_age_group_allocations
 
 
 --
--- Name: purchase_order_age_group_allocations fk_po_age_group_allocations_purchase_order; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: purchase_order_age_group_allocations fk_po_age_group_allocations_purchase_order; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.purchase_order_age_group_allocations
@@ -12294,7 +11896,7 @@ ALTER TABLE ONLY public.purchase_order_age_group_allocations
 
 
 --
--- Name: purchase_order_item_variants fk_po_item_variants_age_group; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: purchase_order_item_variants fk_po_item_variants_age_group; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.purchase_order_item_variants
@@ -12302,7 +11904,7 @@ ALTER TABLE ONLY public.purchase_order_item_variants
 
 
 --
--- Name: purchase_order_item_variants fk_po_item_variants_material; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: purchase_order_item_variants fk_po_item_variants_material; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.purchase_order_item_variants
@@ -12310,7 +11912,7 @@ ALTER TABLE ONLY public.purchase_order_item_variants
 
 
 --
--- Name: purchase_order_item_variants fk_po_item_variants_po_item; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: purchase_order_item_variants fk_po_item_variants_po_item; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.purchase_order_item_variants
@@ -12318,7 +11920,7 @@ ALTER TABLE ONLY public.purchase_order_item_variants
 
 
 --
--- Name: pod_commissions fk_pod_commissions_partner; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_commissions fk_pod_commissions_partner; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_commissions
@@ -12326,7 +11928,7 @@ ALTER TABLE ONLY public.pod_commissions
 
 
 --
--- Name: pod_commissions fk_pod_commissions_pod; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_commissions fk_pod_commissions_pod; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_commissions
@@ -12334,7 +11936,7 @@ ALTER TABLE ONLY public.pod_commissions
 
 
 --
--- Name: pod_commissions fk_pod_commissions_scan; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_commissions fk_pod_commissions_scan; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_commissions
@@ -12342,7 +11944,7 @@ ALTER TABLE ONLY public.pod_commissions
 
 
 --
--- Name: pod_products fk_pod_products_pod; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_products fk_pod_products_pod; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_products
@@ -12350,7 +11952,7 @@ ALTER TABLE ONLY public.pod_products
 
 
 --
--- Name: pod_products fk_pod_products_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_products fk_pod_products_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_products
@@ -12358,7 +11960,7 @@ ALTER TABLE ONLY public.pod_products
 
 
 --
--- Name: pods fk_pods_location; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pods fk_pods_location; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pods
@@ -12366,7 +11968,7 @@ ALTER TABLE ONLY public.pods
 
 
 --
--- Name: pods fk_pods_partner; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pods fk_pods_partner; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pods
@@ -12374,7 +11976,7 @@ ALTER TABLE ONLY public.pods
 
 
 --
--- Name: production_orders fk_por_collection_plan_item; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: production_orders fk_por_collection_plan_item; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.production_orders
@@ -12382,7 +11984,7 @@ ALTER TABLE ONLY public.production_orders
 
 
 --
--- Name: production_orders fk_por_jtrc; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: production_orders fk_por_jtrc; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.production_orders
@@ -12390,7 +11992,7 @@ ALTER TABLE ONLY public.production_orders
 
 
 --
--- Name: production_orders fk_por_production_plan; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: production_orders fk_por_production_plan; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.production_orders
@@ -12398,7 +12000,7 @@ ALTER TABLE ONLY public.production_orders
 
 
 --
--- Name: production_order_stages fk_pos_assigned_vendor; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: production_order_stages fk_pos_assigned_vendor; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.production_order_stages
@@ -12406,7 +12008,7 @@ ALTER TABLE ONLY public.production_order_stages
 
 
 --
--- Name: production_order_stages fk_pos_production_order; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: production_order_stages fk_pos_production_order; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.production_order_stages
@@ -12414,7 +12016,7 @@ ALTER TABLE ONLY public.production_order_stages
 
 
 --
--- Name: production_order_stages fk_pos_workflow_stage; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: production_order_stages fk_pos_workflow_stage; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.production_order_stages
@@ -12422,7 +12024,7 @@ ALTER TABLE ONLY public.production_order_stages
 
 
 --
--- Name: inventory_position_history fk_position_history_position; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: inventory_position_history fk_position_history_position; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.inventory_position_history
@@ -12430,7 +12032,7 @@ ALTER TABLE ONLY public.inventory_position_history
 
 
 --
--- Name: inventory_positions fk_positions_rack; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: inventory_positions fk_positions_rack; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.inventory_positions
@@ -12438,7 +12040,7 @@ ALTER TABLE ONLY public.inventory_positions
 
 
 --
--- Name: inventory_positions fk_positions_slot; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: inventory_positions fk_positions_slot; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.inventory_positions
@@ -12446,7 +12048,7 @@ ALTER TABLE ONLY public.inventory_positions
 
 
 --
--- Name: inventory_positions fk_positions_warehouse; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: inventory_positions fk_positions_warehouse; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.inventory_positions
@@ -12454,7 +12056,7 @@ ALTER TABLE ONLY public.inventory_positions
 
 
 --
--- Name: production_plans fk_ppl_collection_plan; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: production_plans fk_ppl_collection_plan; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.production_plans
@@ -12462,7 +12064,7 @@ ALTER TABLE ONLY public.production_plans
 
 
 --
--- Name: production_plans fk_ppl_workflow_template; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: production_plans fk_ppl_workflow_template; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.production_plans
@@ -12470,7 +12072,7 @@ ALTER TABLE ONLY public.production_plans
 
 
 --
--- Name: print_job_items fk_print_job_items_job; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: print_job_items fk_print_job_items_job; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.print_job_items
@@ -12478,7 +12080,7 @@ ALTER TABLE ONLY public.print_job_items
 
 
 --
--- Name: print_job_items fk_print_job_items_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: print_job_items fk_print_job_items_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.print_job_items
@@ -12486,7 +12088,7 @@ ALTER TABLE ONLY public.print_job_items
 
 
 --
--- Name: print_jobs fk_print_jobs_template; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: print_jobs fk_print_jobs_template; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.print_jobs
@@ -12494,7 +12096,7 @@ ALTER TABLE ONLY public.print_jobs
 
 
 --
--- Name: product_certificates fk_product_certificates_certificate; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: product_certificates fk_product_certificates_certificate; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.product_certificates
@@ -12502,7 +12104,7 @@ ALTER TABLE ONLY public.product_certificates
 
 
 --
--- Name: product_certificates fk_product_certificates_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: product_certificates fk_product_certificates_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.product_certificates
@@ -12510,7 +12112,7 @@ ALTER TABLE ONLY public.product_certificates
 
 
 --
--- Name: pod_user_attributions fk_pua_partner; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_user_attributions fk_pua_partner; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_user_attributions
@@ -12518,7 +12120,7 @@ ALTER TABLE ONLY public.pod_user_attributions
 
 
 --
--- Name: pod_user_attributions fk_pua_pod; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_user_attributions fk_pua_pod; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_user_attributions
@@ -12526,7 +12128,7 @@ ALTER TABLE ONLY public.pod_user_attributions
 
 
 --
--- Name: pod_user_attributions fk_pua_user; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_user_attributions fk_pua_user; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_user_attributions
@@ -12534,7 +12136,7 @@ ALTER TABLE ONLY public.pod_user_attributions
 
 
 --
--- Name: purchase_order_items fk_purchase_order_items_material; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: purchase_order_items fk_purchase_order_items_material; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.purchase_order_items
@@ -12542,7 +12144,7 @@ ALTER TABLE ONLY public.purchase_order_items
 
 
 --
--- Name: purchase_order_items fk_purchase_order_items_purchase_order; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: purchase_order_items fk_purchase_order_items_purchase_order; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.purchase_order_items
@@ -12550,7 +12152,7 @@ ALTER TABLE ONLY public.purchase_order_items
 
 
 --
--- Name: purchase_orders fk_purchase_orders_vendor; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: purchase_orders fk_purchase_orders_vendor; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.purchase_orders
@@ -12558,7 +12160,7 @@ ALTER TABLE ONLY public.purchase_orders
 
 
 --
--- Name: pod_qr_codes fk_qr_code_pod; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_qr_codes fk_qr_code_pod; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_qr_codes
@@ -12566,7 +12168,7 @@ ALTER TABLE ONLY public.pod_qr_codes
 
 
 --
--- Name: pod_qr_codes fk_qr_code_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_qr_codes fk_qr_code_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_qr_codes
@@ -12574,7 +12176,7 @@ ALTER TABLE ONLY public.pod_qr_codes
 
 
 --
--- Name: qr_codes fk_qr_codes_partner; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: qr_codes fk_qr_codes_partner; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.qr_codes
@@ -12582,7 +12184,7 @@ ALTER TABLE ONLY public.qr_codes
 
 
 --
--- Name: qr_codes fk_qr_codes_pod; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: qr_codes fk_qr_codes_pod; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.qr_codes
@@ -12590,7 +12192,7 @@ ALTER TABLE ONLY public.qr_codes
 
 
 --
--- Name: qr_codes fk_qr_codes_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: qr_codes fk_qr_codes_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.qr_codes
@@ -12598,7 +12200,7 @@ ALTER TABLE ONLY public.qr_codes
 
 
 --
--- Name: pod_qr_scans fk_qr_scan_partner; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_qr_scans fk_qr_scan_partner; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_qr_scans
@@ -12606,7 +12208,7 @@ ALTER TABLE ONLY public.pod_qr_scans
 
 
 --
--- Name: pod_qr_scans fk_qr_scan_pod; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_qr_scans fk_qr_scan_pod; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_qr_scans
@@ -12614,7 +12216,7 @@ ALTER TABLE ONLY public.pod_qr_scans
 
 
 --
--- Name: pod_qr_scans fk_qr_scan_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_qr_scans fk_qr_scan_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_qr_scans
@@ -12622,7 +12224,7 @@ ALTER TABLE ONLY public.pod_qr_scans
 
 
 --
--- Name: pod_qr_scans fk_qr_scan_qr_code; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_qr_scans fk_qr_scan_qr_code; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_qr_scans
@@ -12630,7 +12232,7 @@ ALTER TABLE ONLY public.pod_qr_scans
 
 
 --
--- Name: pod_qr_scans fk_qr_scan_user; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pod_qr_scans fk_qr_scan_user; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.pod_qr_scans
@@ -12638,7 +12240,7 @@ ALTER TABLE ONLY public.pod_qr_scans
 
 
 --
--- Name: qr_scans fk_qr_scans_qr_code; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: qr_scans fk_qr_scans_qr_code; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.qr_scans
@@ -12646,7 +12248,7 @@ ALTER TABLE ONLY public.qr_scans
 
 
 --
--- Name: warehouse_racks fk_racks_warehouse; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: warehouse_racks fk_racks_warehouse; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.warehouse_racks
@@ -12654,7 +12256,7 @@ ALTER TABLE ONLY public.warehouse_racks
 
 
 --
--- Name: rfid_scan_logs fk_rfid_scan_logs_tag; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rfid_scan_logs fk_rfid_scan_logs_tag; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.rfid_scan_logs
@@ -12662,7 +12264,7 @@ ALTER TABLE ONLY public.rfid_scan_logs
 
 
 --
--- Name: rfid_tags fk_rfid_tags_print_job; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rfid_tags fk_rfid_tags_print_job; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.rfid_tags
@@ -12670,7 +12272,7 @@ ALTER TABLE ONLY public.rfid_tags
 
 
 --
--- Name: rfid_tags fk_rfid_tags_print_job_item; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rfid_tags fk_rfid_tags_print_job_item; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.rfid_tags
@@ -12678,7 +12280,7 @@ ALTER TABLE ONLY public.rfid_tags
 
 
 --
--- Name: rfid_tags fk_rfid_tags_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rfid_tags fk_rfid_tags_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.rfid_tags
@@ -12686,7 +12288,7 @@ ALTER TABLE ONLY public.rfid_tags
 
 
 --
--- Name: role_permissions fk_role_permissions_permission; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: role_permissions fk_role_permissions_permission; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.role_permissions
@@ -12694,7 +12296,7 @@ ALTER TABLE ONLY public.role_permissions
 
 
 --
--- Name: role_permissions fk_role_permissions_role; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: role_permissions fk_role_permissions_role; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.role_permissions
@@ -12702,7 +12304,7 @@ ALTER TABLE ONLY public.role_permissions
 
 
 --
--- Name: partner_sale_items fk_sale_item_inventory; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: partner_sale_items fk_sale_item_inventory; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.partner_sale_items
@@ -12710,7 +12312,7 @@ ALTER TABLE ONLY public.partner_sale_items
 
 
 --
--- Name: partner_sale_items fk_sale_item_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: partner_sale_items fk_sale_item_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.partner_sale_items
@@ -12718,7 +12320,7 @@ ALTER TABLE ONLY public.partner_sale_items
 
 
 --
--- Name: partner_sale_items fk_sale_item_sale; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: partner_sale_items fk_sale_item_sale; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.partner_sale_items
@@ -12726,7 +12328,7 @@ ALTER TABLE ONLY public.partner_sale_items
 
 
 --
--- Name: warehouse_slots fk_slots_rack; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: warehouse_slots fk_slots_rack; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.warehouse_slots
@@ -12734,7 +12336,7 @@ ALTER TABLE ONLY public.warehouse_slots
 
 
 --
--- Name: user_otps fk_user_otp_user; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: user_otps fk_user_otp_user; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.user_otps
@@ -12742,7 +12344,7 @@ ALTER TABLE ONLY public.user_otps
 
 
 --
--- Name: user_roles fk_user_roles_role; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: user_roles fk_user_roles_role; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.user_roles
@@ -12750,7 +12352,7 @@ ALTER TABLE ONLY public.user_roles
 
 
 --
--- Name: user_roles fk_user_roles_user; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: user_roles fk_user_roles_user; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.user_roles
@@ -12758,7 +12360,7 @@ ALTER TABLE ONLY public.user_roles
 
 
 --
--- Name: vendor_products fk_vendor_products_mirror_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: vendor_products fk_vendor_products_mirror_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.vendor_products
@@ -12766,7 +12368,7 @@ ALTER TABLE ONLY public.vendor_products
 
 
 --
--- Name: vendor_products fk_vendor_products_vendor; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: vendor_products fk_vendor_products_vendor; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.vendor_products
@@ -12774,7 +12376,7 @@ ALTER TABLE ONLY public.vendor_products
 
 
 --
--- Name: email_verification_tokens fk_verification_token_user; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: email_verification_tokens fk_verification_token_user; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.email_verification_tokens
@@ -12782,7 +12384,7 @@ ALTER TABLE ONLY public.email_verification_tokens
 
 
 --
--- Name: workflow_stages fk_wfs_template; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: workflow_stages fk_wfs_template; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.workflow_stages
@@ -12790,7 +12392,7 @@ ALTER TABLE ONLY public.workflow_stages
 
 
 --
--- Name: wholesale_orders fk_wholesale_order_partner; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: wholesale_orders fk_wholesale_order_partner; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.wholesale_orders
@@ -12798,7 +12400,7 @@ ALTER TABLE ONLY public.wholesale_orders
 
 
 --
--- Name: wholesale_order_items fk_wo_item_order; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: wholesale_order_items fk_wo_item_order; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.wholesale_order_items
@@ -12806,1684 +12408,11 @@ ALTER TABLE ONLY public.wholesale_order_items
 
 
 --
--- Name: wholesale_order_items fk_wo_item_product; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: wholesale_order_items fk_wo_item_product; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.wholesale_order_items
     ADD CONSTRAINT fk_wo_item_product FOREIGN KEY (product_id) REFERENCES public.mirror_products(id) ON UPDATE CASCADE ON DELETE RESTRICT;
-
-
---
--- Name: SCHEMA public; Type: ACL; Schema: -; Owner: pg_database_owner
---
-
-GRANT USAGE ON SCHEMA public TO mirror_user;
-
-
---
--- Name: TABLE age_group_preference_values; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.age_group_preference_values TO mirror_user;
-
-
---
--- Name: TABLE age_group_preferences; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.age_group_preferences TO mirror_user;
-
-
---
--- Name: TABLE age_groups; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.age_groups TO mirror_user;
-
-
---
--- Name: TABLE appointments; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.appointments TO mirror_user;
-
-
---
--- Name: SEQUENCE apt_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.apt_seq TO mirror_user;
-
-
---
--- Name: TABLE audit_logs; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.audit_logs TO mirror_user;
-
-
---
--- Name: SEQUENCE audit_logs_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.audit_logs_id_seq TO mirror_user;
-
-
---
--- Name: TABLE band_style_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.band_style_options TO mirror_user;
-
-
---
--- Name: SEQUENCE band_style_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.band_style_options_id_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE blk_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.blk_seq TO mirror_user;
-
-
---
--- Name: TABLE blocked_slots; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.blocked_slots TO mirror_user;
-
-
---
--- Name: SEQUENCE cat_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.cat_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE category_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.category_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE cer_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.cer_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE certificate_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.certificate_seq TO mirror_user;
-
-
---
--- Name: TABLE certificates; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.certificates TO mirror_user;
-
-
---
--- Name: TABLE clarity_grade_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.clarity_grade_options TO mirror_user;
-
-
---
--- Name: SEQUENCE clarity_grade_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.clarity_grade_options_id_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE col_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.col_seq TO mirror_user;
-
-
---
--- Name: TABLE collection_age_group_allocations; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.collection_age_group_allocations TO mirror_user;
-
-
---
--- Name: TABLE collection_plan_items; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.collection_plan_items TO mirror_user;
-
-
---
--- Name: TABLE collection_plans; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.collection_plans TO mirror_user;
-
-
---
--- Name: TABLE collection_products; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.collection_products TO mirror_user;
-
-
---
--- Name: TABLE collections; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.collections TO mirror_user;
-
-
---
--- Name: TABLE color_grade_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.color_grade_options TO mirror_user;
-
-
---
--- Name: SEQUENCE color_grade_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.color_grade_options_id_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE com_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.com_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE component_optional_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.component_optional_seq TO mirror_user;
-
-
---
--- Name: TABLE component_optionals; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.component_optionals TO mirror_user;
-
-
---
--- Name: SEQUENCE component_ownership_log_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.component_ownership_log_seq TO mirror_user;
-
-
---
--- Name: TABLE component_ownership_logs; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.component_ownership_logs TO mirror_user;
-
-
---
--- Name: SEQUENCE component_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.component_seq TO mirror_user;
-
-
---
--- Name: TABLE components; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.components TO mirror_user;
-
-
---
--- Name: TABLE country_of_origin_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.country_of_origin_options TO mirror_user;
-
-
---
--- Name: SEQUENCE country_of_origin_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.country_of_origin_options_id_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE cpr_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.cpr_seq TO mirror_user;
-
-
---
--- Name: TABLE databasechangelog; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.databasechangelog TO mirror_user;
-
-
---
--- Name: TABLE databasechangeloglock; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.databasechangeloglock TO mirror_user;
-
-
---
--- Name: SEQUENCE des_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.des_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE design_product_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.design_product_seq TO mirror_user;
-
-
---
--- Name: TABLE design_products; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.design_products TO mirror_user;
-
-
---
--- Name: SEQUENCE design_sale_transaction_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.design_sale_transaction_seq TO mirror_user;
-
-
---
--- Name: TABLE design_sale_transactions; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.design_sale_transactions TO mirror_user;
-
-
---
--- Name: SEQUENCE designer_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.designer_seq TO mirror_user;
-
-
---
--- Name: TABLE designers; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.designers TO mirror_user;
-
-
---
--- Name: SEQUENCE dpr_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.dpr_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE dst_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.dst_seq TO mirror_user;
-
-
---
--- Name: TABLE email_verification_tokens; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.email_verification_tokens TO mirror_user;
-
-
---
--- Name: SEQUENCE email_verification_tokens_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.email_verification_tokens_id_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE fil_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.fil_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE file_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.file_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE hol_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.hol_seq TO mirror_user;
-
-
---
--- Name: TABLE id_sequences; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.id_sequences TO mirror_user;
-
-
---
--- Name: SEQUENCE inp_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.inp_seq TO mirror_user;
-
-
---
--- Name: TABLE inventory_movements; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.inventory_movements TO mirror_user;
-
-
---
--- Name: TABLE inventory_position_history; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.inventory_position_history TO mirror_user;
-
-
---
--- Name: TABLE inventory_positions; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.inventory_positions TO mirror_user;
-
-
---
--- Name: SEQUENCE iph_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.iph_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE itc_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.itc_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE item_variant_config_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.item_variant_config_seq TO mirror_user;
-
-
---
--- Name: TABLE item_variant_configs; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.item_variant_configs TO mirror_user;
-
-
---
--- Name: SEQUENCE item_variant_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.item_variant_seq TO mirror_user;
-
-
---
--- Name: TABLE item_variants; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.item_variants TO mirror_user;
-
-
---
--- Name: SEQUENCE itv_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.itv_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE ivm_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.ivm_seq TO mirror_user;
-
-
---
--- Name: TABLE jewelry_technical_reports; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.jewelry_technical_reports TO mirror_user;
-
-
---
--- Name: SEQUENCE jlc_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.jlc_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE jmc_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.jmc_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE jsc_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.jsc_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE jtr_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.jtr_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE jtrc_labor_component_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.jtrc_labor_component_seq TO mirror_user;
-
-
---
--- Name: TABLE jtrc_labor_components; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.jtrc_labor_components TO mirror_user;
-
-
---
--- Name: SEQUENCE jtrc_metal_component_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.jtrc_metal_component_seq TO mirror_user;
-
-
---
--- Name: TABLE jtrc_metal_components; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.jtrc_metal_components TO mirror_user;
-
-
---
--- Name: SEQUENCE jtrc_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.jtrc_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE jtrc_stone_component_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.jtrc_stone_component_seq TO mirror_user;
-
-
---
--- Name: TABLE jtrc_stone_components; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.jtrc_stone_components TO mirror_user;
-
-
---
--- Name: SEQUENCE label_template_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.label_template_seq TO mirror_user;
-
-
---
--- Name: TABLE label_templates; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.label_templates TO mirror_user;
-
-
---
--- Name: TABLE labor_type_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.labor_type_options TO mirror_user;
-
-
---
--- Name: SEQUENCE labor_type_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.labor_type_options_id_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE lbt_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.lbt_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE loc_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.loc_seq TO mirror_user;
-
-
---
--- Name: TABLE locations; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.locations TO mirror_user;
-
-
---
--- Name: TABLE market_trends; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.market_trends TO mirror_user;
-
-
---
--- Name: SEQUENCE market_trends_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.market_trends_id_seq TO mirror_user;
-
-
---
--- Name: TABLE material_color_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.material_color_options TO mirror_user;
-
-
---
--- Name: SEQUENCE material_color_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.material_color_options_id_seq TO mirror_user;
-
-
---
--- Name: TABLE material_inventory; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.material_inventory TO mirror_user;
-
-
---
--- Name: TABLE material_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.material_options TO mirror_user;
-
-
---
--- Name: SEQUENCE material_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.material_options_id_seq TO mirror_user;
-
-
---
--- Name: TABLE metal_purity_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.metal_purity_options TO mirror_user;
-
-
---
--- Name: SEQUENCE metal_purity_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.metal_purity_options_id_seq TO mirror_user;
-
-
---
--- Name: TABLE metal_type_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.metal_type_options TO mirror_user;
-
-
---
--- Name: SEQUENCE metal_type_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.metal_type_options_id_seq TO mirror_user;
-
-
---
--- Name: TABLE mirror_diamonds; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.mirror_diamonds TO mirror_user;
-
-
---
--- Name: TABLE mirror_products; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.mirror_products TO mirror_user;
-
-
---
--- Name: TABLE misa_balance_trackers; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.misa_balance_trackers TO mirror_user;
-
-
---
--- Name: SEQUENCE misa_balance_trackers_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.misa_balance_trackers_id_seq TO mirror_user;
-
-
---
--- Name: TABLE misa_callback_logs; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.misa_callback_logs TO mirror_user;
-
-
---
--- Name: SEQUENCE misa_callback_logs_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.misa_callback_logs_id_seq TO mirror_user;
-
-
---
--- Name: TABLE misa_customers; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.misa_customers TO mirror_user;
-
-
---
--- Name: SEQUENCE misa_customers_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.misa_customers_id_seq TO mirror_user;
-
-
---
--- Name: TABLE misa_inventory_items; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.misa_inventory_items TO mirror_user;
-
-
---
--- Name: SEQUENCE misa_inventory_items_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.misa_inventory_items_id_seq TO mirror_user;
-
-
---
--- Name: TABLE misa_invoices; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.misa_invoices TO mirror_user;
-
-
---
--- Name: SEQUENCE misa_invoices_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.misa_invoices_id_seq TO mirror_user;
-
-
---
--- Name: TABLE misa_product_categories; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.misa_product_categories TO mirror_user;
-
-
---
--- Name: SEQUENCE misa_product_categories_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.misa_product_categories_id_seq TO mirror_user;
-
-
---
--- Name: TABLE misa_sync_logs; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.misa_sync_logs TO mirror_user;
-
-
---
--- Name: SEQUENCE misa_sync_logs_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.misa_sync_logs_id_seq TO mirror_user;
-
-
---
--- Name: TABLE misa_warehouses; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.misa_warehouses TO mirror_user;
-
-
---
--- Name: SEQUENCE misa_warehouses_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.misa_warehouses_id_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE ops_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.ops_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE opt_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.opt_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE ord_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.ord_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE order_item_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.order_item_seq TO mirror_user;
-
-
---
--- Name: TABLE order_items; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.order_items TO mirror_user;
-
-
---
--- Name: TABLE order_payment_schedule; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.order_payment_schedule TO mirror_user;
-
-
---
--- Name: SEQUENCE order_payment_schedule_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.order_payment_schedule_seq TO mirror_user;
-
-
---
--- Name: TABLE order_payment_transactions; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.order_payment_transactions TO mirror_user;
-
-
---
--- Name: SEQUENCE order_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.order_seq TO mirror_user;
-
-
---
--- Name: TABLE order_status_history; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.order_status_history TO mirror_user;
-
-
---
--- Name: SEQUENCE order_status_history_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.order_status_history_seq TO mirror_user;
-
-
---
--- Name: TABLE orders; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.orders TO mirror_user;
-
-
---
--- Name: SEQUENCE ori_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.ori_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE osh_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.osh_seq TO mirror_user;
-
-
---
--- Name: TABLE partner_capabilities; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.partner_capabilities TO mirror_user;
-
-
---
--- Name: SEQUENCE partner_capability_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.partner_capability_seq TO mirror_user;
-
-
---
--- Name: TABLE partner_inventory; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.partner_inventory TO mirror_user;
-
-
---
--- Name: TABLE partner_sale_items; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.partner_sale_items TO mirror_user;
-
-
---
--- Name: TABLE partner_sales; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.partner_sales TO mirror_user;
-
-
---
--- Name: SEQUENCE pat_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.pat_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE pcm_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.pcm_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE pcp_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.pcp_seq TO mirror_user;
-
-
---
--- Name: TABLE permissions; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.permissions TO mirror_user;
-
-
---
--- Name: SEQUENCE permissions_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.permissions_id_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE piv_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.piv_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE pjb_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.pjb_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE pji_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.pji_seq TO mirror_user;
-
-
---
--- Name: TABLE pod_attributions; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.pod_attributions TO mirror_user;
-
-
---
--- Name: TABLE pod_commissions; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.pod_commissions TO mirror_user;
-
-
---
--- Name: TABLE pod_partners; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.pod_partners TO mirror_user;
-
-
---
--- Name: TABLE pod_products; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.pod_products TO mirror_user;
-
-
---
--- Name: SEQUENCE pod_products_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.pod_products_id_seq TO mirror_user;
-
-
---
--- Name: TABLE pod_qr_codes; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.pod_qr_codes TO mirror_user;
-
-
---
--- Name: TABLE pod_qr_scans; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.pod_qr_scans TO mirror_user;
-
-
---
--- Name: SEQUENCE pod_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.pod_seq TO mirror_user;
-
-
---
--- Name: TABLE pod_user_attributions; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.pod_user_attributions TO mirror_user;
-
-
---
--- Name: TABLE pods; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.pods TO mirror_user;
-
-
---
--- Name: SEQUENCE por_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.por_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE pos_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.pos_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE ppl_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.ppl_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE pqr_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.pqr_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE pqs_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.pqs_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE prd_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.prd_seq TO mirror_user;
-
-
---
--- Name: TABLE print_job_items; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.print_job_items TO mirror_user;
-
-
---
--- Name: TABLE print_jobs; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.print_jobs TO mirror_user;
-
-
---
--- Name: TABLE product_certificates; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.product_certificates TO mirror_user;
-
-
---
--- Name: SEQUENCE product_certificates_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.product_certificates_id_seq TO mirror_user;
-
-
---
--- Name: TABLE product_finder_combinations; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.product_finder_combinations TO mirror_user;
-
-
---
--- Name: SEQUENCE product_finder_combinations_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.product_finder_combinations_id_seq TO mirror_user;
-
-
---
--- Name: TABLE product_finder_selections; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.product_finder_selections TO mirror_user;
-
-
---
--- Name: SEQUENCE product_finder_selections_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.product_finder_selections_id_seq TO mirror_user;
-
-
---
--- Name: TABLE product_finder_side_stone_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.product_finder_side_stone_options TO mirror_user;
-
-
---
--- Name: SEQUENCE product_finder_side_stone_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.product_finder_side_stone_options_id_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE production_order_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.production_order_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE production_order_stage_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.production_order_stage_seq TO mirror_user;
-
-
---
--- Name: TABLE production_order_stages; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.production_order_stages TO mirror_user;
-
-
---
--- Name: TABLE production_orders; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.production_orders TO mirror_user;
-
-
---
--- Name: SEQUENCE production_plan_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.production_plan_seq TO mirror_user;
-
-
---
--- Name: TABLE production_plans; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.production_plans TO mirror_user;
-
-
---
--- Name: SEQUENCE psi_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.psi_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE psl_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.psl_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE ptn_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.ptn_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE ptr_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.ptr_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE ptx_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.ptx_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE pua_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.pua_seq TO mirror_user;
-
-
---
--- Name: TABLE purchase_order_age_group_allocations; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.purchase_order_age_group_allocations TO mirror_user;
-
-
---
--- Name: TABLE purchase_order_item_variants; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.purchase_order_item_variants TO mirror_user;
-
-
---
--- Name: TABLE purchase_order_items; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.purchase_order_items TO mirror_user;
-
-
---
--- Name: TABLE purchase_orders; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.purchase_orders TO mirror_user;
-
-
---
--- Name: TABLE qr_codes; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.qr_codes TO mirror_user;
-
-
---
--- Name: TABLE qr_scans; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.qr_scans TO mirror_user;
-
-
---
--- Name: SEQUENCE qrc_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.qrc_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE rak_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.rak_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE rec_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.rec_seq TO mirror_user;
-
-
---
--- Name: TABLE rfid_scan_logs; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rfid_scan_logs TO mirror_user;
-
-
---
--- Name: TABLE rfid_tags; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rfid_tags TO mirror_user;
-
-
---
--- Name: SEQUENCE rft_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.rft_seq TO mirror_user;
-
-
---
--- Name: TABLE role_matrix; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.role_matrix TO mirror_user;
-
-
---
--- Name: SEQUENCE role_matrix_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.role_matrix_id_seq TO mirror_user;
-
-
---
--- Name: TABLE role_permissions; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.role_permissions TO mirror_user;
-
-
---
--- Name: TABLE roles; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.roles TO mirror_user;
-
-
---
--- Name: SEQUENCE roles_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.roles_id_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE rsl_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.rsl_seq TO mirror_user;
-
-
---
--- Name: TABLE s3_files; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.s3_files TO mirror_user;
-
-
---
--- Name: SEQUENCE scn_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.scn_seq TO mirror_user;
-
-
---
--- Name: TABLE side_stones_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.side_stones_options TO mirror_user;
-
-
---
--- Name: SEQUENCE side_stones_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.side_stones_options_id_seq TO mirror_user;
-
-
---
--- Name: TABLE sku_prefix_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.sku_prefix_options TO mirror_user;
-
-
---
--- Name: SEQUENCE sku_prefix_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.sku_prefix_options_id_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE sku_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.sku_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE slt_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.slt_seq TO mirror_user;
-
-
---
--- Name: TABLE stock_reconciliation_records; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.stock_reconciliation_records TO mirror_user;
-
-
---
--- Name: TABLE stone_origin_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.stone_origin_options TO mirror_user;
-
-
---
--- Name: SEQUENCE stone_origin_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.stone_origin_options_id_seq TO mirror_user;
-
-
---
--- Name: TABLE stone_role_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.stone_role_options TO mirror_user;
-
-
---
--- Name: SEQUENCE stone_role_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.stone_role_options_id_seq TO mirror_user;
-
-
---
--- Name: TABLE stone_shape_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.stone_shape_options TO mirror_user;
-
-
---
--- Name: SEQUENCE stone_shape_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.stone_shape_options_id_seq TO mirror_user;
-
-
---
--- Name: TABLE stone_type_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.stone_type_options TO mirror_user;
-
-
---
--- Name: SEQUENCE stone_type_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.stone_type_options_id_seq TO mirror_user;
-
-
---
--- Name: TABLE stone_weight_options; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.stone_weight_options TO mirror_user;
-
-
---
--- Name: SEQUENCE stone_weight_options_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.stone_weight_options_id_seq TO mirror_user;
-
-
---
--- Name: TABLE user_otps; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.user_otps TO mirror_user;
-
-
---
--- Name: SEQUENCE user_otps_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.user_otps_id_seq TO mirror_user;
-
-
---
--- Name: TABLE user_roles; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.user_roles TO mirror_user;
-
-
---
--- Name: TABLE users; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.users TO mirror_user;
-
-
---
--- Name: SEQUENCE users_id_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.users_id_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE ven_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.ven_seq TO mirror_user;
-
-
---
--- Name: TABLE vendor_products; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.vendor_products TO mirror_user;
-
-
---
--- Name: TABLE vendors; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.vendors TO mirror_user;
-
-
---
--- Name: SEQUENCE vpr_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.vpr_seq TO mirror_user;
-
-
---
--- Name: TABLE warehouse_racks; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.warehouse_racks TO mirror_user;
-
-
---
--- Name: TABLE warehouse_slots; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.warehouse_slots TO mirror_user;
-
-
---
--- Name: SEQUENCE wfs_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.wfs_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE wft_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.wft_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE who_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.who_seq TO mirror_user;
-
-
---
--- Name: TABLE wholesale_order_items; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.wholesale_order_items TO mirror_user;
-
-
---
--- Name: TABLE wholesale_orders; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.wholesale_orders TO mirror_user;
-
-
---
--- Name: SEQUENCE woi_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.woi_seq TO mirror_user;
-
-
---
--- Name: SEQUENCE workflow_stage_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.workflow_stage_seq TO mirror_user;
-
-
---
--- Name: TABLE workflow_stages; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.workflow_stages TO mirror_user;
-
-
---
--- Name: SEQUENCE workflow_template_seq; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.workflow_template_seq TO mirror_user;
-
-
---
--- Name: TABLE workflow_templates; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.workflow_templates TO mirror_user;
-
-
---
--- Name: DEFAULT PRIVILEGES FOR SEQUENCES; Type: DEFAULT ACL; Schema: public; Owner: postgres
---
-
-ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA public GRANT ALL ON SEQUENCES TO mirror_user;
-
-
---
--- Name: DEFAULT PRIVILEGES FOR TABLES; Type: DEFAULT ACL; Schema: public; Owner: postgres
---
-
-ALTER DEFAULT PRIVILEGES FOR ROLE postgres IN SCHEMA public GRANT ALL ON TABLES TO mirror_user;
 
 
 --
